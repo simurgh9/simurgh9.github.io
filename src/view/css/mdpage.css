@@ -4,6 +4,7 @@
 }
 
 #mdpage #main {
+  width: 80%;
   padding: 0.4em 1em 1em 0em;
   list-style-position: inside;
 }

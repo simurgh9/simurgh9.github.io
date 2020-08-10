@@ -1,0 +1,27 @@
+#mdpage {
+  display: flex;
+  justify-content: space-between;
+}
+
+#mdpage #main {
+  padding: 0.4em 1em 1em 0em;
+  list-style-position: inside;
+}
+
+#mdpage #main hr {
+  border-color: rgba(255, 202, 0, 0.1);
+}
+
+#mdpage #main h1,
+#mdpage #main h2,
+#mdpage #main h3,
+#mdpage #main h4,
+#mdpage #main h5,
+#mdpage #main h6 {
+  padding-bottom: 0.3em;
+}
+
+#mdpage #main ul,
+#mdpage #main ol {
+  padding: 0.5em 1em 0.5em 2em;
+}

@@ -1,0 +1,59 @@
+#resume {
+  padding: 1em 0em 1em 0em;
+}
+
+#resume-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+  justify-content: space-between;
+}
+
+#resume-section-title {
+  color: #FF6732;
+  padding-top: 0.3em;
+  font-family: Latin Modern Roman Dunhill, Ariel, Helvetica, sans-serif;
+}
+
+#resume hr {
+  border-color: rgba(255, 202, 0, 0.1);
+}
+
+#resume-button-space {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resume-button-space button {
+  color: #FF6732;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Iosevka Aile Web, Ariel, Helvetica, sans-serif;
+}
+
+#resume-button-space button:hover {
+  color: #00F2FF;
+  border-style: solid;
+  border-color: #FF6732;
+  border-width: 0em 0em 0.1em 0em;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em 0em 1em;
+  justify-content: space-between;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.resume-list {
+  font-size: 0.9em;
+  padding: 0em 3em 0em 3em;
+}

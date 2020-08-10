@@ -1,0 +1,155 @@
+{
+  "header": {
+    "name": "Tashfeen, Ahmad",
+    "majors": "Mathematics & Computer Science",
+    "email": "tashfeen@ou.edu"
+  },
+  "schools": [ 3,
+    {
+      "name": "University of Oklahoma",
+      "degree": "Master of Science in Computer Science; GPA: 4.0",
+      "location": "Norman, OK",
+      "date": "May 2022"
+    },
+    {
+      "name": "Oklahoma State University",
+      "degree": "Bachelor of Science in Computer Science; GPA: 3.9",
+      "location": "Stillwater, OK",
+      "date": "May 2019"
+    },
+    {
+      "name": "Oklahoma State University",
+      "degree": "Bachelor of Science in Mathematics; GPA: 3.9",
+      "location": "Stillwater, OK",
+      "date": "May 2019"
+    },
+    {
+      "name": "Oklahoma State University",
+      "degree": "Associate of Science in Enterprise Development; GPA: 4.0",
+      "location": "Oklahoma City, OK",
+      "date": "Jul 2017"
+    },
+    {
+      "name": "Putnam City High School",
+      "degree": "High School Diploma;  GPA: 4.0",
+      "location": "Oklahoma City, OK",
+      "date": "May 2014"
+    }    
+  ],
+  "skills": [ 2,
+    {
+      "title": "Programming Languages",
+      "description": "C/C++, Java, Python, JavaScript, C# and exposed to PHP, ML and PROLOG."
+    },
+    {
+      "title": "Topics",
+      "description": "Artificial Intelligence, Cryptography, Object-Oriented and Functional Programming, ReactJS, Data Structures and Model View Controller Architecture."
+    }
+  ],
+  "work": [ 2,
+    {
+      "name": "Paycom",
+      "position": "Software Developer Intern",
+      "location": "Oklahoma City, OK",
+      "date": "May 2019 – Aug 2019 & May 2018 – Aug 2018",
+      "bullets": [
+        "Developed and implemented an algorithm for detecting and cleaning unused Cascading Style Sheets.",
+        "Designed the back-end coding-architecture (an abstract class in C#) for a quicker search system in the company’s database using Elasticsearch.",
+        "Helped in automating a well-defined procedure the employees went through to log in their billable hours by extending and refactoring pre-written PHP code."
+      ]
+    },
+    {
+      "name": "LASSO Centre",
+      "position": "Supplemental Instruction Leader",
+      "location": "OSU, Stillwater, OK",
+      "date": "Jan 2018 – May 2019",
+      "bullets": [
+        "Debugged and helped new Computer Science students with their code.",
+        "Planned study and lectures sessions.",
+        "Lead individual and study groups of new Computer Science students."
+      ]
+    },
+    {
+      "name": "Greenvale Elementary",
+      "position": "Teacher Aide",
+      "location": "Oklahoma City, OK",
+      "date": "Mar 2016 – Apr 2016",
+      "bullets": [
+        "Provided technical and administrative support.",
+        "Assisted with the management of the classroom."
+      ]
+    },
+    {
+      "name": "Boathouse District & Riversport Adventures",
+      "position": "Adventure Guide",
+      "location": "Oklahoma City, OK",
+      "date": "Jul 2014 - Sep 2015",
+      "bullets": [
+        "Inspected the equipment including sky-trail, ensuring it meets organisation's security criteria and quality control et cetera.",
+        "Directed small crowds in rides & attractions and supervised kayaks in the downtown river."
+      ]
+    }
+  ],
+  "research": [ 0,
+    {
+      "name": "Error & Noise Analysis in a Quantum Key Exchange",
+      "position": "Fall 2018",
+      "location": "OSU, Stillwater, OK",
+      "date": "Aug 2018 – Dec 2018",
+      "bullets": [
+        "Analysed the effects noise has on a Quantum Key Exchange through empirical modelling and machine learning algorithms such as linear, logistic regression, k-means and neural networks."
+      ]
+    },
+    {
+      "name": "Simulations to Study Transportation & Habitat for Deep Space",
+      "position": "Spring 2018",
+      "location": "OSU, Stillwater, OK",
+      "date": "Jan 2018 – May 2018",
+      "bullets": [
+        "Discussed the adoption of simulation based design approaches to support the study of transportation and assembly alternatives in deep space.",
+        "Published and presented at 2018 IEEE International Conference on Systems, Man, and Cybernetics."
+      ]
+    },
+    {
+      "name": "Application and Study of Cryptography Algorithms",
+      "position": "Spring 2018",
+      "location": "OSU, Stillwater, OK",
+      "date": "Jan 2018 – May 2018",
+      "bullets": [
+        "Implemented in Sage-Python cryptographic algorithms such as Diﬀie-Hellman, RSA and Elliptic Curves, while examining their mathematical background, and possibility of quantum safe algorithms such as NTRU."
+      ]
+    }
+  ],
+  "honors": [ 4,
+    {
+      "title": "Summa Cum Laude",
+      "description": "Institutional Honours for Computer Science and Mathematics",
+      "location": "OSU, OK",
+      "date": "May 2019"
+    },
+    {
+      "title": "Outstanding Senior Award",
+      "description": "Computer Science Department",
+      "location": "OSU, OK",
+      "date": "Aug 2018 - May 2019"
+    },
+    {
+      "title": "Student Government Association",
+      "description": "President of the Student Body",
+      "location": "OSU, OK",
+      "date": "May 2015 – Aug 2016"
+    },
+    {
+      "title": "Honours College",
+      "description": "Honours Student & President's Honour Role",
+      "location": "OSU, OK",
+      "date": "Aug 2014 – May 2019"
+    },
+    {
+      "title": "Phi Theta Kappa",
+      "description": "Honour Society",
+      "location": "OSU, OK",
+      "date": "Aug 2014"
+    }
+  ]
+}

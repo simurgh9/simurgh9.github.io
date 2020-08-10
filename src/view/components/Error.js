@@ -1,3 +1,5 @@
+// Copyright (C) 2020 Tashfeen, Ahmad
+
 import '../css/error.css';
 
 import React, { Component } from 'react';

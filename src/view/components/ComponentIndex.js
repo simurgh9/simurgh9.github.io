@@ -1,3 +1,5 @@
+// Copyright (C) 2020 Tashfeen, Ahmad
+
 export {default as Header} from './Header.js';
 export {default as Nav} from './Nav.js';
 export {default as MdPage} from './MdPage.js';

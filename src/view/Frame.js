@@ -1,3 +1,5 @@
+// Copyright (C) 2020 Tashfeen, Ahmad
+
 import './css/frame.css';
 import './css/mobile.css';
 

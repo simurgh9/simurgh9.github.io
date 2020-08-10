@@ -1,3 +1,5 @@
+// Copyright (C) 2020 Tashfeen, Ahmad
+
 import '../css/mdpage.css';
 
 import React, { Component } from 'react';

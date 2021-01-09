@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { Aside } from './ComponentIndex.js';
 import Markdown from 'react-markdown';
 
+const GET_URL = 'https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/src/model/markdown/';
 
 class MdPage extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class MdPage extends Component {
   }
 
   componentDidMount() {
-    fetch(require('../../model/markdown/' + this.props.fileName))
+    fetch(GET_URL + this.props.fileName)
       .then(response => {
         return response.text();
       })

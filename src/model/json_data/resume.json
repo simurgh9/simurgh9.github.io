@@ -43,10 +43,20 @@
     },
     {
       "title": "Topics",
-      "description": "Artificial Intelligence, Cryptography, Object-Oriented and Functional Programming, ReactJS, Data Structures and Model View Controller Architecture."
+      "description": "Artificial Intelligence, Machine Learning, Cryptography, Recreational Mathematics, Object-Oriented and Functional Programming & ReactJS."
     }
   ],
   "work": [ 2,
+    {
+      "name": "University of Oklahoma",
+      "position": "Teaching Assistant",
+      "location": "Norman, OK",
+      "date": "Aug 2020",
+      "bullets": [
+        "Assisted with grading, held office hours and helped students. Bellow are the classes I have been a teaching assistant for.",
+        "Machine Learning, Intelligent Robotics and Cryptography."
+      ]
+    },
     {
       "name": "Paycom",
       "position": "Software Developer Intern",

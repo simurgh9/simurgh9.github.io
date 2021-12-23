@@ -9,6 +9,7 @@ Following are some of my recent projects:
 - [Cool kids do their hw in LaTex](https://github.com/simurgh9/latex-homework-class)
 - [The Appointment in Samarra](samarra.md)
 - [A Quote from "Either/Or: A Fragment of Life"](kierkegaard.md)
+
 Here is one of the papers I contributed to:
 
 - [Simulation Based Design Approaches to Study Transportation and Habitat Alternatives for Deep Space Missions](https://ieeexplore.ieee.org/abstract/document/8616247)

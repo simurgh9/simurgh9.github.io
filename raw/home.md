@@ -41,7 +41,12 @@ Bellow is an image,
 
 > Many online resources are found with appendages: "in ten minutes", "made easy" and "from scratch". In hopes of getting through to the reader, most of such resources seem to either oversimplify, hide the fair complexity or only talk about the mathematics/code of the Neural Networks. Or, instead of explaining a Neural Network, they discuss how to use library code to quickly put together one. This alludes the reader into the miss-conception that the mathematics and code of a Neural Network should be of two different interests.
 
-
+```python
+def f(n):
+    for i in range(n):
+        print(n)
+    return 0
+```
 
 ***
 

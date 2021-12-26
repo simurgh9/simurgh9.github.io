@@ -35,6 +35,10 @@ Bellow we test check bars,
   - [x] baz
 - [ ] bim
 
+Bellow is an image,
+
+![Levitating GNU.](https://www.gnu.org/graphics/meditate.jpg "Levitating GNU.")
+
 ***
 
 † All outward pointing links on this website should open in a new tab. That means no right clicky business. You're welcome.  

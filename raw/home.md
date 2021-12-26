@@ -28,16 +28,20 @@ Table: A Caption
 | K | L | M | N | O | P | Q | U | R | S |
 | T | U | V | W | X | Y | Z | / | / | / |
 
-Bellow we test check bars,
+Bellow `we test check` bars,
 
-- [x] foo
-  - [ ] bar
-  - [x] baz
-- [ ] bim
+    - [x] foo
+      - [x] bar
+      - [ ] baz
+    - [ ] bim
 
 Bellow is an image,
 
 ![Levitating GNU.](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Levitating GNU.")
+
+> Many online resources are found with appendages: "in ten minutes", "made easy" and "from scratch". In hopes of getting through to the reader, most of such resources seem to either oversimplify, hide the fair complexity or only talk about the mathematics/code of the Neural Networks. Or, instead of explaining a Neural Network, they discuss how to use library code to quickly put together one. This alludes the reader into the miss-conception that the mathematics and code of a Neural Network should be of two different interests.
+
+
 
 ***
 

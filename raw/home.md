@@ -30,10 +30,10 @@ Table: A Caption
 
 Bellow `we test check` bars,
 
-    - [x] foo
-      - [x] bar
-      - [ ] baz
-    - [ ] bim
+- [x] foo
+  - [x] bar
+  - [ ] baz
+- [ ] bim
 
 Bellow is an image,
 

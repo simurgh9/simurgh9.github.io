@@ -1,7 +1,6 @@
 import '../../css/resume.css';
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -13,7 +12,7 @@ class Header extends Component {
         </div>
         <div className='right-align'>
           {this.props.data.email} <br/>
-          <Link to="/resume_tashfeen.pdf" target="_blank" download>Download PDF</Link>
+          <a download target='_blank' rel='noopener noreferrer' href={this.props.downloadUrl}>Download PDF</a>
         </div>
       </section>
     );

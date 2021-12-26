@@ -1,16 +1,23 @@
 // Copyright (C) 2020 Tashfeen, Ahmad
 
 class Control {
-  constructor(app) {
-    this.app = app;
+  constructor(model) {
+    this.model = model;
   }
 
-  exampleEventHandler = (event) => {
-    console.log(event);
-    // This was copied over from fractalsetc
-    // let newDepth = Number(event.target.value);
-    // let state = this.app.model.updateFigure(null, null, null, newDepth);
-    // this.app.setState(state);
+  setFrame(frame) {
+    this.frame = frame;
+  }
+
+  M() {
+    return this.model;
+  }
+  
+  clickEventHandler = (event) => {
+    if (event.target.href) {
+      this.M().setReactState(event.target.href);
+      this.frame.setState(this.M().getReactState());
+    }
   }
 }
 

@@ -1,14 +1,20 @@
 @media only screen and (max-width: 750px) {
   body #header {
     font-size: 3.5vw;
-    justify-content: center;
+    flex-direction: column;
+     padding-bottom: 1em;
+  }
+
+  body #header #logo {
+    padding-top: 0.9em;
   }
   
   body #header #text {
-    flex-grow: 0;
     line-height: 1.4;
-    align-items: flex-start;
-    flex-direction: column;
+  }
+
+  body #header #nav {
+    padding-left: 3.6em;
   }
 
   body {
@@ -20,10 +26,15 @@
     flex-direction: column;
   }
   
-  body #mdpage * :not(h1):not(h2):not(h3):not(h4):not(h5):not(h5){
+  body #mdpage *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     font-size: 3.5vw;
   }
 
+  body #mdpage:lang(ur) *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: 5.5vw;
+  }
+
+  
   body #mdpage #main {
     width: 100%;
   }

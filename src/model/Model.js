@@ -1,23 +1,34 @@
 // Copyright (C) 2020 Tashfeen, Ahmad
 
-import RESUME from './json_data/resume.json';
-import BOOKMARKS from './json_data/bookmarks.json';
+const TITLE = 'tashfeen.org';
+const LOGO = 'لا';
 
+const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
+const ROOT = 'https:tashfeen.org/raw/';
+
+const HOME = 'home.md';
+const BOOKMARK = 'home_aside.json';
+const RESUME = 'resume.json';
 
 class Model {
-  getReactState() {
-    return {
-      resumeData: this.getResumeData(),
-      bookmarks: this.getBookmarks()
+  constructor() {
+    this.state = {
+      title: TITLE,
+      logo: LOGO,
+      loading: LOADING,
+      root: ROOT,
+      home: HOME,
+      bookmark: BOOKMARK,
+      resume: RESUME
     };
   }
 
-  getResumeData() {
-    return RESUME;
+  getReactState() {
+    return this.state;
   }
 
-  getBookmarks() {
-    return BOOKMARKS.bookmarks;
+  setReactState(url) {
+    console.log(`I will set state as f(${url})`);
   }
 }
 

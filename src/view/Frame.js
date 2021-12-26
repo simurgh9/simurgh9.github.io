@@ -3,42 +3,54 @@
 import './css/frame.css';
 import './css/mobile.css';
 
-import Model from '../../src/model/Model.js';
-import Control from '../../src/control/Control.js';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Header, MdPage, Resume, Footer, Error } from './components/ComponentIndex.js';
+import {
+  Header, MdPage, Resume, Footer
+} from './components/ComponentIndex.js';
 
 
 class Frame extends Component {
   constructor(props) {
     super(props);
-    this.control = new Control(this);
-    this.model = new Model();
-    this.state = this.model.getReactState();
+    this.MdPageKey = 0;
+    this.control = props.control;
+    this.control.setFrame(this);
+    this.state = this.control.M().getReactState();
   }
 
   resumeRenderJob(props) {
-    return <Resume {...props} resumeData={this.state.resumeData} key={0} />;
+    return (
+      <Resume {...props}
+        loading={this.state.loading}
+        resumeUrl={this.state.root + this.state.resume}
+        key={this.uniqueKey()}
+      />);
   }
 
-  homeRenderJob(props) {
-    return <MdPage {...props} hasAside={true} asideData={this.state.bookmarks} fileName={'home.md'} key={1} />;
+  markdown(file = null, aside = null) {
+    return (props) => <MdPage {...props}
+      key={this.uniqueKey()}
+      file={file}
+      aside={aside}
+      root={this.state.root}
+      loading={this.state.loading} />;
   }
 
-  aboutRenderJob(props) {
-    return <MdPage hasAside={false} fileName={'about.md'} key={2} />;
+  uniqueKey() { // this MUST return a unique key each invocation
+    // console.log(this.MdPageKey);
+    return this.MdPageKey++;
   }
 
   render() {
-    return (
-      <div id='frame'>
-        <Header />
+    let st = this.state;
+    return ( // Router should be in the index.js
+      <div id='frame'> {/* onClick={this.control.clickEventHandler} */}
+        <Header logo={this.state.logo} title={this.state.title} />
         <Switch>
-          <Route exact path='/' render={this.homeRenderJob.bind(this)} />
+          <Route exact path='/' render={this.markdown(st.home, st.bookmark)} />
           <Route path='/resume' render={this.resumeRenderJob.bind(this)} />
-          <Route path='/about' render={this.aboutRenderJob.bind(this)} />
-          <Route component={Error} />
+          <Route path='/:filename' render={this.markdown()} />
         </Switch>
         <Footer />
       </div>

@@ -8,12 +8,15 @@ import React, { Component } from 'react';
 class Aside extends Component {
   bookmarks() {
     let ret = [];
-    for (let i = 0; i < this.props.data.length; i++) {
+    for (let i = 1; i < this.props.data.length; i++) {
       ret.push(<li key={i}>
-                 <a target='_blank' rel='noopener noreferrer' href={this.props.data[i].url}>
+                 <a
+                   target='_blank'
+                   rel='noopener noreferrer'
+                   href={this.props.data[i].url}>
                    {this.props.data[i].title}
-                 </a><
-               /li>);
+                 </a>
+               </li>);
     }
     return ret;
   }
@@ -21,7 +24,7 @@ class Aside extends Component {
   render() {
     return (
       <aside id='aside'>
-        <h3>Bookmarks</h3>
+        <h3>{this.props.data[0].title}</h3>
         <ul>
           {this.bookmarks()}
         </ul>

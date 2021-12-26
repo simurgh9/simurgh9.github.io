@@ -1,7 +1,20 @@
-#nav a {
-  font: 0.6em Iosevka Aile Web, Ariel, Helvetica, sans-serif;;
+#nav {
+  word-spacing: 1em;
 }
 
-#nav a:hover {
-  font: bold 0.61em Iosevka Aile Web, Ariel, Helvetica, sans-serif;;
+#nav a {
+  font: 1em Iosevka, Ariel, Helvetica, sans-serif;
+}
+
+@media (hover: hover) { /* solves sticky problem on touch devices */
+  #nav a:hover {
+    font: bold 1.01em Iosevka, Ariel, Helvetica, sans-serif;
+  }
+}
+
+.active{ /* should always be the same as "a:hover" in frame.css */
+  color: #00F2FF;
+  border-style: solid;
+  border-color: #FF6732;
+  border-width: 0em 0em 0.1em 0em;
 }

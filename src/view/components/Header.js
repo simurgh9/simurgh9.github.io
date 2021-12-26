@@ -10,11 +10,11 @@ class Header extends Component {
   render() {
     return (
       <header id='header'>
-        <span id='logo'>ق &nbsp;</span>
-        <h1 id='text'>
-          tashfeen.org
-          <Nav />
-        </h1>
+        <div id='left'>
+          <span id='logo' className='convexhull'>{this.props.logo}</span>
+          <span id='text' className='convexhull'>{this.props.title}</span>
+        </div>
+        <Nav className='debug convexhull' />
       </header>
     );
   }

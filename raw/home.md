@@ -19,6 +19,15 @@ $$
 f(x) = \int_{-\infty}^\infty f(\xi)e^{2 \pi i \xi x} d\xi
 $$
 
+We test tables bellow,
+
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|
+| A | B | C | D | E | F | G | H | I | J |
+| K | L | M | N | O | P | Q | U | R | S |
+| T | U | V | W | X | Y | Z | / | / | / |
+
+
 ***
 
 † All outward pointing links on this website should open in a new tab. That means no right clicky business. You're welcome.  

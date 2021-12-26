@@ -37,7 +37,7 @@ Bellow we test check bars,
 
 Bellow is an image,
 
-![Levitating GNU.](https://www.gnu.org/graphics/meditate.jpg "Levitating GNU.")
+![Levitating GNU.](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Levitating GNU.")
 
 ***
 

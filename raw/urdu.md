@@ -19,6 +19,6 @@
 | ص | ض | ط | ظ | ع | غ | ف | ق | ک | گ |
 | ل | م | ن | ں | و | ہ | ھ | ء | ى | ے |
 
-![Flaga, Dictionnaire Infernal](https://upload.wikimedia.org/wikipedia/commons/5/51/Ill_dict_infernal_p0291-275_flaga.jpg "Flaga, Dintionnaire Infernal")
+![Flaga, Dictionnaire Infernal](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Flaga, Dintionnaire Infernal")
 
 <!-- lang:ur -->

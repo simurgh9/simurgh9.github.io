@@ -43,4 +43,24 @@
 
 ![Flaga, Dictionnaire Infernal](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Flaga, Dintionnaire Infernal")
 
+میر تقی میر:
+
+```
+حالت تو یہ کہ مجھ کو غموں سے نہیں فراغ 
+
+دل سوزش درونہ سے جلتا ہے جوں چراغ 
+
+سینہ تمام چاک ہے سارا جگر ہے داغ 
+
+ہے نام مجلسوں میں مرا میرؔ بے دماغ 
+
+ازبسکہ کم دماغی نے پایا ہے اشتہار 
+```
+
+گنتی:
+
+1. ایک
+2. دو
+3. تین
+
 <!-- lang:ur -->

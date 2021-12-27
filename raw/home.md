@@ -53,7 +53,7 @@ Bellow is an image,
    2. Two
    3. Three
 4. Four
-6. Five
+5. Five
 
 Code:
 

@@ -1,14 +1,14 @@
 # Salvete, omnes!
 
-This is my personal website, have a look around.
+This is my personal website, have a look around $\frac{n(n+1)}{2} = \sum_{i=1}^n i$.
 
 Following are some of my recent projects:
 
 - [Fractals etc.](https://tashfeen.org/fractalsetc) ([Github](https://github.com/simurgh9/fractalsetc))
 - [Neural Networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
-- [Cool kids do their hw in LaTex](https://github.com/simurgh9/latex-homework-class)
-- [The Appointment in Samarra](samarra.md)
-- [A Quote from "Either/Or: A Fragment of Life"](kierkegaard.md)
+  - [Cool kids do their hw in LaTex](https://github.com/simurgh9/latex-homework-class)
+  - [The Appointment in Samarra](samarra.md)
+    - [A Quote from "Either/Or: A Fragment of Life"](kierkegaard.md)
 - [List](list.md)
 
 Here is one of the papers I contributed to:
@@ -21,7 +21,6 @@ $$
 
 We test tables bellow,
 
-Table: A Caption
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |---|---|---|---|---|---|---|---|---|---|
 | A | B | C | D | E | F | G | H | I | J |
@@ -39,7 +38,22 @@ Bellow is an image,
 
 ![Levitating GNU.](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Levitating GNU.")
 
+
+- One
+- Two
+  1. Three
+  2. Three
+  3. Three
+- Four
+- Five
+
 > Many online resources are found with appendages: "in ten minutes", "made easy" and "from scratch". In hopes of getting through to the reader, most of such resources seem to either oversimplify, hide the fair complexity or only talk about the mathematics/code of the Neural Networks. Or, instead of explaining a Neural Network, they discuss how to use library code to quickly put together one. This alludes the reader into the miss-conception that the mathematics and code of a Neural Network should be of two different interests.
+
+1. One
+   2. Two
+   3. Three
+4. Four
+6. Five
 
 Code:
 

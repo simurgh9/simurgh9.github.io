@@ -1,15 +1,17 @@
 # Lorem Ipsum
 
+$$
 \begin{align*}
     2ax &= -b\pm\sqrt{b^2-4ac} \\
     x   &= \frac{-b\pm\sqrt{b^2-4ac}}{2a} \\
 \end{align*}
+$$
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua $e=mc^2$. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Sed vulputate odio ut enim blandit volutpat maecenas. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Sed blandit libero volutpat sed cras ornare arcu dui. Pharetra vel turpis nunc eget lorem. Accumsan tortor posuere ac ut. Tempus quam pellentesque nec nam aliquam sem et. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Vel pretium lectus quam id.
 
-\[
+$$
     e^{i\pi} + 1 = 0
-\]
+$$
 
 ## Lorem Ipsum
 Dui id ornare arcu odio ut sem nulla pharetra. Massa tincidunt dui ut ornare lectus sit amet est placerat. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada  $\mathcal{O}(n)$. Volutpat ac tincidunt vitae semper. Etiam tempor orci eu lobortis $\mathbb{R}$. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Id ornare arcu odio ut sem. Mi proin sed libero enim sed faucibus turpis in eu. A diam maecenas sed enim ut sem viverra aliquet. Orci eu lobortis elementum nibh.
@@ -19,9 +21,9 @@ Dui id ornare arcu odio ut sem nulla pharetra. Massa tincidunt dui ut ornare lec
   - [ ] Three
 - [ ] Four
 
-\[
+$$
     f(x) = \int_{-\infty}^\infty f(\xi)e^{2 \pi i \xi x} d\xi
-\]
+$$
 
 ## Lorem Ipsum
 Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Tempor orci eu lobortis elementum nibh tellus. Aliquam id diam maecenas ultricies mi. Tristique magna sit amet purus gravida quis blandit turpis cursus. Accumsan sit amet nulla facilisi. Id leo in vitae turpis massa sed elementum.

@@ -16,3 +16,4 @@ Tashfeen تاشفین
 Colourless green ideas (خیالات) sleep furiously.
 
 دشتِ تنہائی (solidtude's forest) میں دوری کے خس و خاک تلے۔
+<!-- lang:ur -->

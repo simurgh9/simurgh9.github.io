@@ -1,12 +1,4 @@
 # Lorem Ipsum
-
-$$
-\begin{align*}
-    2ax &= -b\pm\sqrt{b^2-4ac} \\
-    x   &= \frac{-b\pm\sqrt{b^2-4ac}}{2a} \\
-\end{align*}
-$$
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua $e=mc^2$. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Sed vulputate odio ut enim blandit volutpat maecenas. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Sed blandit libero volutpat sed cras ornare arcu dui. Pharetra vel turpis nunc eget lorem. Accumsan tortor posuere ac ut. Tempus quam pellentesque nec nam aliquam sem et. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Vel pretium lectus quam id.
 
 $$
@@ -51,6 +43,13 @@ Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Tempor 
 3. Ten
 
 Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Gravida arcu ac tortor dignissim convallis. Gravida cum sociis natoque penatibus et magnis. Ut tortor pretium viverra suspendisse potenti nullam ac.
+
+$$
+\begin{align*}
+    2ax &= -b\pm\sqrt{b^2-4ac} \\
+    x   &= \frac{-b\pm\sqrt{b^2-4ac}}{2a} \\
+\end{align*}
+$$
 
 ## Lorem Ipsum
 Diam ut venenatis tellus in. Sit amet porttitor eget dolor morbi non arcu. Scelerisque in dictum non consectetur. Amet tellus cras adipiscing enim eu turpis egestas pretium. Nunc non blandit massa enim nec. Enim tortor at auctor urna nunc id cursus metus. Donec enim diam vulputate ut pharetra sit amet aliquam id.

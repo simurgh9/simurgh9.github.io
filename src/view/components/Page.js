@@ -10,7 +10,7 @@ class Page extends Component {
   constructor(props) {
     super(props);
     let RT = props.root;
-    let fileUrl = props.file ? RT + props.file : RT + props.match.params.filename;
+    let fileUrl = props.file ? RT + props.file : RT + props.location.pathname.substring(1);
     fileUrl = fileUrl.endsWith('.md') ? fileUrl : fileUrl + '.md';
     this.state = {
       error: 'Squeak-a-plinggg! File not found.',

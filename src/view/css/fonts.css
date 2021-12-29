@@ -1,23 +1,27 @@
 @font-face {
   font-family: 'Dunhill';
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/lmromandunh.woff') format('woff2');
+  src: url('./fonts/lmromandunh.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Noori';
+  font-display: swap;
   src: url('./fonts/noori_regular.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Noori';
+  font-display: swap;
   font-style: italic;
   src: url('./fonts/noori_kasheeda.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Scheherazade';
+  font-display: swap;
   src: url('./fonts/scheherazade.woff2') format('woff2');
 }
 
@@ -46,4 +50,13 @@
 	font-stretch: normal;
 	font-style: italic;
 	src: url('./fonts/iosevka-aile-italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Fixed';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('./fonts/iosevka-fixed.woff2') format('woff2');
 }

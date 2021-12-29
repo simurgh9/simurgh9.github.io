@@ -1,47 +1,52 @@
+/* CSS for exclusively Urdu pages in mobiles is in urdu.css */
 @media only screen and (max-width: 750px) {
-  body #header {
-    font-size: 3.5vw;
-    flex-direction: column;
-     padding-bottom: 1em;
-  }
-
-  body #header #logo {
-    padding-top: 0.9em;
-  }
-  
-  body #header #text {
-    line-height: 1.4;
-  }
-
-  body #header #nav {
-    padding-left: 3.6em;
+  :root {
+    --INDENT_X: 2em; /*primary margin indent in mobiles*/
   }
 
   body {
-    font-size: 2.5vw; /* Consistent fonts sizes in phones */
-    margin: 0.5em 2em 0.5em 2em;
+    margin: 0.5em 1em 0.5em 1em;
   }
 
-  body #mdpage {
+  body #page {
     flex-direction: column;
   }
   
-  body #mdpage *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-size: 3.5vw;
+  body #header {
+    font-size: 4.5vw;
+    flex-direction: column;
+    padding-bottom: 1em;
   }
 
-  body #mdpage:lang(ur) *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-size: 5.5vw;
+  body #header #left {
+    padding-right: 2em;
   }
-
   
-  body #mdpage #main {
+  body #header #logo {
+    padding-top: 0.9em;
+  }
+
+  body #header #nav {
+    padding-left: 2em;
+  }
+  
+  body #page #main {
     width: 100%;
+    font-size: 1.2em;
+  }
+
+  body #page #main h1 {
+    font-size: 1.4em;
   }
   
-  body #aside {
+  body #page #aside {
     /* display: none; */
     width: 100%;
     border-width: 0.1em 0em 0em 0em;
+  }
+  
+  body #page #main th,
+  body #page #main td {
+    padding: 0.1em 0.3em 0.1em 0.3em;
   }
 }

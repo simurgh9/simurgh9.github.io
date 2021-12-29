@@ -1,0 +1,120 @@
+#page {
+  display: flex;
+}
+
+#page #main {
+  width: 100%;
+  margin: var(--INDENT_Y) 0.3em var(--INDENT_Y) 0em;
+}
+
+#page #main hr {
+  width: 97%;
+  margin: 0.1em auto;
+  border-color: var(--DM);
+}
+
+#page #main h1:first-child {
+  padding-top: 0em;
+  margin-top: -0.2em;
+}
+
+#page #main h1 {
+  text-align: center;
+  font-variant: small-caps;
+  font-family: var(--FONT_TITLE);
+}
+
+#page #main hr + h1,
+#page #main hr + h2,
+#page #main hr + h3 {
+  margin-top: 0.1em;
+}
+
+#page #main h1,
+#page #main h2,
+#page #main h3,
+#page #main h4,
+#page #main h5,
+#page #main h6 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+#page #main table {
+  text-align: center;
+  margin: var(--INDENT_Y) auto;
+  border-collapse: collapse;
+}
+
+#page #main th,
+#page #main td {
+  border: 0.1em solid var(--DM);
+  padding: 0.1em 1em 0.1em 1em;
+}
+
+#page #main img {
+  display: block;
+  margin: var(--INDENT_Y) auto;
+}
+
+#page #main pre,
+#page #main code,
+#page #main kbd,
+#page #main samp,
+#page #main tt {
+  font-family: var(--FONT_EN_FX);
+}
+
+#page #main pre {
+  margin: var(--INDENT_Y) var(--INDENT_X) var(--INDENT_Y) var(--INDENT_X);
+  padding: 0.2em 0.3em 0.1em 0.3em; /*this 0.2em is a bit hacky*/
+}
+
+#page #main pre,
+#page #main code {
+  background: var(--DM);
+}
+
+#page #main pre code { /*avoid double highlight*/
+  background: none;
+}
+
+#page #main blockquote {
+  padding: 0.2em 0.3em 0.1em 0.3em;
+  background: var(--DM);
+  border-left: 0.1em solid var(--BD);
+  margin: var(--INDENT_Y) var(--INDENT_X) var(--INDENT_Y) var(--INDENT_X);
+}
+
+#page #main ul,
+#page #main ol {
+  margin: var(--INDENT_Y) 0em var(--INDENT_Y) var(--INDENT_X);
+}
+
+#page #main ul ul,
+#page #main ul ol,
+#page #main ol ul,
+#page #main ol ol {
+  margin: 0em 0em 0em calc(var(--INDENT_X)/3);
+}
+
+#page ol {
+  list-style-type: decimal;
+}
+
+#page ol > li > ol {
+  list-style-type: lower-roman;
+}
+
+#page ol > li > ol > li > ol {
+  list-style-type: lower-alpha;
+}
+
+#page .contains-task-list {
+  list-style-type: none;
+}
+
+#page .task-list-item input[type=checkbox] {
+  margin: 0em 0.2em 0.25em -1.6em;
+  vertical-align: middle; /* stollen from github using inspect */
+}

@@ -1,0 +1,18 @@
+/* One of the colour pallets from: */
+/* behance.net/gallery/80191113/Minimalist-Color-Palettes-are-back */
+
+:root {
+  --FG: #FFFFFF; /*foreground*/
+  --BG: #2A2F3D; /*background*/
+  --LN: #FF6732; /*link*/
+  --HV: #00F2FF; /*hover*/
+  --BD: #FFCA00; /*border*/
+  --DM: rgba(255, 202, 0, 0.1); /*dimmed border*/
+  --INDENT_X: 4em; /*primary margin indent*/ /*This is 0.65*4=2.6 for Noori*/
+  --INDENT_Y: 1em; /*primary block indent*/
+  --FONT_EN: Iosevka, Noori, Ariel, Helvetica, sans-serif;
+  --FONT_EN_FX: Iosevka Fixed, monospace;
+  --FONT_UR: Noori, Scheherazade, Ariel, Helvetica, sans-serif;
+  --FONT_TITLE: Dunhill, Scheherazade, serif; 
+  --FONT_LOGO: Scheherazade, Noori, serif;
+}

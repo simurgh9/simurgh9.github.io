@@ -3,18 +3,18 @@
 }
 
 #nav a {
-  font: 1em Iosevka, Ariel, Helvetica, sans-serif;
+  font: 1em var(--FONT_EN);
 }
 
 @media (hover: hover) { /* solves sticky problem on touch devices */
   #nav a:hover {
-    font: bold 1.01em Iosevka, Ariel, Helvetica, sans-serif;
+    font: bold 1.01em var(--FONT_EN);
   }
 }
 
 .active{ /* should always be the same as "a:hover" in frame.css */
-  color: #00F2FF;
+  color: var(--HV);
   border-style: solid;
-  border-color: #FF6732;
+  border-color: var(--LN);
   border-width: 0em 0em 0.1em 0em;
 }

@@ -6,14 +6,14 @@ import './css/mobile.css';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import {
-  Header, MdPage, Resume, Footer
+  Header, Page, Resume, Footer
 } from './components/ComponentIndex.js';
 
 
 class Frame extends Component {
   constructor(props) {
     super(props);
-    this.MdPageKey = 0;
+    this.pageKey = 0;
     this.control = props.control;
     this.control.setFrame(this);
     this.state = this.control.M().getReactState();
@@ -29,7 +29,7 @@ class Frame extends Component {
   }
 
   markdown(file = null, aside = null) {
-    return (props) => <MdPage {...props}
+    return (props) => <Page {...props}
       key={this.uniqueKey()}
       file={file}
       aside={aside}
@@ -38,8 +38,8 @@ class Frame extends Component {
   }
 
   uniqueKey() { // this MUST return a unique key each invocation
-    // console.log(this.MdPageKey);
-    return this.MdPageKey++;
+    // console.log(this.pageKey);
+    return this.pageKey++;
   }
 
   render() {

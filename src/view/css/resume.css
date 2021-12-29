@@ -10,13 +10,13 @@
 }
 
 #resume-section-title {
-  color: #FF6732;
+  color: var(--LN);
   padding-top: 0.3em;
-  font-family: Latin Modern Roman Dunhill, Ariel, Helvetica, sans-serif;
+  font-family: var(--FONT_TITLE);
 }
 
 #resume hr {
-  border-color: rgba(255, 202, 0, 0.1);
+  border-color: var(--DM);
 }
 
 #resume-button-space {
@@ -26,20 +26,20 @@
 }
 
 #resume-button-space button {
-  color: #FF6732;
+  color: var(--LN);
   border: none;
   outline: none;
   background: none;
   cursor: pointer;
   text-decoration: none;
-  font-family: Iosevka Aile Web, Ariel, Helvetica, sans-serif;
+  font-family: var(--FONT_EN);
 }
 
 @media (hover: hover) { /* solves sticky problem on touch devices */
   #resume-button-space button:hover {
-    color: #00F2FF;
+    color: var(--HV);
     border-style: solid;
-    border-color: #FF6732;
+    border-color: var(--LN);
     border-width: 0em 0em 0.1em 0em;
   }
 }

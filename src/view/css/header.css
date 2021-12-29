@@ -9,16 +9,16 @@
 }
 
 #text {
-  color: #FF6732;
+  color: var(--LN);
   padding-bottom: 0.15em;
-  font: 2em Dunhill, Ariel, Helvetica, sans-serif;
+  font: 2em var(--FONT_TITLE);
 }
 
 #logo {
   height: 1em;
   padding-top: 0.15em;
   padding-right: 0.1em;
-  font: 3em Scheherazade;
+  font: 3em var(--FONT_LOGO);
 }
 
 #left { /*logo text: la tashfeen.org*/
@@ -27,7 +27,6 @@
 }
 
 .convexhull { /*Make the boxes class elements tight and inline*/
-  box-sizing: border-box;
   height: 1.3em;
   display: inline-flex;
   align-items: center;

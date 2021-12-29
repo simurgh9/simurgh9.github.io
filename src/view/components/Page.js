@@ -1,17 +1,12 @@
 // Copyright (C) 2020 Tashfeen, Ahmad
 
-import '../css/mdpage.css';
+import '../css/page.css';
 import 'katex/dist/katex.min.css';
 
 import React, { Component } from 'react';
-import { Aside } from './ComponentIndex.js';
-import ReactMarkdown from 'react-markdown';
-import remarkMath from 'remark-math';
-import remarkGfm from 'remark-gfm';
-import rehypeKatex from 'rehype-katex';
-import { Link } from 'react-router-dom';
+import { Aside, Markdown } from './ComponentIndex.js';
 
-class MdPage extends Component {
+class Page extends Component {
   constructor(props) {
     super(props);
     let RT = props.root;
@@ -43,17 +38,9 @@ class MdPage extends Component {
     }
   }
 
-  handleLinks({ node, ...props }) {
-    if (props.href.startsWith('http') || props.href.startsWith('mailto')) {
-      return <a href={props.href} target='_blank' rel='noopener noreferrer'
-        {...props}> {props.children}</a>;
-    }
-    return <Link to={props.href} rel='noopener noreferrer' {...props}></Link>;
-  }
-
   hasLangTag() {
-    let txt = this.state.markdownText;
-    let lastLine = txt.substring(txt.lastIndexOf('\n', txt.length - 2) + 1);
+    let txt = this.state.markdownText.trim();
+    let lastLine = txt.substring(txt.lastIndexOf('\n') + 1);
     lastLine = lastLine.replace(/\s/g, ''); // clearn all whitespace
     let rxp = /<!--lang:(.*?)-->/;
     if (!rxp.test(lastLine)) // is the last line a comment of form <!--lang:*-->?
@@ -62,19 +49,14 @@ class MdPage extends Component {
   }
 
   render() {
-    let md = <div id='main'><ReactMarkdown  // github.com/remarkjs/react-markdown
-      children={this.state.markdownText}
-      skipHtml={true}
-      components={{ a: this.handleLinks }}
-      remarkPlugins={[remarkMath, remarkGfm]}
-      rehypePlugins={[rehypeKatex]} /></div>;
+    let md = <div id='main'><Markdown content={this.state.markdownText} /></div>;
     let aside = this.state.asideData ? <Aside data={this.state.asideData} /> : null;
     let lang = this.hasLangTag();
-    let ret = <div id='mdpage'>{md}{aside}</div>;
+    let ret = <div id='page'>{md}{aside}</div>;
     if (lang) // section element here renders h1 as h(n+1)
-      ret = <div id='mdpage' dir='auto' lang={lang}>{md}{aside}</div>;
+      ret = <div id='page' dir='auto' lang={lang}>{md}{aside}</div>;
     return ret;
   }
 }
 
-export default MdPage;
+export default Page;

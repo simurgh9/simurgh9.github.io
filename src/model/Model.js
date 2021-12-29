@@ -4,7 +4,7 @@ const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
 
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
-const ROOT = 'https:tashfeen.org/raw/';
+const ROOT = 'https://tashfeen.org/raw/';
 
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';

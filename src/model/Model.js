@@ -2,33 +2,98 @@
 
 const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
-
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
-const ROOT = 'https://tashfeen.org/raw/';
 
+const ROOT = 'https://tashfeen.org/raw/';
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';
 const RESUME = 'resume.json';
 
 class Model {
   constructor() {
-    this.state = {
-      title: TITLE,
-      logo: LOGO,
-      loading: LOADING,
-      root: ROOT,
-      home: HOME,
-      bookmark: BOOKMARK,
-      resume: RESUME
+    this.state = { // initial state
+      header: {
+        logo: LOGO,
+        title: TITLE,
+        nav: [
+          { address: '/', name: 'Home' },
+          { address: '/resume', name: 'Résumé' },
+          { address: '/about.md', name: 'About' }
+        ]
+      },
+      page: {
+        text: LOADING,
+        aside: null,
+        lang: null
+      },
+      resume: LOADING,
+      footer: 'Copyright © 2020 Tashfeen'
     };
+  }
+
+  handleError(response) {
+    if (!response.ok)
+      throw Error(`${LOADING} Squeak-a-plinggg! Error ${response.status}.`);
+    return response;
+  }
+
+  fetchResume() {
+    return fetch(this.prependRoot(RESUME))
+      .then(this.handleError)
+      .then(rsp => rsp.json())
+      .catch(error => error.message);
+  }
+
+  fetchPage(path) {
+    let filename = path === '' ? HOME : path;
+    filename = filename.endsWith('.md') ? filename : filename + '.md';
+    let aside = null;
+    let text = fetch(this.prependRoot(filename))
+      .then(this.handleError)
+      .then(rsp => rsp.text())
+      .catch(error => error.message);
+    if (path === '')
+      aside = fetch(this.prependRoot(BOOKMARK))
+        .then(this.handleError)
+        .then(rsp => rsp.json())
+        .catch(error => null);
+    return Promise.all([text, aside]);
+  }
+
+  updateResumeState(json) {
+    this.setReactState({ resume: json });
+  }
+
+  updatePageState(text, aside = null) {
+    this.setReactState({
+      page: {
+        text: text,
+        aside: aside,
+        lang: this.extractLangTag(text)
+      }
+    });
+  }
+
+  extractLangTag(text) {
+    text = text.trim();
+    let lastLine = text.substring(text.lastIndexOf('\n') + 1);
+    lastLine = lastLine.replace(/\s/g, ''); // clearn all whitespace
+    let rxp = /<!--lang:(.*?)-->/;
+    if (!rxp.test(lastLine)) // is the last line a comment of form <!--lang:*-->?
+      return null; // if not, there is no lang tag
+    return rxp.exec(lastLine)[1]; // if yes, then return the lang code, e.g., ur
+  }
+
+  prependRoot(name) {
+    return ROOT + name;
   }
 
   getReactState() {
     return this.state;
   }
 
-  setReactState(url) {
-    console.log(`I will set state as f(${url})`);
+  setReactState(changes) {
+    Object.assign(this.state, changes);
   }
 }
 

@@ -12,7 +12,7 @@ class Header extends Component {
         </div>
         <div className='right-align'>
           {this.props.data.email} <br/>
-          <a download target='_blank' rel='noopener noreferrer' href={this.props.downloadUrl}>Download PDF</a>
+          <a download target='_blank' rel='noopener noreferrer' href={this.props.data.url}>Download PDF</a>
         </div>
       </section>
     );

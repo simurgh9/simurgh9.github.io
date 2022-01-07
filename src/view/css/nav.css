@@ -1,9 +1,10 @@
 #nav {
-  word-spacing: 1em;
+  margin-right: -1.5em;
 }
 
 #nav a {
   font: 1em var(--FONT_EN);
+  margin-right: 1.5em; /*must be -1*#nav.margin-right*/
 }
 
 @media (hover: hover) { /* solves sticky problem on touch devices */

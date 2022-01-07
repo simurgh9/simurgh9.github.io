@@ -12,12 +12,19 @@ class Control {
   M() {
     return this.model;
   }
-  
-  clickEventHandler = (event) => {
-    if (event.target.href) {
-      this.M().setReactState(event.target.href);
+
+  updatePageState = (path) => {
+    this.M().fetchPage(path).then(pg => {
+      this.M().updatePageState(pg[0], pg[1]);
       this.frame.setState(this.M().getReactState());
-    }
+    });
+  }
+
+  updateResumeState = () => {
+    this.M().fetchResume().then(json => {
+      this.M().updateResumeState(json);
+      this.frame.setState(this.M().getReactState());
+    });
   }
 }
 

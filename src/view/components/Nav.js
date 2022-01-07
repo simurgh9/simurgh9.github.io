@@ -8,11 +8,19 @@ import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
   render() {
+    let navLinks = new Array(this.props.links.length);
+    for (let i = 0; i < this.props.links.length; i++) {
+      let ln = this.props.links[i];
+      if (ln.address === '/')
+        navLinks[i] = <NavLink exact to={ln.address}
+          rel='noopener noreferrer' key={i}>{ln.name}</NavLink>;
+      else
+        navLinks[i] = <NavLink to={ln.address}
+          rel='noopener noreferrer' key={i}>{ln.name}</NavLink>;
+    }
     return (
       <nav id='nav' className={this.props.className} >
-        <NavLink exact to='/' rel='noopener noreferrer' >Home</NavLink> &nbsp;
-        <NavLink to='/resume' rel='noopener noreferrer' >Résumé</NavLink> &nbsp;
-        <NavLink to='/about.md' rel='noopener noreferrer' >About</NavLink>
+        {navLinks}
       </nav>
     );
   }

@@ -7,41 +7,26 @@ import {
 } from './ResumeComponentIndex';
 
 class Resume extends Component {
-    constructor(props) {
-    super(props);
-    this.state = {
-      resumeDataFetched: false,
-      resumeData: this.props.loading
-    };
-  }
-
   componentDidMount() {
-    fetch(this.props.resumeUrl)
-      .then(response => {
-        return response.json();
-      }).then(json => {
-        this.setState({ resumeDataFetched: true, resumeData: json });
-      });
+    this.props.updateResumeState();
   }
   
   render() {
-    let downloadUrl = this.props.resumeUrl.replace('.json', '_tashfeen.pdf');
-    if (!this.state.resumeDataFetched) {
-      return <p>{this.state.resumeData}</p>;
-    }
+    if (typeof this.props.json === 'string')
+      return <p>{this.props.json}</p>;
     return (
       <section id='resume'>
-        <Header downloadUrl={downloadUrl} data={this.state.resumeData.header}/>
+        <Header data={this.props.json.header}/>
         <Section title={'Education'}
-          data={this.state.resumeData.schools} component={EducationEntry} />
+          data={this.props.json.schools} component={EducationEntry} />
         <Section title={'Skills'}
-          data={this.state.resumeData.skills} component={SkillEntry} />
+          data={this.props.json.skills} component={SkillEntry} />
         <Section title={'Work Experience'}
-          data={this.state.resumeData.work} component={WorkEntry} />
+          data={this.props.json.work} component={WorkEntry} />
         <Section title={'Research Experience'}
-          data={this.state.resumeData.research} component={WorkEntry} />
+          data={this.props.json.research} component={WorkEntry} />
         <Section title={'Leadership et Honours'}
-          data={this.state.resumeData.honors} component={HonorsEntry} />
+          data={this.props.json.honors} component={HonorsEntry} />
       </section>
     );
   }

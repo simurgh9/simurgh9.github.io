@@ -14,7 +14,7 @@ class Header extends Component {
           <span id='logo' className='convexhull'>{this.props.logo}</span>
           <span id='text' className='convexhull'>{this.props.title}</span>
         </div>
-        <Nav className='debug convexhull' />
+        <Nav links={this.props.nav} className='convexhull' />
       </header>
     );
   }

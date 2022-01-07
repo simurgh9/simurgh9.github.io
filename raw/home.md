@@ -9,8 +9,8 @@ These are articles, presentations or papers I wrote,
 
 - [Neural networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
 - [Error and noise analysis in a quantum key exchange](https://shareok.org/handle/11244/329317)
-- [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](pdfs/bb84.pdf)
-    - [Supplement for the presentation](pdfs/bb84_supp.pdf)
+- [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](https://tashfeen.org/raw/pdfs/bb84.pdf)
+    - [Supplement for the presentation](https://tashfeen.org/raw/pdfs/bb84_supp.pdf)
 
 #### Contributions,
 

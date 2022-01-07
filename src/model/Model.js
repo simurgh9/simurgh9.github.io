@@ -18,7 +18,7 @@ class Model {
         nav: [
           { address: '/', name: 'Home' },
           { address: '/resume', name: 'Résumé' },
-          { address: '/about.md', name: 'About' }
+          { address: '/colophon.md', name: 'Colophon' }
         ]
       },
       page: {

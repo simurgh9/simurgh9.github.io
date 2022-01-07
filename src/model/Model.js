@@ -46,6 +46,7 @@ class Model {
 
   fetchPage(path) {
     let filename = path === '' ? HOME : path;
+    // what about other files, e.g., *.pdf and *.txt?
     filename = filename.endsWith('.md') ? filename : filename + '.md';
     let aside = null;
     let text = fetch(this.prependRoot(filename))

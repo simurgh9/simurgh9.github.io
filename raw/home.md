@@ -1,13 +1,22 @@
-This is my personal website, have a look around. Following are some of my recent projects:
+This is my personal website, have a look around. Following are couple of my projects (that I use & maintain),
 
 - [Fractals etc.](https://tashfeen.org/fractalsetc) ([Github](https://github.com/simurgh9/fractalsetc))
-- [Neural Networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
 - [Cool kids do their hw in LaTeX](https://github.com/simurgh9/latex-homework-class)
-- I've updated this site quite a bit, more coming soon.
 
-<!-- Here is one of the papers I contributed to: -->
+#### Literature,
 
-<!-- - [Simulation Based Design Approaches to Study Transportation and Habitat Alternatives for Deep Space Missions](https://ieeexplore.ieee.org/abstract/document/8616247) -->
+These are articles, presentations or papers I wrote,
+
+- [Neural networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
+- [Error and noise analysis in a quantum key exchange](https://shareok.org/handle/11244/329317)
+- [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](pdfs/bb84.pdf)
+    - [Supplement for the presentation](pdfs/bb84_supp.pdf)
+
+#### Contributions,
+
+These are other people's papers I contributed to,
+
+- [Habitat Alternatives for Deep Space Missions](https://ieeexplore.ieee.org/abstract/document/8616247)
 
 ***
 † Black Lives Matter ✊

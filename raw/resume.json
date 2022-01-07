@@ -126,7 +126,7 @@
       "name": "Integer Factorisation with Feed-forward Neural Networks",
       "position": "Summer 2021",
       "location": "OU, Norman, OK",
-      "date": "May 2021 -- Aug 2021",
+      "date": "May 2021 – Aug 2021",
       "bullets": [
         "Experimented empirically with semi-primes p of order 2²⁰.",
         "Implemented a minimal Feed-forward network that could perform factorisation of aforementioned p."

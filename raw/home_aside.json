@@ -3,11 +3,11 @@
       "title": "Bookmarks"
     },
     {
-      "title": "Radio Paradise",
+      "title": "Music",
       "url": "https://radioparadise.com/player"
     },
     {
-      "title": "NPR Text Only",
+      "title": "NPR News",
       "url": "https://text.npr.org/"
     },
     {
@@ -15,7 +15,7 @@
       "url": "https://one.npr.org/"
     },
     {
-      "title": "NPR Podcasts",
+      "title": "Podcasts",
       "url": "https://www.npr.org/podcasts/"
     }
 ]

@@ -3,14 +3,21 @@
     "name": "Tashfeen, Ahmad",
     "majors": "Mathematics & Computer Science",
     "email": "tashfeen@ou.edu",
-    "url": "https://tashfeen.org/raw/resume_tashfeen.pdf"  
+    "url": "https://tashfeen.org/raw/resume_tashfeen.pdf"
   },
-  "schools": [ 3,
+  "schools": [
+    4,
     {
       "name": "University of Oklahoma",
-      "degree": "Master of Science in Computer Science; GPA: 3.86",
+      "degree": "Doctor of Philosophy in Computer Science; GPA: 3.9",
       "location": "Norman, OK",
-      "date": "May 2022"
+      "date": "TBA"
+    },
+    {
+      "name": "University of Oklahoma",
+      "degree": "Master of Science in Computer Science; GPA: 3.9",
+      "location": "Norman, OK",
+      "date": "December 2021"
     },
     {
       "name": "Oklahoma State University",
@@ -35,27 +42,29 @@
       "degree": "High School Diploma;  GPA: 4.0",
       "location": "Oklahoma City, OK",
       "date": "May 2014"
-    }    
-  ],
-  "skills": [ 2,
-    {
-      "title": "Programming Languages",
-      "description": "C/C++, Java, Python, JavaScript, C# and exposed to PHP, ML and PROLOG."
-    },
-    {
-      "title": "Topics",
-      "description": "Artificial Intelligence, Cryptography, Recreational Maths, Object-Oriented and Functional Programming."
     }
   ],
-  "work": [ 2,
+  "skills": [
+    2,
+    {
+      "title": "Concepts",
+      "description": "Artificial Intelligence, Cryptography, Recreational Maths, Object-Oriented and Functional Programming."
+    },
+    {
+      "title": "Programming Languages",
+      "description": "C/C++, Java, Python, JavaScript, C#, ELisp, and exposed to PHP, ML & PROLOG."
+    }
+  ],
+  "work": [
+    2,
     {
       "name": "University of Oklahoma",
       "position": "Teaching Assistant",
       "location": "Norman, OK",
       "date": "Aug 2020",
       "bullets": [
-        "Assisted with grading, held office hours and helped students. Bellow are the classes I have been a teaching assistant for.",
-        "Machine Learning, Intelligent Robotics and Cryptography."
+        "Created & graded assignments, held office hours and helped students etc. Classes I have been a TA for:",
+        "Mach. Learning, Intelligent Robotics, Distributed Operating Sys., Discrete Math(s) & Cryptography."
       ]
     },
     {
@@ -101,7 +110,8 @@
       ]
     }
   ],
-  "research": [ 0,
+  "research": [
+    0,
     {
       "name": "Satellite to Ground Quantum Key Distribution",
       "position": "Fall 2021",
@@ -151,7 +161,8 @@
       ]
     }
   ],
-  "honors": [ 4,
+  "honors": [
+    3,
     {
       "title": "Summa Cum Laude",
       "description": "Institutional Honours for Computer Science and Mathematics",

@@ -20,14 +20,15 @@ class Frame extends Component {
 
   resumeRenderJob(props) {
     return <Resume {...props}
-      key={0}
+      key={props.location.pathname}
       json={this.state.resume}
       updateResumeState={this.control.updateResumeState} />;
   }
 
-  markdown(k, file = null, aside = null) {
+  markdown(file = null, aside = null) {
     return (props) => <Page {...props} {...this.state.page}
-      key={k} updatePageState={this.control.updatePageState} />;
+      key={props.location.pathname}
+      updatePageState={this.control.updatePageState} />;
   }
 
   render() {
@@ -35,9 +36,9 @@ class Frame extends Component {
       <div id='frame'>
         <Header {...this.state.header} />
         <Switch>
-          <Route exact path='/' render={this.markdown(1)} />
+          <Route exact path='/' render={this.markdown()} />
           <Route path='/resume' render={this.resumeRenderJob.bind(this)} />
-          <Route path='/:filename' render={this.markdown(2)} />
+          <Route path='/:filename' render={this.markdown()} />
         </Switch>
         <Footer footer={this.state.footer} />
       </div>

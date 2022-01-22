@@ -44,7 +44,7 @@ it. Here are some guidelines,
 #### Optionally for typesetting,
 
 If you typeset your homework in LaTeX, [here][overleaf] is a class I
-use that makes my life easier. For more see [Github](github). I'll see
+use that makes my life easier. For more see [Github][github]. I'll see
 if I can provide the `*.tex` file used to compile the homework
 document so you can just type in your answers. And, for those who use
 [Word][word]...

@@ -5,20 +5,21 @@ Here I plan on collecting excerpts, quotes and other texts I find interesting.
 ## Geometry
 Noli turbare circulos meos!
 
-> Archimedes
+― Archimedes
 
 ## Justice and Mercy
 Heaven goes by favor. If it went by merit, you would stay out and your
 dog would go in.
 
-> Mark Twain
+― Mark Twain
 
 ## Logic
 Contrariwise,' continued Tweedledee, 'if it was so, it might be; and
 if it were so, it would be; but as it isn't, it ain't. That's logic.
 
-> Lewis Carroll, _Alice's Adventures in Wonderland/Through the
-> Looking-Glass_.
+_Alice's Adventures in Wonderland/Through the Looking-Glass_.
+
+― Lewis Carroll
 
 ## The Appointment in Samarra
 SHEPPEY.  Look 'ere, you ain't come 'ere on my account?
@@ -60,8 +61,10 @@ SHEPPEY.  (with a shudder) D'you mean there's no escaping you?
 
 DEATH.  No.
 
-> The Death's story is an old Arab fable retold by W. Somerset Maugham
-> in his 1933 play _Sheppey_.
+The Death's story is an old Arab fable retold in the 1933 play _Sheppey_.
+
+― W. Somerset Maugham
+
 
 ## Either, Or.
 When I was very young and in the cave of Trophonius I forgot to
@@ -76,13 +79,15 @@ being fined 10 rix-dollars, that cordiality was to say "You're
 welcome" after a meal, and that the fear of God was to go to communion
 once a year. That's what I saw. And I laughed.
 
-> Søren Kierkegaard, _Either/Or: A Fragment of Life_.
+_Either/Or: A Fragment of Life_.
+
+― Søren Kierkegaard
+
 
 <!-- You experience a strange warmth and protection when you look at the -->
 <!-- merciless winter outside the window from a nearby desk where you just -->
 <!-- wrote a (mathematical) proof as impregnable as it is elegant. It's -->
 <!-- almost as if God gazes down at you and says, "Quod Erat -->
 <!-- Demonstrandum". -->
-
 <!-- You feel stupid? Good, that is the first step at getting -->
 <!-- smarter. Those who never feel stupid, stay stupid. -->

@@ -1,19 +1,20 @@
 #  Excerpts, Quotes Etc.
 
-Here I plan on collecting excerpts, quotes and other texts I find interesting.
+Here I plan on collecting excerpts, quotes and other texts I find
+interesting.
 
-## Geometry
+### Geometry
 Noli turbare circulos meos!
 
 ― Archimedes
 
-## Justice and Mercy
-Heaven goes by favor. If it went by merit, you would stay out and your
+### Favour
+Heaven goes by favour. If it went by merit, you would stay out and your
 dog would go in.
 
 ― Mark Twain
 
-## Logic
+### Logic
 Contrariwise,' continued Tweedledee, 'if it was so, it might be; and
 if it were so, it would be; but as it isn't, it ain't. That's logic.
 
@@ -21,7 +22,7 @@ _Alice's Adventures in Wonderland/Through the Looking-Glass_.
 
 ― Lewis Carroll
 
-## The Appointment in Samarra
+### The Appointment in Samarra
 SHEPPEY.  Look 'ere, you ain't come 'ere on my account?
 
 DEATH.  Yes.
@@ -66,7 +67,7 @@ The Death's story is an old Arab fable retold in the 1933 play _Sheppey_.
 ― W. Somerset Maugham
 
 
-## Either, Or.
+### Either, Or.
 When I was very young and in the cave of Trophonius I forgot to
 laugh. Then, when I got older, when I opened my eyes and saw the real
 world, I began to laugh and I haven't stopped since. I saw that the

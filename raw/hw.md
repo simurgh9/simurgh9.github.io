@@ -4,9 +4,19 @@ Usually when I grade homework, I try to give as much points as I can
 within the guidelines from the professor. But, if your homework looks
 like you did not care for it (crooked dark pictures of hand-drawn
 hieroglyphs taken at midnight) then it is hard to find motivation to
-look over something like that again. This is not to say that you must
-type your homework, hand written is fine as long as I can read it
-_easily_. Here are some guidelines,
+look over something like that again.
+
+This is not to say that you must type your homework, hand written is
+fine as long as I can read it _easily_. To be clear, legibility does
+not imply readability.
+
+#### When submitting handwritten work,
+
+- Start each problem on a new page. Don't want to waste paper? Type
+  your homework instead.
+
+- Sharpen your pencil (or use a pen), if you have had to erase more
+  than twice, write on a new line.
 
 #### Generally you should,
 
@@ -34,23 +44,10 @@ _easily_. Here are some guidelines,
   Otherwise, Canvas does not show all of the page and it is annoying
   to horizontally scroll each time to finish reading a line.
 
-#### When submitting handwritten work,
-
-- Sharpen your pencil (or use a pen), if you have had to erase more
-  than twice, write on a new line.
-
-- Start each problem on a new page. Don't want to waste paper? Type
-  your homework instead.
-
 #### Optionally for typesetting,
 
 If you typeset your homework in LaTeX, [here][overleaf] is a class I
-use that makes my life easier. For more see [Github][github]. I'll see
-if I can provide the `*.tex` file used to compile the homework
-document so you can just type in your answers. And, for those who use
-[Word][word]...
-
+use that makes my life easier. For more see [Github][github].
 
 [overleaf]: https://www.overleaf.com/latex/templates/overleaf-homework-template/tjpxvcfnrqpd
 [github]: https://github.com/simurgh9/homework
-[word]: https://youtu.be/kmgwYrwJ3M8?t=79

@@ -1,13 +1,44 @@
 <!doctype html>
 <html lang="en-GB">
+  <style>
+    body {
+      margin: 0 auto;
+      max-width: 50em;
+      color: #FFFFFF;
+      background-color: #2A2F3D;
+      font: 16px helvetica, sans-serif;
+    } header, footer {
+      text-align: center;
+    } header h1 {
+      margin: 0 0 0.3ex 0;
+      font: 6ex garamond, serif;
+    } header nav ul {
+      margin: 0;
+      padding: 0;
+    } header nav ul li {
+      display: inline-block;
+    } a {
+      color: #FF6732;
+      text-decoration: none;
+    } 
+  </style>
   <head><title>tashfeen.org</title></head>
   <body>
-    <h2><a href="/raw/home">tashfeen.org</a></h2>
+    <header>
+      <h1><a href="/raw/home">tashfeen.org</a></h1>
+      <nav>
+        <ul>
+          <li>[ <a href="/raw/home">Home</a> ]</li>
+          <li>[ <a href="/raw/pdfs/resume_tashfeen.pdf">Résumé</a> ]</li>
+          <li>[ <a href="/raw/colophon">Colophon</a> ]</li>
+        </ul>
+      </nav>
+    </header>
+    <hr>
     <div class="content">{{ content }}</div>
+    <hr>
     <footer>
-      <div class="container">
         Copyright © 2020 Tashfeen
-      </div>
     </footer>
   </body>
 </html>

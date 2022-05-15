@@ -1,13 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.937da390.css",
-    "main.js": "/static/js/main.168a8680.js",
+    "main.css": "/static/css/main.9468cc8b.css",
+    "main.js": "/static/js/main.aeae85fb.js",
     "static/media/noori_regular.woff2": "/static/media/noori_regular.e9d3a6d2ccc736d0d497.woff2",
     "static/media/noori_kasheeda.woff2": "/static/media/noori_kasheeda.d151882a74422b49e4a3.woff2",
-    "static/media/iosevka-aile-italic.woff2": "/static/media/iosevka-aile-italic.09e5dcfde26c89a92650.woff2",
-    "static/media/iosevka-aile-bold.woff2": "/static/media/iosevka-aile-bold.6f555e944c578c807153.woff2",
-    "static/media/iosevka-aile-regular.woff2": "/static/media/iosevka-aile-regular.80fe25c2fe9ef420d859.woff2",
-    "static/media/iosevka-fixed.woff2": "/static/media/iosevka-fixed.7d4133f0e68a70aff10e.woff2",
     "static/media/scheherazade.woff2": "/static/media/scheherazade.cc4ec4b24a5014683d7b.woff2",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -71,11 +67,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.937da390.css.map": "/static/css/main.937da390.css.map",
-    "main.168a8680.js.map": "/static/js/main.168a8680.js.map"
+    "main.9468cc8b.css.map": "/static/css/main.9468cc8b.css.map",
+    "main.aeae85fb.js.map": "/static/js/main.aeae85fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.937da390.css",
-    "static/js/main.168a8680.js"
+    "static/css/main.9468cc8b.css",
+    "static/js/main.aeae85fb.js"
   ]
 }

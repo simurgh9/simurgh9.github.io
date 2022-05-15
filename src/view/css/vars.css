@@ -6,7 +6,7 @@
   --BD: #A9A1E1; /*border*/
   --DM: rgba(169, 161, 225, 0.1); /*dimmed border*/
   --INDENT_X: 4em; /*primary margin indent*/ /*This is 0.65*4=2.6 for Noori*/
-  --INDENT_Y: 1em; /*primary block indent*/
+  --INDENT_Y: 2ex; /*primary block indent*/
   --FONT_EN: helvetica, ariel, sans-serif;
   --FONT_EN_FX: monospace;
   --FONT_UR: noori, scheherazade, helvetica, ariel, sans-serif;

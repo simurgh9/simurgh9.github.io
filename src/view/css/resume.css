@@ -1,17 +1,16 @@
 #resume {
-  padding: 1em 0em 1em 0em;
+  margin: var(--INDENT_Y) 0.3em var(--INDENT_Y) 0em;
 }
 
 #resume-header {
   display: flex;
   align-items: center;
-  padding-bottom: 0.5em;
+  margin-bottom: var(--INDENT_Y);
   justify-content: space-between;
 }
 
 #resume-section-title {
   color: var(--LN);
-  padding-top: 0.3em;
   font-family: var(--FONT_TITLE);
 }
 
@@ -40,14 +39,14 @@
     color: var(--HV);
     border-style: solid;
     border-color: var(--LN);
-    border-width: 0em 0em 0.1em 0em;
+    border-width: 0ex 0em 0.2ex 0em;
   }
 }
 
 .entry {
   display: flex;
   align-items: center;
-  padding: 0.3em 1em 0em 1em;
+  margin: 0.3ex 1em 0ex 1em;
   justify-content: space-between;
 }
 
@@ -56,6 +55,6 @@
 }
 
 .resume-list {
-  font-size: 0.9em;
-  padding: 0em 3em 0em 3em;
+  font-size: 0.8em;
+  margin: 0ex var(--INDENT_X) 0ex var(--INDENT_X);
 }

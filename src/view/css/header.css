@@ -2,21 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.3em;
-  padding-bottom: 0.5em;
+  padding-top: 1ex;
+  padding-bottom: 1.5ex;
   border-style: dashed;
-  border-width: 0em 0em 0.1em 0em;
+  border-width: 0em 0em 0.2ex 0em;
 }
 
 #text {
   color: var(--LN);
-  padding-bottom: 0.15em;
+  padding-bottom: 0.8ex;
   font: 2em var(--FONT_TITLE);
 }
 
 #logo {
-  height: 1em;
-  padding-top: 0.15em;
+  height: 2ex;
+  padding-top: 0.5ex;
   padding-right: 0.1em;
   font: 3em var(--FONT_LOGO);
 }
@@ -27,7 +27,7 @@
 }
 
 .convexhull { /*Make the boxes class elements tight and inline*/
-  height: 1.3em;
+  height: 2.6ex;
   display: inline-flex;
   align-items: center;
 }

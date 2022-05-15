@@ -1,9 +1,9 @@
 #aside {
   width: 20%;
-  padding-top: 0.5em;
+  padding-top: 1ex;
   padding-bottom: var(--INDENT_Y);
   border-style: dashed;
-  border-width: 0em 0em 0em 0.1em;
+  border-width: 0ex 0em 0ex 0.1em;
 }
 
 #aside ul,

@@ -11,6 +11,28 @@
   /* border: 1px solid green */
 }
 
+/* Unitless Line Heights
+
+Unitless line heights are recommended due to the fact that child
+elements will inherit the raw number value, rather than the computed
+value. With this, child elements can compute their line heights based
+on their computed font size, rather than inheriting an arbitrary value
+from a parent that is more likely to need overriding.
+
+Therefore bellow,
+
+line-height: 1.4; without units
+
+https://tinyurl.com/y3omcgju */
+
+body {
+  color: var(--FG);
+  line-height: 1.4;
+  background-color: var(--BG);
+  margin: 0.5ex var(--INDENT_X) 0.5ex var(--INDENT_X);
+  font-family: var(--FONT_EN);
+}
+
 a {
   color: var(--LN);
   text-decoration: none;
@@ -21,14 +43,6 @@ a {
     color: var(--HV);
     border-style: solid;
     border-color: var(--LN);
-    border-width: 0em 0em 0.1em 0em;
+    border-width: 0ex 0em 0.1ex 0em;
   }
-}
-
-body {
-  color: var(--FG);
-  line-height: 1.4;
-  background-color: var(--BG);
-  margin: 0.5em var(--INDENT_X) 0.5em var(--INDENT_X);
-  font-family: var(--FONT_EN);
 }

@@ -5,7 +5,7 @@
   }
 
   body {
-    margin: 0.5em 1em 0.5em 1em;
+    margin: 0.5ex 1em 0.5ex 1em;
   }
 
   body #page {
@@ -15,7 +15,7 @@
   body #header {
     font-size: 4.5vw;
     flex-direction: column;
-    padding-bottom: 1em;
+    padding-bottom: 2ex;
   }
 
   body #header #left {
@@ -23,7 +23,7 @@
   }
   
   body #header #logo {
-    padding-top: 0.9em;
+    padding-top: 2.2ex;
   }
 
   body #header #nav {
@@ -42,11 +42,11 @@
   body #page #aside {
     /* display: none; */
     width: 100%;
-    border-width: 0.1em 0em 0em 0em;
+    border-width: 0.2ex 0em 0ex 0em;
   }
   
   body #page #main th,
   body #page #main td {
-    padding: 0.1em 0.3em 0.1em 0.3em;
+    padding: 0.2ex 0.3em 0.2ex 0.3em;
   }
 }

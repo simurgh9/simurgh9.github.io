@@ -50,4 +50,4 @@ If you typeset your homework in LaTeX, [here][overleaf] is a class I
 use that makes my life easier. For more see [Github][github].
 
 [overleaf]: https://www.overleaf.com/latex/templates/overleaf-homework-template/tjpxvcfnrqpd
-[github]: https://github.com/simurgh9/homework
+[github]: https://github.com/simurgh9/hw

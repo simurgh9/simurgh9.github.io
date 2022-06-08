@@ -1,7 +1,8 @@
 This is my personal website, have a look around. Following are couple of my projects (that I use & maintain),
 
 - [Fractals etc.](https://tashfeen.org/fractalsetc) ([Github](https://github.com/simurgh9/fractalsetc))
-- [Cool kids do their hw in LaTeX](https://github.com/simurgh9/latex-homework-class)
+- [Huiswerk in LaTeX](https://github.com/simurgh9/hw)
+- [Terminal Wordle](https://github.com/simurgh9/wordle)
 
 #### Literature,
 
@@ -19,4 +20,3 @@ These are other people's papers I contributed to,
 - [Habitat Alternatives for Deep Space Missions](https://ieeexplore.ieee.org/abstract/document/8616247)
 
 ***
-† Black Lives Matter ✊

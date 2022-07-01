@@ -55,8 +55,8 @@ Therefore, remove,
 ```
 
 From `package.json` once Meta fixes CRA. For the time being, now `npm
-audit` with or without the production flag does not report the
-`nth-check` vulnerability.
+audit` with or without the production flag does not report any
+vulnerabilities.
 
 ## Installing NodeJS and NPM
 

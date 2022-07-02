@@ -1,7 +1,6 @@
 // Copyright (C) 2020 Tashfeen, Ahmad
 
 import '../css/page.css';
-import 'katex/dist/katex.min.css';
 
 import React, { Component } from 'react';
 import { Aside, Markdown } from './ComponentIndex.js';

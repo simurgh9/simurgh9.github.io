@@ -1,6 +1,9 @@
 # Homework Mathjax Ext.
 <!-- Per file macros -->
-$\newcommand{\dummy}[1]{\texttt{\\ #1\{\\frac\{x\}\{2\}\}}}$
+$
+\newcommand{\bk}{\\}
+\newcommand{\dummy}[1]{\texttt{\bk #1\{\bk frac\{x\}\{2\}\}}}
+$
 
 ## Testing Mathjax Homework Extension
 

@@ -1,6 +1,6 @@
 # Homework Mathjax Ext.
 <!-- Per file macros -->
-$\newcommand{\dummy}[1]{\texttt{\backslash #1\{\\frac\{x\}\{2\}\}}}$
+\newcommand{\dummy}[1]{\texttt{\backslash #1\{\\frac\{x\}\{2\}\}}}
 
 ## Testing Mathjax Homework Extension
 

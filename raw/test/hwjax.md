@@ -9,6 +9,7 @@ $
 
 I use this table to check if all the custom macros in `hwjax.js` are being rendered properly.
 
+$$
 \begin{array}{ | c | c | c | c | } \hline
   Macro                    & Symbol     & Macro                             & Symbol              \\\\ \hline
   \texttt{\\C}             & \C         & \dummy{floor}                     & \floor{\frac{x}{2}} \\\\ \hline
@@ -29,6 +30,7 @@ I use this table to check if all the custom macros in `hwjax.js` are being rende
   \texttt{\\p}             & \p         & \texttt{\\derivative[g]\{f\}}     & \derivative[g]{f}   \\\\ \hline
   \texttt{\\D}             & \D         & \texttt{\\derivative\{\\zeta\}}   & \derivative{\zeta}  \\\\ \hline
 \end{array}
+$$
 
 ## Other Features
 
@@ -51,7 +53,7 @@ Lastly, checking an environment,
 
 $$
 \begin{align*}
-  x^2- 8x - 9         & = 9-9         &  & \text{Subtract 9 on both sides.}         \\\\
+  x^2- 8x - 9         & = 9-9         &  & \text{Subtract 9 on both sides.}         \\
   x^2- x + 9x - 9     & = 0           &  & \text{Breaking the middle term.}         \\\\
   x(x - 1) + 9(x - 1) & = 0           &  & \text{Pulling out common factors.}       \\\\
   (x - 1)(x + 9)      & = 0           &  & \text{Pulling out common } (x - 1).      \\\\

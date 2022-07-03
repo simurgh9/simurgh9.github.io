@@ -1,12 +1,13 @@
 # Homework Mathjax Ext.
 <!-- Per file macros -->
-$\newcommand{\bk}{\\}$
-$\newcommand{\dummy}[1]{\texttt{\bk #1\{\bk frac\{x\}\{2\}\}}}$
+$
+  \newcommand{\bk}{\texttt{\\\\}}
+  \newcommand{\dummy}[1]{\bk\texttt{#1\{\\frac\{x\}\{2\}\}}}
+$
 
+## Custom Macros Table
 
-## Testing Mathjax Homework Extension
-
-Here is the symbol table. Check if all are rendered properly.
+I use this table to check if all the custom macros in `hwjax.js` are being rendered properly.
 
 \begin{array}{ | c | c | c | c | } \hline
   Macro                    & Symbol     & Macro                             & Symbol              \\\\ \hline
@@ -20,7 +21,7 @@ Here is the symbol table. Check if all are rendered properly.
   \texttt{\\GF, \\GF[7]}   & \GF,\GF[7] & \dummy{abs}                       & \abs{\frac{x}{2}}   \\\\ \hline
   \texttt{\\nil}           & \nil       & \texttt{\\modulo[7]}              & \modulo[7]          \\\\ \hline
   \texttt{\\O(n)}          & \O(n)      & \texttt{\\vec\{v\}}               & \vec{v}             \\\\ \hline
-  \texttt{\\?}             & \?         & \texttt{\\bijective}              & \bijective          \\\\ \hline
+  \bk\bk\texttt{?}         & \\?        & \texttt{\\bijective}              & \bijective          \\\\ \hline
   \texttt{\\is}            & \is        & \texttt{\\surjective}             & \surjective         \\\\ \hline
   \texttt{\\al}            & \al        & \texttt{\\injective}              & \injective          \\\\ \hline
   \texttt{\\ep}            & \ep        & \texttt{\\Ra}                     & \Ra                 \\\\ \hline
@@ -29,7 +30,11 @@ Here is the symbol table. Check if all are rendered properly.
   \texttt{\\D}             & \D         & \texttt{\\derivative\{\\zeta\}}   & \derivative{\zeta}  \\\\ \hline
 \end{array}
 
-In-line quadratic: $ax^2+bx+c=0$. Checking expanding macros:
+## Other Features
+
+This line is to test the in-line equations. We render this quadratic: $ax^2+bx+c=0$.
+
+Bellow we test the twin-delimiter expanding macros (e. g., they should get taller for fractions):
 
 $$
   \floor{x}, \ceil{y}, \near{z}, \arr{x,y,z},
@@ -42,7 +47,7 @@ $$
   \abs{\frac{x}{2}}
 $$
 
-Lastly, checking a environment,
+Lastly, checking an environment,
 
 \begin{align*}
   x^2- 8x - 9         & = 9-9         &  & \text{Subtract 9 on both sides.}         \\\\

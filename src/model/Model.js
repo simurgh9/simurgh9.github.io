@@ -6,7 +6,7 @@ const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
 
 const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
-const MATHJAX_LINK = ROOT + 'mathjax/hwjax.js';
+const MATHJAX_LINK = RAW_DIR + 'mathjax/hwjax.js';
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';
 const RESUME = 'resume.json';

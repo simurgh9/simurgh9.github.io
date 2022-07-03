@@ -1,6 +1,6 @@
 # Homework Mathjax Ext.
 <!-- Per file macros -->
-$\newcommand{\dummy}[1]{\texttt{#1\{\\frac\{x\}\{2\}\}}}$
+$\newcommand{\dummy}[1]{\texttt{\#1\{\\frac\{x\}\{2\}\}}}$
 
 ## Testing Mathjax Homework Extension
 
@@ -50,4 +50,4 @@ Lastly, checking a environment,
   x                   & \in \{1, -9\} &  & f(x)g(x) = 0 \Ra f(x) = 0 \vee g(x) = 0. \\\\
 \end{align*}
 
-The checks here are by no means exhastive. Though the table above should check all the `hwsymb.sty` symbols.
+The checks here are by no means exhaustive. Though the table above should check all the `hwsymb.sty` symbols.

@@ -49,6 +49,7 @@ $$
 
 Lastly, checking an environment,
 
+$$
 \begin{align*}
   x^2- 8x - 9         & = 9-9         &  & \text{Subtract 9 on both sides.}         \\\\
   x^2- x + 9x - 9     & = 0           &  & \text{Breaking the middle term.}         \\\\
@@ -56,5 +57,6 @@ Lastly, checking an environment,
   (x - 1)(x + 9)      & = 0           &  & \text{Pulling out common } (x - 1).      \\\\
   x                   & \in \{1, -9\} &  & f(x)g(x) = 0 \Ra f(x) = 0 \vee g(x) = 0. \\\\
 \end{align*}
+$$
 
 The checks here are by no means exhaustive. Though the table above should check all the `hwsymb.sty` symbols.

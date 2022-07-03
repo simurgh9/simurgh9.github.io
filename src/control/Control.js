@@ -20,6 +20,23 @@ class Control {
     });
   }
 
+  updateMathJaxStateToLoaded = () => {
+    let postMathJaxReadyFunction = () => {
+      // mathJax is loaded, but not yet initialised
+      window.MathJax.startup.defaultReady();
+      // mathJax is initialised, and the initial typeset is queued
+      this.M().updateMathJaxStateToLoaded();
+      this.frame.setState(this.M().getReactState());
+    };
+    // http://tinyurl.com/28x3qlco
+    // https://stackoverflow.com/a/65600713/12035739
+    window.MathJax = {
+      startup: {
+        ready: postMathJaxReadyFunction
+      }
+    };
+  }
+
   updateResumeState = () => {
     this.M().fetchResume().then(json => {
       this.M().updateResumeState(json);

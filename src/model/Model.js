@@ -4,7 +4,9 @@ const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
 
-const ROOT = 'https://tashfeen.org/raw/';
+const ROOT = 'https:tashfeen.org/';
+const RAW_DIR = ROOT + 'raw/';
+const MATHJAX_LINK = ROOT + 'mathjax/hwjax.js';
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';
 const RESUME = 'resume.json';
@@ -26,6 +28,10 @@ class Model {
         aside: null,
         lang: null
       },
+      mathjax: {
+        link: MATHJAX_LINK,
+        loaded: false
+      },
       resume: LOADING,
       footer: 'Copyright © 2020 Tashfeen'
     };
@@ -38,7 +44,7 @@ class Model {
   }
 
   fetchResume() {
-    return fetch(this.prependRoot(RESUME))
+    return fetch(this.prependRawDir(RESUME))
       .then(this.handleError)
       .then(rsp => rsp.json())
       .catch(error => error.message);
@@ -49,12 +55,12 @@ class Model {
     // what about other files, e.g., *.pdf and *.txt?
     filename = filename.endsWith('.md') ? filename : filename + '.md';
     let aside = null;
-    let text = fetch(this.prependRoot(filename))
+    let text = fetch(this.prependRawDir(filename))
       .then(this.handleError)
       .then(rsp => rsp.text())
       .catch(error => error.message);
     if (path === '')
-      aside = fetch(this.prependRoot(BOOKMARK))
+      aside = fetch(this.prependRawDir(BOOKMARK))
         .then(this.handleError)
         .then(rsp => rsp.json())
         .catch(error => null);
@@ -75,6 +81,15 @@ class Model {
     });
   }
 
+  updateMathJaxStateToLoaded() {
+    this.setReactState({
+      mathjax: {
+        link: MATHJAX_LINK,
+        loaded: true
+      }
+    });
+  }
+
   extractLangTag(text) {
     text = text.trim();
     let lastLine = text.substring(text.lastIndexOf('\n') + 1);
@@ -85,8 +100,8 @@ class Model {
     return rxp.exec(lastLine)[1]; // if yes, then return the lang code, e.g., ur
   }
 
-  prependRoot(name) {
-    return ROOT + name;
+  prependRawDir(name) {
+    return RAW_DIR + name;
   }
 
   getReactState() {

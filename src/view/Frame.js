@@ -18,6 +18,24 @@ class Frame extends Component {
     this.state = this.control.M().getReactState();
   }
 
+  componentDidMount() {
+    // the controller method must be called before the
+    // script tag is added.
+    this.control.updateMathJaxStateToLoaded();
+    // now, we add the script tag, once MathJax is
+    // loaded, the above call will update the model.
+    let script = document.createElement('script');
+    script.id = 'MathJax-script';
+    script.defer = true;
+    script.src = this.state.mathjax.link;
+    document.head.appendChild(script);
+  }
+
+  componentDidUpdate() {
+    if (this.state.mathjax.loaded)
+      window.MathJax.typesetPromise();
+  }
+
   resumeRenderJob(props) {
     return <Resume {...props}
       key={props.location.pathname}

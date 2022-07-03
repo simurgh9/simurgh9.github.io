@@ -4,7 +4,7 @@ const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
 
-const ROOT = 'https:tashfeen.org/';
+const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
 const MATHJAX_LINK = ROOT + 'mathjax/hwjax.js';
 const HOME = 'home.md';

@@ -23,7 +23,7 @@ $$
   \texttt{\\GF, \\GF[7]}   & \GF,\GF[7] & \dummy{abs}                       & \abs{\frac{x}{2}}   \n \hline
   \texttt{\\nil}           & \nil       & \texttt{\\modulo[7]}              & \modulo[7]          \n \hline
   \texttt{\\O(n)}          & \O(n)      & \texttt{\\vec\{v\}}               & \vec{v}             \n \hline
-  \bk\bk\texttt{?}         & \\?        & \texttt{\\bijective}              & \bijective          \n \hline
+  \texttt{\\?}             & \?         & \texttt{\\bijective}              & \bijective          \n \hline
   \texttt{\\is}            & \is        & \texttt{\\surjective}             & \surjective         \n \hline
   \texttt{\\al}            & \al        & \texttt{\\injective}              & \injective          \n \hline
   \texttt{\\ep}            & \ep        & \texttt{\\Ra}                     & \Ra                 \n \hline

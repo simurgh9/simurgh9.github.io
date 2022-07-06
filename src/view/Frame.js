@@ -21,13 +21,13 @@ class Frame extends Component {
   componentDidMount() {
     // the controller method must be called before the
     // script tag is added.
-    this.control.updateMathJaxStateToLoaded();
+    this.control.updateMathJaxStateToLoaded(this.state.mathjax.CDN);
     // now, we add the script tag, once MathJax is
     // loaded, the above call will update the model.
     let script = document.createElement('script');
     script.id = 'MathJax-script';
     script.defer = true;
-    script.src = this.state.mathjax.link;
+    script.src = this.state.mathjax.hwjax;
     document.head.appendChild(script);
   }
 

@@ -2,9 +2,10 @@
 
 import { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import { Link } from 'react-router-dom';
-
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeMathjaxBrowser from 'rehype-mathjax/browser';
 
 class Markdown extends Component {
   handleLinks({ node, ...props }) {
@@ -20,7 +21,8 @@ class Markdown extends Component {
       children={this.props.content}
       skipHtml={true}
       components={{ a: this.handleLinks }}
-      remarkPlugins={[remarkGfm]} />
+      rehypePlugins={[rehypeMathjaxBrowser]}
+      remarkPlugins={[remarkGfm, remarkMath]} />
     );
   }
 }

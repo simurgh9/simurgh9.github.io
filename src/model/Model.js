@@ -4,10 +4,10 @@ const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
 
-// const ROOT = 'https://tashfeen.org/';
-const ROOT = '/';
+const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
-const MATHJAX_LINK = RAW_DIR + 'mathjax/hwjax.js';
+const HWJAX_LINK = RAW_DIR + 'mathjax/hwjax.js';
+const MATHJAX_LINK = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5';
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';
 const RESUME = 'resume.json';
@@ -30,7 +30,8 @@ class Model {
         lang: null
       },
       mathjax: {
-        link: MATHJAX_LINK,
+        hwjax: HWJAX_LINK,
+        CDN: MATHJAX_LINK,
         loaded: false
       },
       resume: LOADING,

@@ -60,7 +60,7 @@ Diam ut venenatis tellus in. Sit amet porttitor eget dolor morbi non arcu. Scele
 | K | L | M | N | O | P | Q | U | R | S |
 | T | U | V | W | X | Y | Z | / | / | / |
 
-![Logo La.](https://raw.githubusercontent.com/simurgh9/simurgh9.github.io/master/public/logo192.png "Logo La.")
+![Logo La.](https://tashfeen.org/logo192.png "Logo La.")
 
 Scelerisque varius morbi enim nunc faucibus a. Semper risus in hendrerit gravida. Duis at consectetur lorem donec massa sapien faucibus et. Sit amet consectetur adipiscing elit.
 

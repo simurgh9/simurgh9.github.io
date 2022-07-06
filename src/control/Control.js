@@ -20,7 +20,7 @@ class Control {
     });
   }
 
-  updateMathJaxStateToLoaded = (cdnMathjaxLink) => {
+  updateMathJaxStateToLoaded = () => {
     let postMathJaxReadyFunction = () => {
       // mathJax is loaded, but not yet initialised
       window.MathJax.startup.defaultReady();
@@ -31,11 +31,6 @@ class Control {
     // http:tinyurl.com/28x3qlco
     // https:stackoverflow.com/a/65600713/12035739
     window.MathJax = {
-      loader: {
-        paths: {
-          mathjax: cdnMathjaxLink
-        }
-      },
       startup: {
         ready: postMathJaxReadyFunction
       }

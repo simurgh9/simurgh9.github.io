@@ -1,3 +1,3 @@
-بےرنگےسبزخیالات(thoughts)برہم سوتےہیں۔
+بےرنگےسبزخیالات(ideas)برہم سوتےہیں۔
 
 Colourless green ideas (خیالات) sleep furiously.

@@ -7,10 +7,10 @@ const DEFAULT_LANGUAGE = 'en-GB';
 
 const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
-const HWJAX_LINK = 'mathjax/hwjax.js';
+const HWJAX_LINK = 'utils/mathjax/hwjax.js';
 const HOME = 'home.md';
-const BOOKMARK = 'home_aside.json';
-const RESUME = 'resume.json';
+const BOOKMARK = 'utils/json/home_aside.json';
+const RESUME = 'utils/json/resume.json';
 
 class Model {
   constructor() {

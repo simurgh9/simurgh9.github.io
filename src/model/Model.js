@@ -7,7 +7,7 @@ const DEFAULT_LANGUAGE = 'en-GB';
 
 const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
-const HWJAX_LINK = RAW_DIR + 'mathjax/hwjax.js';
+const HWJAX_LINK = 'mathjax/hwjax.js';
 const HOME = 'home.md';
 const BOOKMARK = 'home_aside.json';
 const RESUME = 'resume.json';
@@ -30,7 +30,7 @@ class Model {
         lang: DEFAULT_LANGUAGE
       },
       mathjax: {
-        link: HWJAX_LINK,
+        link: this.prependRawDir(HWJAX_LINK),
         loaded: false
       },
       resume: LOADING,
@@ -86,7 +86,7 @@ class Model {
   updateMathJaxStateToLoaded() {
     this.setReactState({
       mathjax: {
-        link: HWJAX_LINK,
+        link: this.prependRawDir(HWJAX_LINK),
         loaded: true
       }
     });

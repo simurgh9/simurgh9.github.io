@@ -1,14 +1,11 @@
 # Homework Mathjax Ext.
-<!-- Per file macros -->
-$
-  \newcommand{\dummy}[1]{\texttt{\\#1\{\frac\{x\}\{2\}\}}}
-$
 
 ## Custom Macros Table
 
 I use this table to check if all the custom macros in `hwjax.js` are being rendered properly.
 
 $$
+\newcommand{\dummy}[1]{\texttt{\\#1\{\frac\{x\}\{2\}\}}}
 \begin{array}{ | c | c | c | c | } \hline
   Macro                   & Symbol     & Macro                             & Symbol              \\ \hline
   \texttt{\C}             & \C         & \dummy{floor}                     & \floor{\frac{x}{2}} \\ \hline

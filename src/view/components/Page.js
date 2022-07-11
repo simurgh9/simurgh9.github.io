@@ -14,10 +14,9 @@ class Page extends Component {
   render() { // section element here renders h1 as h(n+1)
     let md = <div id='main'><Markdown content={this.props.text} /></div>;
     let aside = this.props.aside ? <Aside data={this.props.aside} /> : null;
-    let ret = <div id='page'>{md}{aside}</div>;
-    if (this.props.lang)
-      ret = <div id='page' dir='auto' lang={this.props.lang}>{md}{aside}</div>;
-    return ret;
+    return <div id='page' lang={this.props.lang}>
+              {md}{aside}
+           </div>;
   }
 }
 

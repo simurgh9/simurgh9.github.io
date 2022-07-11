@@ -3,6 +3,7 @@
 const TITLE = 'tashfeen.org';
 const LOGO = 'لا';
 const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
+const DEFAULT_LANGUAGE = 'en-GB';
 
 const ROOT = 'https://tashfeen.org/';
 const RAW_DIR = ROOT + 'raw/';
@@ -26,7 +27,7 @@ class Model {
       page: {
         text: LOADING,
         aside: null,
-        lang: null
+        lang: DEFAULT_LANGUAGE
       },
       mathjax: {
         link: HWJAX_LINK,
@@ -72,11 +73,12 @@ class Model {
   }
 
   updatePageState(text, aside = null) {
+    let language = this.extractLangTag(text);
     this.setReactState({
       page: {
         text: text,
         aside: aside,
-        lang: this.extractLangTag(text)
+        lang: language ? language : DEFAULT_LANGUAGE
       }
     });
   }

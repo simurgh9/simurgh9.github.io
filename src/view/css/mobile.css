@@ -1,38 +1,38 @@
-/* CSS for exclusively Urdu pages in mobiles is in urdu.css */
+/* Due to very particular requirements of mobiles,
+ * it is okay to use numbers here.
+ */
 @media only screen and (max-width: 750px) {
-  :root {
-    --INDENT_X: 2em; /*primary margin indent in mobiles*/
-  }
-
-  body {
-    margin: 0.5ex 1em 0.5ex 1em;
-  }
-
-  body #page {
+  body #page,
+  body #page:lang(ur) {
+    border-top-width: 0.15em;
+    border-bottom-width: 0.15em;
     flex-direction: column;
   }
   
   body #header {
-    font-size: 4.5vw;
+    margin-top: 0ex;
+    font-size: 5vw;
     flex-direction: column;
-    padding-bottom: 2ex;
   }
 
   body #header #left {
-    padding-right: 2em;
-  }
-  
-  body #header #logo {
-    padding-top: 2.2ex;
+    margin-right: 9.9em;
   }
 
+  body #header #logo {
+    padding: 3ex 0.1em 0ex 1.35em;
+  }
+
+  body #header #text {
+    padding-top: 1ex;
+  }
+  
   body #header #nav {
-    padding-left: 3.7em;
+    padding-left: 1em;
   }
   
   body #page #main {
-    width: 100%;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   body #page #main h1 {
@@ -40,13 +40,40 @@
   }
   
   body #page #aside {
-    /* display: none; */
     width: 100%;
-    border-width: 0.2ex 0em 0ex 0em;
+    border-left: none;
+    border-right: none;
+    border-top: 0.15em dashed var(--BD);
   }
   
   body #page #main th,
   body #page #main td {
-    padding: 0.2ex 0.3em 0.2ex 0.3em;
+    padding: 0.2ex 0.3em;
+  }
+
+  /* urdu on mobiles */
+  #page #main blockquote:lang(ur),
+  #page #main pre:lang(ur) {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+  }
+
+  #page #main ul:lang(ur),
+  #page #main ol:lang(ur) {
+  /* list-style-position is outside therefore we need
+   * more than 0.25em in margins.
+   */
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  #page #main pre:lang(ur) {
+    word-spacing: 0em;
+  }
+
+  body #page #main th:lang(ur),
+  body #page #main td:lang(ur) {
+    padding-left: 0.17em;
+    padding-right: 0.17em;
   }
 }

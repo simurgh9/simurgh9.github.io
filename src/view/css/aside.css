@@ -1,16 +1,11 @@
 #aside {
   width: 20%;
-  padding-top: 1ex;
-  padding-bottom: var(--INDENT_Y);
-  border-style: dashed;
-  border-width: 0ex 0em 0ex 0.1em;
+  /* Needs to be padding instead of margins so the boder connects. */
+  padding: calc(2 * var(--SML)) var(--MED);
+  border-left: var(--TNY) dashed var(--BD);
 }
 
 #aside ul,
 #aside ol {
-  margin-left: 2em;
-}
-
-#aside h3 {
-  text-align: center;
+  margin-left: var(--MED);
 }

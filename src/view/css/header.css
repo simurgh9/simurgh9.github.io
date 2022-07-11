@@ -2,32 +2,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1ex;
-  padding-bottom: 1.5ex;
-  border-style: dashed;
-  border-width: 0em 0em 0.2ex 0em;
+  margin: var(--MED) 0;
 }
 
-#text {
-  color: var(--LN);
-  padding-bottom: 0.8ex;
-  font: 2em var(--FONT_TITLE);
-}
-
-#logo {
-  height: 2ex;
-  padding-top: 0.5ex;
-  padding-right: 0.1em;
-  font: 3em var(--FONT_LOGO);
-}
-
-#left { /*logo text: la tashfeen.org*/
+#left {
+  padding-bottom: var(--SML);
   display: flex;
   align-items: center;
 }
 
-.convexhull { /*Make the boxes class elements tight and inline*/
-  height: 2.6ex;
+#text {
+  color: var(--LN);
+  font: var(--FONT_TITLE);
+}
+
+#logo {
+  padding-top: var(--SML);
+  font: var(--FONT_LOGO);
+}
+
+.convexhull { /* Make the boxes class elements tight and inline. */
+  height: var(--MED);
   display: inline-flex;
   align-items: center;
 }

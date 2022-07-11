@@ -1,34 +1,23 @@
-#page #main:lang(ur) {
-  word-spacing: 0em; /* does not do anything, just a reminder */
-  font: 1.6em var(--FONT_UR);
-  margin: 0em 0em 1em 0.3em;
+#page:lang(ur) {
+  flex-direction: row-reverse;
 }
 
 #aside:lang(ur) {
-  border-width: 0em 0.1em 0em 0em;
-  /* bellow is a hacky way of keeping bullets
-   * from spilling to the right in urdu aside
-   */
-  padding-right: 2em;
+  border-left: none;
+  border-right: var(--TNY) dashed var(--BD);
+}
+
+#page #main:lang(ur) {
+  word-spacing: 0em; /* Does not do anything, just a reminder. */
+  font: var(--FONT_UR_SIZE) var(--FONT_UR);
 }
 
 #page #main h1:lang(ur) {
-  font-size: 1.5em;
+  font-size: var(--FONT_UR_SIZE);
 }
 
 #page #main h2:lang(ur) {
-  font-size: 1.3em;
-}
-
-#page #main hr + h1:lang(ur),
-#page #main hr + h2:lang(ur),
-#page #main hr + h3:lang(ur),
-#page #main h1 + h2:lang(ur),
-#page #main h2 + h3:lang(ur),
-#page #main h3 + h4:lang(ur),
-#page #main h4 + h5:lang(ur),
-#page #main h5 + h6:lang(ur) {
-  margin-top: -0.4em;
+  font-size: calc(0.84*var(--FONT_UR_SIZE));
 }
 
 #page #main h1:lang(ur),
@@ -37,22 +26,15 @@
 #page #main h4:lang(ur),
 #page #main h5:lang(ur),
 #page #main h6:lang(ur) {
+  margin-top: 0em;
+  margin-bottom: calc(-1*var(--TNY));
   font-weight: normal;
-  margin-bottom: 0em;
-  font-family: var(--FONT_LOGO);
-}
-
-#page #main th:lang(ur),
-#page #main td:lang(ur) {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  font-family: var(--FONT_UR_HEADING);
 }
 
 #page #main blockquote:lang(ur) {
   border-left: none;
-  border-right: 0.1em solid var(--BD);
-  margin: 1em 2em 1em 2em;
-  padding: 0.2em 0.5em 0.1em 0.3em;
+  border-right: var(--TNY) solid var(--BD);
 }
 
 #page #main pre:lang(ur),
@@ -65,49 +47,18 @@
 
 #page #main pre:lang(ur) {
   text-align: center;
-  margin: 1em 2em 1em 2em;
-  word-spacing: 0.7em;
-}
-
-#page #main ul:lang(ur),
-#page #main ol:lang(ur) {
-  margin: 0em 2.6em 0em 0em;
+  word-spacing: var(--MED);
 }
 
 #page #main ul ul:lang(ur),
 #page #main ul ol:lang(ur),
 #page #main ol ul:lang(ur),
 #page #main ol ol:lang(ur) {
-  margin: 0em 1.3em 0em 0em;
+  margin-left: var(--MED);
+  margin-right: var(--MED);
 }
 
+/* Bit hacky but no other fix.*/
 #page .task-list-item input[type=checkbox]:lang(ur) {
   margin: 0em -1.6em 0.25em 1.2em;
-}
-
-/* urdu on mobiles */
-@media only screen and (max-width: 750px) {
-  /* I have not cared to be precise about the check boxes
-   * since they are already broken upstream for urdu.
-   */
-  #page #main blockquote:lang(ur),
-  #page #main pre:lang(ur) {
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-  }
-  
-  #page #main pre:lang(ur) {
-    word-spacing: 0em;
-  }
-  
-  #page #main ul:lang(ur),
-  #page #main ol:lang(ur) {
-    margin-right: 2em;
-  }
-
-  body #page #main th:lang(ur),
-  body #page #main td:lang(ur) {
-    padding-left: 0.17em;
-    padding-right: 0.17em;
-  }
 }

@@ -5,11 +5,18 @@
   --HV: #ECBE7B; /*hover*/
   --BD: #A9A1E1; /*border*/
   --DM: rgba(169, 161, 225, 0.1); /*dimmed border*/
-  --INDENT_X: 4em; /*primary margin indent*/ /*This is 0.65*4=2.6 for Noori*/
-  --INDENT_Y: 2ex; /*primary block indent*/
-  --FONT_EN: helvetica, ariel, sans-serif;
+  --PAGE_WIDTH: 90ch;
+  --LINE_HEIGHT: 1.4; /* https://tinyurl.com/y3omcgju */
+  --BIG: 2em; /*primary margin indent*/ /*This is 0.65*4=2.6 for Noori*/
+  --MED: 1.89279ex; /* primary block indent */
+  --SML: 0.2517em;
+  --TNY: 0.1em;
+  --FONT_EN: 1em helvetica, ariel, sans-serif;
   --FONT_EN_FX: monospace;
+  --FONT_EN_HEADING: dunhill, scheherazade, serif;
   --FONT_UR: noori, scheherazade, helvetica, ariel, sans-serif;
-  --FONT_TITLE: dunhill, scheherazade, serif;
-  --FONT_LOGO: scheherazade, noori, serif;
+  --FONT_UR_SIZE: 1.54em;
+  --FONT_UR_HEADING: scheherazade, noori, serif;
+  --FONT_TITLE: 3.64ex var(--FONT_EN_HEADING);
+  --FONT_LOGO: 5.64ex var(--FONT_UR_HEADING);
 }

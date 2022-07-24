@@ -64,6 +64,8 @@ def f(n):
 
 [Nulla pharetra](https://tashfeen.org) diam sit amet nisl suscipit adipiscing. Turpis massa tincidunt dui ut ornare lectus. Mi bibendum neque egestas congue quisque egestas diam https://tashfeen.org.
 
+[Test internal link](urdu.md)
+
 $$
 \begin{align*}
     2ax &= -b\pm\sqrt{b^2-4ac} \\

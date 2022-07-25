@@ -50,7 +50,12 @@ Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Tempor 
 | K | L | M | N | O | P | Q | U | R | S |
 | T | U | V | W | X | Y | Z | / | / | / |
 
-![Logo La.](https://tashfeen.org/logo192.png "Logo La.")
+![Logo La](https://tashfeen.org/logo192.png "Logo La.")
+
+Local image test,
+
+![Local](../blog/logo.png "Local.")
+
 
 ```python
 def f(n):

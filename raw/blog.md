@@ -16,4 +16,4 @@ quote atop by Samuel L. Clemens is for you. I. e., I am not trying
 best agathokakological. No problem you may have on this page can not
 be solved with `Ctrl-w`.
 
-![Blog logo.](https://tashfeen.org/raw/blog/logo.png "Blog Logo")
+![Blog logo.](blog/logo.png "Blog Logo")

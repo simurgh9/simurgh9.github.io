@@ -4,4 +4,4 @@ To contact me, send an email to _tashfeen[at]ou[dot]edu_ with the appropriate su
 
 Peace!
 
-![Emblem La.](logo192.png "Emblem of La.")
+![Emblem La.](../logo192.png "Emblem of La.")

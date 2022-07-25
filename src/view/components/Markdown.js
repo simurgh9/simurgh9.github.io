@@ -16,6 +16,12 @@ class Markdown extends Component {
     return <Link to={props.href} rel='noopener noreferrer' {...props}></Link>;
   }
 
+  handleImg = ({ node, ...props }) => {
+    if (!props.src.startsWith('http') && !props.src.startsWith('/'))
+      props.src = this.props.absolutePath(document.location.href, props.src);
+    return <img src={props.src} alt={props.alt} title={props.title} {...props} />;
+  }
+
   handleBidiText({ node, ...props }) {
     const Tag = node.tagName;
     if (Tag === 'ul' || Tag === 'ol')
@@ -29,6 +35,7 @@ class Markdown extends Component {
       skipHtml={true}
       components={{
         a: this.handleLinks,
+        img: this.handleImg,
         p: this.handleBidiText,
         ul: this.handleBidiText,
         ol: this.handleBidiText,

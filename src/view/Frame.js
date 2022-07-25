@@ -46,6 +46,7 @@ class Frame extends Component {
   markdown(file = null, aside = null) {
     return (props) => <Page {...props} {...this.state.page}
       key={props.location.pathname}
+      absolutePath={this.control.M().absolutePath}
       updatePageState={this.control.updatePageState} />;
   }
 

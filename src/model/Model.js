@@ -6,7 +6,7 @@ const LOADING = 'Do, Re, Mi, Fa, Sol, La, Tiii...';
 const DEFAULT_LANGUAGE = 'en-GB';
 
 const ROOT = 'https://tashfeen.org/';
-const RAW_DIR = ROOT + 'raw/';
+const RAW_DIR = 'raw/';
 const HWJAX_LINK = 'utils/mathjax/hwjax.js';
 const HOME = 'home.md';
 const BOOKMARK = 'utils/json/home_aside.json';
@@ -102,8 +102,30 @@ class Model {
     return rxp.exec(lastLine)[1]; // if yes, then return the lang code, e.g., ur
   }
 
+  absolutePath(base, relative) { // https://stackoverflow.com/a/14780463/12035739
+    let searchFrom = 0;
+    if (base.startsWith('https'))
+      searchFrom = 'https://'.length;
+    else if (base.startsWith('http'))
+      searchFrom = 'http://'.length;
+    let idx = base.indexOf('/', searchFrom) + 1;
+    base = base.substring(0, idx) + RAW_DIR + base.substring(idx);
+    base = base.split('/');
+    let parts = relative.split('/');
+    base.pop();
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i] === '.')
+        continue;
+      if (parts[i] === '..')
+        base.pop();
+      else
+        base.push(parts[i]);
+    }
+    return base.join('/');
+  }
+
   prependRawDir(name) {
-    return RAW_DIR + name;
+    return ROOT + RAW_DIR + name;
   }
 
   getReactState() {

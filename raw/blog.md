@@ -11,7 +11,7 @@
 
 Here I'll write on personal opinions, hobbies and interesting things
 I've found on the internet. If you've found yourself offended, the
-quote by Samuel L. Clemens atop is for you. I. e., I am not trying
+quote atop by Samuel L. Clemens is for you. I. e., I am not trying
 (very hard anyways) to change anybody's mind. The content here is at
 best agathokakological. No problem you may have on this page can not
 be solved with `Ctrl-w`.

@@ -8,13 +8,13 @@ in cash, I just pay a dollar above the bill and receive back some
 change per _modus operandi_. That day I began to think, why don't I
 actually use these coins? Laziness?
 
-Further rummaging into that thought, I had a speculation. Even if I
+Further rummaging into that thought resulted speculation. Even if I
 lugged along some of those coins, most of the times I either end-up
-over or under. I. e., bringing coins back anyways. If at this point
-you are fitting some sort of a fancy Gaussian in your head; getting
-ready to prove that _in the limit_ I will actually consume more coins
-than collect, stop it. Why not just bring coins back by paying above
-the bill?
+over or under. I. e., bringing coins back anyway. If at this point you
+are fitting some sort of a fancy Gaussian in your head; getting ready
+to prove that _in the limit_ I will actually consume more coins than
+collect, stop it. Why not just bring coins back by paying above the
+bill?
 
 _What if I there was an oracle guaranteeing the exact-coinage needed
 to make the change?_ Well, one such oracle is the entire mass of the
@@ -45,7 +45,7 @@ find the said solution. Luckily, computer science has a class of
 algorithms known as the _greedy algorithms_. Though, I must stress
 their independence from the ones you come by in political sciences.
 
-Greedy, ah yes! We try to make the change (greedily) starting from the
+Greedy, ah yes! I try to make the change (greedily) starting from the
 largest possible denomination of coins to the smallest.
 
 1. One; two; three; four? No, there I should just use a dollar. So,
@@ -54,8 +54,8 @@ largest possible denomination of coins to the smallest.
 3. Two nickels is a dime so just one nickel.
 5. Four pence obviously.
 
-Eureka! 3 quarters, 2 dimes, 1 nickel and 4 pence. If you carry these
-10 coins, you'll make any change exactly!
+Eureka! 3 quarters, 2 dimes, 1 nickel and 4 pence. If anyone carries
+these 10 coins, they'll make any change exactly!
 
 Did that rabbit-hole-optimisation end there? Well, no. What you have
 read so far is a _sketch_ of a proof. A couple of days ago when I
@@ -63,22 +63,23 @@ decided to write on this, I wanted to accompany it with a rigorous
 mathematical proof.
 
 To my surprise, the general problem of making the exact change for
-different coin sets is actually a very hard one. What do I mean
+different currencies is actually a very hard one. What do I mean
 general? Well, I only solved the problem for the common coins in the
-US. What about the countries with coins of different worth? Actually, this
-tosses the whole idea of the greedy algorithms out of the window.
+US. What about the countries with the coins of different worth?
+Actually, this tosses the whole idea of the greedy algorithms out of
+the window.
 
 Have you ever wondered why the US has coins worth one, five, ten and
 twenty-five cents? Why not something, e. g., a twelve cents coin?
 Because as it turns out, there are other people who have thought about
-this problem way before I did. They knew that certain set of
+this problem way before I did. They knew that certain sets of
 coin-denominations allow for greedy algorithms while others do not!
 
-Take the example of a twelve-cents coin. If we need to make fifteen
-cents and we go about it the same greedy way, we pick the 1
-twelve-cents coin, and 3 pence. That is four coins. But clearly, the
-optimal set of coins here is a dime and a nickel (two coins). The
-greedy approach fails.
+Take the example of a twelve-cents coin. If I need to make fifteen
+cents and I go about it the same greedy way, I pick a twelve-cents
+coin, and three pence. That is 4 coins. But clearly, the optimal set
+of coins here is a dime and a nickel (2 coins). The greedy approach
+fails.
 
 Those familiar with the jargon, finding the optimal set of coins to
 make the exact change is an instance of the knapsack problem known to
@@ -90,7 +91,7 @@ major breakthrough in theory.
 Therein lies the rub of those who make the decision of picking out the
 different coin denominations. They have to make sure that they mint
 coins such that when looking for a change, a greedy algorithm can find
-a solution. Otherwise we face the general knapsack problem.
+a solution. Otherwise we face the unyielding knapsack problem.
 
 What about that rigours proof of the optimal number of coins needed to
 make any exact change (in US)? Here is a proof using moduli,
@@ -120,13 +121,12 @@ $$
 Therefore, any $t$ can be made exactly with 3 Quarters, 2 Dimes,
 1 Nickel and 4 Pence. QED.
 
-Both the change-making and the knapsack problem are the areas of
+Both the change-making and the general knapsack problem are areas of
 current research. E. g., what are the sufficient and necessary
 conditions for a set of coin denominations to be greedy-searchable?
 Now to be clear, this is a lighthearted demo of a possible application
 of an NP-Hard problem. A general solution to any such problem will
-have far bigger consequences then some old change counting
-algorithm.
+have far bigger consequences then some old change counting algorithm.
 
 We have come the full circle, from _Daydreams to Research_.
 

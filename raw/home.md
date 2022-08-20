@@ -8,6 +8,7 @@ This is my personal website, have a look around. Following are couple of my proj
 
 These are articles, presentations or papers I wrote,
 
+- [Blog](blog.md)
 - [Neural networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
 - [Error and noise analysis in a quantum key exchange](https://shareok.org/handle/11244/329317)
 - [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](https://tashfeen.org/raw/pdfs/bb84.pdf)

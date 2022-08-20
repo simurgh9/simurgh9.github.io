@@ -9,9 +9,9 @@
 
 #### [2022-08-18] Daydreams to Research
 
-"3 quarters, 2 dimes, 1 nickel and 4 pence. If anyone carries these 10
-coins, they'll make any change exactly!" Read the full story,
-[Daydreams to Research](blog/daydreams_to_research.md).
+"3 quarters, 2 dimes, 1 nickel and 4 pence. If anyone carries (at
+most) these 10 coins, they'll make any change exactly!" Read the full
+story, [Daydreams to Research](blog/daydreams_to_research.md).
 
 #### [2022-07-24] Ab Initio
 

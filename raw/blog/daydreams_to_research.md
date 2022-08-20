@@ -97,7 +97,7 @@ What about that rigours proof of the optimal number of coins needed to
 make any exact change (in US)? Here is a proof using moduli,
 
 _Proof._ Let $t\in\mathbb{N}$ be any dollar amount in cents and $c \in
-\\{5, 10, 25, 100\\}$. Define $\max(\mathbb{Z}/c\mathbb{Z}) = c-1$ as
+\curl{5, 10, 25, 100}$. Define $\max(\mathbb{Z}/c\mathbb{Z}) = c-1$ as
 the smallest element of the largest residue class in
 $\mathbb{Z}/c\mathbb{Z}$.
 Observe that any $(t \mod c)$ can be paid entirely using only the

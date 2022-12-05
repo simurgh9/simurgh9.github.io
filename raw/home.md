@@ -11,8 +11,9 @@ These are articles, presentations or papers I wrote,
 - [Blog](blog.md)
 - [Neural networks](https://tashfeen.org/net) ([Github](https://github.com/simurgh9/net))
 - [Error and noise analysis in a quantum key exchange](https://shareok.org/handle/11244/329317)
-- [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](share/7nov2021.pdf)
-    - [Supplement for the presentation](share/bb84_supp.pdf)
+<!-- Bellow are absolure links due to line no 56 in Model.js. Fix it. -->
+- [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius](https://tashfeen.org/raw/share/7nov2021.pdf)
+    - [Supplement for the presentation](https://tashfeen.org/raw/share/bb84_supp.pdf)
 
 #### Contributions,
 

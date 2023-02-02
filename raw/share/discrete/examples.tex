@@ -1,0 +1,186 @@
+\documentclass{homework}
+\author{Tashfeen, Ahmad}
+\class{CS 2813: Tashfeen's Discrete Structures}
+\date{Spring 2023}
+\title{Historical Proofs}
+\address{University of Oklahoma, Computer Science}
+
+\begin{document} \maketitle
+
+
+\begin{footnotesize}
+    The proofs given here may contain careless-errors and might not be to someone's high standards of mathematical rigour. These are not meant for anything more than a learning guide of different proof methods for undergraduates who are new to proof writing in mathematics. Please note that the form of arguments presented here is quite likely not the one used by the original authors of proof since I want the students to be able to use and understand the modern mathematical notation.
+\end{footnotesize}
+
+\fig[0.3]{pythagorean}{Taken from \href{http://jwilson.coe.uga.edu/emat6680/brown/6690/pythathm.htm}{jwilson.coe.uga.edu}}{py}
+
+\section{Pythagoras (c.  570-495 BC)}
+
+
+\begin{proof}[Proof by Construction] If a right angle triangle has perpendicular side of lengths $a,b$ then its hypotenuse is $c = \sqrt{a^2 + b^2}$ long.
+
+    \begin{enumerate}
+        \item Assume a right angle triangle has perpendicular side of lengths $a,b$.
+        \item Then four such triangles can be arranged as in figure \ref{py} to form an inscribed square with side length of $c$. The area of the four such triangles and the inscribed square is,
+              \[
+                  4\paren{\frac{1}{2}ab}+c^2
+              \]
+        \item The area of the parameter formed by the triangles is $(a+b)^2$.
+        \item Note that the area of the four triangles and the inscribed square is the same as the area of the parameter formed by the triangles,
+              \[
+                  4\paren{\frac{1}{2}ab}+c^2 = (a+b)^2
+              \]
+        \item We rearrange,
+              \begin{align*}
+                  c^2 & = (a+b)^2-4\paren{\frac{1}{2}ab}     &  & \text{Subtracting }4\paren{\frac{1}{2}ab} \text{ from both sides.} \\
+                  c^2 & = a^2+b^2+2ab-4\paren{\frac{1}{2}ab} &  & \text{Expanding } (a+b)^2                                          \\
+                  c^2 & = a^2+b^2+2ab-2ab                                                                                            \\
+                  c^2 & = a^2+b^2                                                                                                    \\
+                  c   & = \sqrt{a^2+b^2}                                                                                             \\
+              \end{align*}
+        \item Therefore, a right angle triangle with perpendicular side of lengths $a,b$ has hypotenuse is ${c = \sqrt{a^2 + b^2}}$ long. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\section{Hippasus of Metapontum (c. 500 BC)}
+
+The famous legend that comes with this proof is that Pythagoreans preached all numbers as rational \ie expressible as a ratio of integers. Upon proof of $\sqrt{2}$'s irrationality, Hippasus was drowned for crimes against the sanctity of number.
+
+\begin{proof}[Proof by contradiction] Square-root of two is irrational.
+    \begin{enumerate}
+        \item Assume for the sake of contradiction that $\sqrt{2} \in \Q$, then $\sqrt{2} = p/q$ for $(p,q)\in \Z^2$ and $\gcd(p,q)=1$. This last condition requires that the $p,q$ have no common factors or the fraction $p/q$ is in its most reduced form. Then by algebra,
+              \begin{align*}
+                  \paren{\sqrt{2}}^2 & = \paren{\frac{p}{q}}^2 &  & \text{Squaring both sides.}                    \\
+                  2                  & = \frac{p^2}{q^2}                                                           \\
+                  2q^2               & = p^2                   &  & \text{Multiplying } q^2 \text{ on both sides.} \\
+              \end{align*}
+        \item Since $q^2$ is an integer because the product of two integers is an integer, $2q^2=p^2$ is an even number.
+        \item If $p^2$ is an even number then so is $p$. Therefore we can write $p=2c$ for $c\in \Z$. Substituting for $p$,
+              \begin{align*}
+                  2q^2 & =(2c)^2     &  & \text{Since } p = 2c                      \\
+                  2q^2 & =2\cdot2c^2 &  & \text{Dividing } 2 \text{ on both sides.} \\
+                  q^2  & =2c^2
+              \end{align*}
+        \item By the same closure of integers under multiplication, $c^2 \in \Z$ and $q^2$ along with $q$ are even. If $q$ is even and $p$ is even then they have common factors $\gcd(p,q) \geq 2$ which is a contradiction! Therefore, $\sqrt{2} \in \R\setminus \Q$ is irrational. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\section{Euclid (c. 323-285 BC)}
+
+\begin{proof} There are infinitely many prime numbers.
+    \begin{enumerate}
+        \item Assume for the sake of contradiction that there are finitely many $n$ prime numbers.
+              \[
+                  p_1 < p_2 < p_3 < \cdots < p_n
+              \]
+        \item Since there are no primes past $p_n$, we know that
+              \[
+                  (p_n < p_1 \times p_2 \times p_3 \times \cdots \times p_n) + 1 = t \text{ is not a prime number.}
+              \]
+        \item Since $t$ is not prime, then by the fundamental theorem of arithmetic, $t$ must have a non-trivial prime factor $p_i$. Therefore, $p_i$ divides $t$.
+        \item Note that $p_i$ also divides $p_1 \times p_2 \times p_3 \times \cdots \times p_n$.
+        \item If $p_i$ divides $t$ and it divides $p_1 \times p_2 \times p_3 \times \cdots \times p_n$ then it divides their difference,
+              \[
+                  t - (p_1 \times p_2 \times p_3 \times \cdots \times p_n) = (p_1 \times p_2 \times p_3 \times \cdots \times p_n)+1-(p_1 \times p_2 \times p_3 \times \cdots \times p_n)=1
+              \]
+        \item That is a contradiction since $p_i$ does not divide 1. Therefore, there must be infinite prime numbers.
+    \end{enumerate}
+\end{proof}
+
+\section{Gauss (1777 - 1855)}
+
+Gauss has been said to have written this proof as a 10 year old boy to avoid busy work of adding up the first hundred numbers assigned to him by his school teacher. Read more \href{http://bit-player.org/wp-content/extras/gaussfiles/gauss-snippets.html}{here}.
+
+\begin{proof}[Proof by Induction] $1+2+3+\cdots+n=\frac{n(n+1)}{2}$
+
+    \textbf{Basis:} Take $n\in\{1,2,3,4\}$ then we have,
+    \[
+        1       =\frac{1(1+1)}{2}=1  ,\quad
+        1+2     =\frac{2(2+1)}{2}=3  ,\quad
+        1+2+3   =\frac{3(3+1)}{2}=6  ,\quad
+        1+2+3+4 =\frac{4(4+1)}{2}=10
+    \]
+    \textbf{Weak Inductive Hypothesis:} Assume for some positive integer $n$,
+    \[
+        1+2+3+\cdots+n=\frac{n(n+1)}{2}
+    \]
+    \textbf{Strong Inductive Hypothesis:} Assume \textit{for all} positive integer \textit{till} some positive integer $n$,
+    \[
+        1+2+3+\cdots+n=\frac{n(n+1)}{2}
+    \]
+    \textbf{Inductive Step:} We show the bellow by induction on $n$,
+    \[
+        1+2+3+\cdots+n=\frac{n(n+1)}{2} \Ra 1+2+3+\cdots+(n+1)=\frac{(n+1)((n+1)+1)}{2}
+    \]
+
+    Add $n+1$ to $1+2+3+\cdots+n$.
+    \begin{align*}
+        1+2+3+\cdots+n+(n+1) & = \frac{n(n+1)}{2}+n+1              &  & \text{By the Inductive Hypothesis.} \\
+        1+2+3+\cdots+(n+1)   & = \frac{n(n+1)}{2}+\frac{2(n+1)}{2}                                          \\
+                             & = \frac{n(n+1)+2(n+1)}{2}                                                    \\
+                             & = \frac{(n+1)(n+2)}{2}                                                       \\
+                             & = \frac{(n+1)((n+1)+1)}{2}
+    \end{align*}
+    Then by induction on $n$ we showed that $1+2+3+\cdots+n=\frac{n(n+1)}{2}$.
+\end{proof}
+
+\section{Peter Gustav Lejeune Dirichlet (1834)}
+
+\begin{proof}[Proof by Contrapositive] We see $m$ pigeons fly into $n$ trees. If $m>n$ then some tree has at least two pigeons.
+    \begin{enumerate}
+        \item Assume all trees have zero or one pigeons \ie let $x_i$ be the number pigeons in the $i^{\text{th}}$ tree, then $x_i\in\{0,1\}$.
+        \item Then the total number of pigeons is,
+              \[
+                  m = \sum_i^nx_i \leq n\quad\text{The equality case occurs when all }x_i=1.
+              \]
+        \item Therefore, by the contrapositive we know that if $m>n$ then there exists a tree with at least two pigeons. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\section{Tashfeen (2023)}
+
+A demonstration in Tashfeen trying to come up with a proof which is easier when proven via contrapositive and failing with flying colours.
+
+We will prove, ``For numbers where one is not zero such that if one is rational and the other irrational then the product is irrational.''
+
+\begin{proof}[Proof by Contrapositive] Let $b\neq0$, $a \not \in \Q \wedge b \in \Q \Ra ab \not \in \Q$.
+    \begin{enumerate}
+        \item By contrapositive we establish,
+              \begin{align*}
+                  \sim(ab \not \in \Q) & \Ra \sim(a \not \in \Q \wedge b \in \Q)                                           \\
+                  ab \in \Q            & \Ra a \in \Q \vee b \not \in \Q         &  & \text{DeMorgan's Law}                \\
+                  \sim(ab \in \Q)      & \vee a \in \Q \vee b \not \in \Q        &  & \text{By } P \Ra Q \iff \sim P\vee Q \\
+                  ab \not \in \Q       & \vee b \not \in \Q \vee a \in \Q        &  & \text{Commutativity of Disjunction}  \\
+                  \sim (ab \in \Q      & \wedge b \in \Q) \vee a \in \Q          &  & \text{DeMorgan's Law}                \\
+                  (ab \in \Q           & \wedge b \in \Q) \Ra a \in \Q           &  & \text{By } \sim P\vee Q \iff P \Ra Q
+              \end{align*}
+        \item Now we assume, $ab \in \Q$ and $b \in \Q$, then there exists $(m,n) \in \Z^2\ni (t,w)$ such that,
+              \[
+                  ab = \frac{m}{n},\quad b = \frac{t}{w}, \quad n \neq w \neq 0
+              \]
+        \item We not write $a$ as a fraction of integers,
+              \begin{align*}
+                  a & = a                                                         \\
+                  a & = a \times 1                     &  & \text{Times Identity} \\
+                  a & = a \times \frac{b}{b}                                      \\
+                  a & = \frac{ab}{b}                                              \\
+                  a & = \frac{m}{n} \times \frac{w}{t}                            \\
+                  a & = \frac{mw}{nt}                                             \\
+              \end{align*}
+        \item Since $mw$ and $nt$ are integers, we have shown that $a \in \Q$. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\begin{proof}[Proof by Contradiction] Let $b\neq0$, $a \not \in \Q \wedge b \in \Q \Ra ab \not \in \Q$.
+    \begin{enumerate}
+        \item Assume for the sake of contraction, $\sim(a \not \in \Q \wedge b \in \Q \Ra ab \not \in \Q)$,
+              \begin{align*}
+                  \sim(\sim(a \not \in \Q \wedge b \in \Q) \vee (ab \not \in \Q)) &  & \text{By } P \Ra Q \iff \sim P\vee Q \\
+                  a \not \in \Q \wedge b \in \Q \wedge ab \in \Q                  &  & \text{DeMorgan's}                    \\
+              \end{align*}
+        \item Since $b \in \Q \wedge ab \in \Q$ then $(ab/b)\in \Q$ because dividing two rationals gives another rational.
+        \item Then, $(ab/b)=a\in \Q$ and $a \not \in \Q$ which is a contradiction. Therefore, $a \not \in \Q \wedge b \in \Q \Ra ab \not \in \Q$. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\end{document}

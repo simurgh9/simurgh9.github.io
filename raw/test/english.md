@@ -1,5 +1,8 @@
 # Lorem Ipsum
 
+1. [Link to a Markdown File](../blog/excerpt.md)
+2. [Link to a PDF file](../share/asg0.pdf)
+
 Lorem ipsum dolor sit amet $e=mc^2$, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut morbi tincidunt augue interdum velit euismod in pellentesque.
 
 $$

@@ -53,18 +53,23 @@ class Model {
 
   fetchPage(path) {
     let filename = path === '' ? HOME : path;
-    // what about other files, e.g., *.pdf and *.txt?
-    filename = filename.endsWith('.md') ? filename : filename + '.md';
+    let text = null;
     let aside = null;
-    let text = fetch(this.prependRawDir(filename))
-      .then(this.handleError)
-      .then(rsp => rsp.text())
-      .catch(error => error.message);
-    if (path === '')
-      aside = fetch(this.prependRawDir(BOOKMARK))
+    if (filename.endsWith('.md')) {
+      text = fetch(this.prependRawDir(filename))
         .then(this.handleError)
-        .then(rsp => rsp.json())
-        .catch(error => null);
+        .then(rsp => rsp.text())
+        .catch(error => error.message);
+      if (path === '')
+        aside = fetch(this.prependRawDir(BOOKMARK))
+          .then(this.handleError)
+          .then(rsp => rsp.json())
+          .catch(error => null);
+    } else {
+      let address = this.prependRawDir(filename);
+      window.location.replace(address);
+      text = `Redirected or [click here](${address}).`;
+    }
     return Promise.all([text, aside]);
   }
 

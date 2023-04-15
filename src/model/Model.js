@@ -44,6 +44,14 @@ class Model {
     return response;
   }
 
+  handleValidResponse(response) {
+    if (!response.url.endsWith('.md')) {
+      window.location.replace(response.url);
+      return `[Click here](${response.url}) if not redirected.`;
+    }
+    return response.text();
+  }
+
   fetchResume() {
     return fetch(this.prependRawDir(RESUME))
       .then(this.handleError)
@@ -55,21 +63,15 @@ class Model {
     let filename = path === '' ? HOME : path;
     let text = null;
     let aside = null;
-    if (filename.endsWith('.md')) {
-      text = fetch(this.prependRawDir(filename))
+    text = fetch(this.prependRawDir(filename))
+      .then(this.handleError)
+      .then(this.handleValidResponse)
+      .catch(error => error.message);
+    if (path === '')
+      aside = fetch(this.prependRawDir(BOOKMARK))
         .then(this.handleError)
-        .then(rsp => rsp.text())
-        .catch(error => error.message);
-      if (path === '')
-        aside = fetch(this.prependRawDir(BOOKMARK))
-          .then(this.handleError)
-          .then(rsp => rsp.json())
-          .catch(error => null);
-    } else {
-      let address = this.prependRawDir(filename);
-      window.location.replace(address);
-      text = `Redirected or [click here](${address}).`;
-    }
+        .then(rsp => rsp.json())
+        .catch(error => null);
     return Promise.all([text, aside]);
   }
 

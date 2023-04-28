@@ -45,8 +45,8 @@ find the said solution. Luckily, computer science has a class of
 algorithms known as the _greedy algorithms_. Though, I must stress
 their independence from the ones you come by in political sciences.
 
-Greedy, ah yes! I try to make the change (greedily) starting from the
-largest possible denomination of coins to the smallest.
+I try to make the change (greedily) starting from the largest possible
+denomination of coins to the smallest.
 
 1. One; two; three; four? No, there I should just use a dollar. So,
    three quarters.
@@ -83,7 +83,7 @@ fails.
 
 Those familiar with the jargon, finding the optimal set of coins to
 make the exact change is an instance of the knapsack problem known to
-be NP-Hard. To give the uninitiated reader some perspective, these
+be NP-complete. To give the uninitiated reader some perspective, these
 problems are hard enough that even a theoretical quantum computer does
 not have enough computation muscle to provide a solution without a
 major breakthrough in theory.
@@ -91,7 +91,7 @@ major breakthrough in theory.
 Therein lies the rub of those who make the decision of picking out the
 different coin denominations. They have to make sure that they mint
 coins such that when looking for a change, a greedy algorithm can find
-a solution. Otherwise we face the unyielding knapsack problem.
+a solution. Otherwise, we face the unyielding knapsack problem.
 
 What about that rigours proof of the optimal number of coins needed to
 make any exact change (in US)? Here is a proof using moduli,
@@ -125,8 +125,9 @@ Both the change-making and the general knapsack problem are areas of
 current research. E. g., what are the sufficient and necessary
 conditions for a set of coin denominations to be greedy-searchable?
 Now to be clear, this is a lighthearted demo of a possible application
-of an NP-Hard problem. A general solution to any such problem will
-have far bigger consequences then some old change counting algorithm.
+of an NP-complete problem. A general solution to any such problem will
+have [far bigger consequences](https://www.youtube.com/watch?v=F5bAa6gFvLs&t=35s) then some old change counting
+algorithm.
 
 We have come the full circle, from _Daydreams to Research_.
 

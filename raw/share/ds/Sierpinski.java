@@ -4,7 +4,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Sierpinksi extends JPanel {
+public class Sierpinski extends JPanel {
     public static void main(String[] args) {
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension screenSize = kit.getScreenSize();
@@ -12,7 +12,7 @@ public class Sierpinksi extends JPanel {
         frame.setTitle("Sierpinksi's Triangle");
         frame.setSize(screenSize.width / 2, screenSize.height / 2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Sierpinksi());
+        frame.add(new Sierpinski());
         frame.setVisible(true);
     }
     public void paintComponent(Graphics g) {

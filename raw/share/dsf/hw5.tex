@@ -99,14 +99,14 @@ At this point, in order to minimise the above, we differentiate $(X\beta - Y)^T(
 \]
 And,
 \[
-    \frac{\p \lambda\beta^T\beta}{\p\beta} = \lambda \beta
+    \frac{\p \lambda\beta^T\beta}{\p\beta} = 2\lambda \beta
 \]
 Therefore, the derivative equal to zero is as follows,
 \[
-    2X^TX\beta - 2X^TY + \lambda \beta = 0
+    2X^TX\beta - 2X^TY + 2\lambda \beta = 0
 \]
 
-\question\label{eq} Let $\mathbb{I}$ be a $p$ by $p$ identity matrix. Solve $2X^TX\beta - 2X^TY + \lambda \beta = 0$ for $\beta$ as the new linear model. Show your work.
+\question\label{eq} Let $\mathbb{I}$ be a $p$ by $p$ identity matrix. Solve $2X^TX\beta - 2X^TY + 2\lambda \beta = 0$ for $\beta$ as the new linear model. Show your work.
 
 \question Using the same two columns you picked in the last assignment from Boston house--price data, draw a (appropriately labelled) plot using the equation you got in question \ref{eq}. The plot should graph integers $-10 < \lambda <20$ on the $x$--axis and the model's root mean squared error on the $y$--axis. Use a file called \texttt{ridge.py} for this question.
 

@@ -1,0 +1,62 @@
+\documentclass{homework}
+\author{Tashfeen, Ahmad}
+\class{CSCI 6213: Data Science Fundamentals}
+\title{Homework 6}
+\address{Oklahoma City University, Petree College of Arts \& Sciences, Computer Science}
+
+\begin{document} \maketitle
+You're \textit{not allowed} to use any libraries other than Numpy or Matplotlib.
+
+Let $x_{1}, \ldots, x_n$ be a set of instances in $\R^p$ just like before and $c_1, \ldots, c_K$ be a
+set of $K$ cluster centroids. Note that $c_i$ are also in $\R^p$. Let $\mathbb{I}_{ij} \in \{0, 1\}$ be a variable such that $\mathbb{I}_{ij} = 1$ if $x_i$ is assigned to cluster centered at $c_j$  and $\mathbb{I}_{ij} = 0$ otherwise. In layman's terms, $\mathbb{I}_{ij}$ indicates whether $x_i$ is in the $j^\text{th}$ cluster. The $K$--Means Clustering algorithm minimises the following objective function,
+\[
+  \sum_{i=1}^n \sum_{j=1}^K \mathbb{I}_{ij} [(x_i - c_j)^T(x_i - c_j)]
+\]
+This objective function is essentially a measure of how far are the members of each cluster from their respective centroids or means. The $K$--Means Clustering algorithm is given bellow,
+
+\begin{enumerate}
+  \item Initialise centroids or means $c_j$ for $1 \leq j \leq K$ randomly in $\R^p$ or,
+        \[
+          c_j \leftarrow x_j
+        \]
+  \item Assign all $x_i$ to the closest centroid $c_u$. I. e., for some $u$ and all $j$,
+        \[
+          \mathbf{if}\quad [(x_i - c_u)^T(x_i - c_u)]<[(x_i - c_j)^T(x_i - c_j)]\quad \mathbf{then} \quad \mathbb{I}_{iu}\leftarrow 1
+        \]
+  \item Adjust the centroids or means according the new assignment in the last step,
+        \[
+          c_j \leftarrow \sum_{i=1}^{n}\mathbb{I}_{ij}\paren{\frac{x_i}{n}}
+        \]
+        Note that this is just assigning $c_j$ to the new mean of the $j^\text{th}$ cluster.
+  \item Repeat from (2) till $c_j$ stop changing or the change is less than some $\ep$.
+\end{enumerate}
+You may also find this algorithm (Algorithm 12.2) on page 523 of your textbook (Hatie et al.).
+\lstinputlisting[
+  language={Python},
+  caption={Python code to generate synthetic two dimensional data clusters. \href{https://tashfeen.org/raw/share/dsf/kmeans.py}{Download} this file.},
+  label=code]
+{./code/kmeans.py}
+
+\question Listing \ref{code} plots the clusters shown in figure \ref{clusters}. Give your best guesses for the optimal centroids $c_j\in \R^2$ and $K=4$.
+
+\question Implement the $K$--Means Clustering algorithm for the data in listing \ref{code}. Run the algorithm for $K \in \{1, 2, 3, 4\}$ and $\ep = 10^{-5}$. Give your final converged centroids plotted over the clustered data. Plot each cluster with a distinct colour\footnote{use different shades of grey if you have difficulty seeing colour}. At the end you should have four converged (with different coloured clusters) plots for each value of $K$.
+
+
+\question Download the file \href{https://myokcuedu-my.sharepoint.com/:u:/g/personal/tashfeen_okcu_edu/EeqU1CH36W5Bp0YRgiRXxxUBuhzdI_JPec6CBlxsMBCtgA}{\texttt{t10k-images-idx3-byte}}. This is the binary file containing 1000 images of the test set from the \href{http://yann.lecun.com/exdb/mnist/}{the MNIST database of handwritten digits}. You can refer to their website for more information about the data and its organisation. However, it is read and plotted for your inspection and further usage to implement the $K$--Means Clustering algorithm in listing \ref{mnsit}.
+
+\lstinputlisting[
+  language={Python},
+  caption={Python code that reads in the binary MNSIT test set data and plots a few data points. Pressing the space-bar changes the plot upon running the file. \href{https://tashfeen.org/raw/share/dsf/mnsit.py}{Download} this file.},
+  label=mnsit]
+{./code/mnsit.py}
+
+\begin{enumerate}
+    \item Why do you think $K=10$ maybe a good choice for this data?
+    \item What are the values of $n$ and $p$?
+    \item What does each of the total $p$ features represent in this data?
+    \item For $\ep = 3.5$, finish implementing the $K$--Means Clustering algorithm after the line indicated by the comment in listing \ref{mnsit}. The code in listing \ref{mnsit} should then plot your 10 approximately converged cluster centroids as 28 by 28 pixel images comprising of 2 rows and 5 columns. Give and discuss this plot. Why do you think the centroids $c_j$ look the way they do?
+\end{enumerate}
+
+\img<clusters>[0.7]{Unlabelled clusters of data.}{./media/clusters}
+
+\end{document}

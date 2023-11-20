@@ -33,7 +33,9 @@ example, a sample output for the George Orwell's controversial novel
 |    before | 103|
 \end{verbatim}
 
-Place the code for this question in a file called \texttt{Frequency.java}.
+Place the code for this question in a file called
+\texttt{Frequency.java} and copy any output in your PDF to answer this
+question.
 
 \question We used the following hash function in class to implement a
 HashMap/Dictionary class in Java. Consider the ordering,
@@ -96,14 +98,17 @@ named with labels in the list,
 Taking as many labels as the rows/columns.
 
 Write a Java class \texttt{Graph.java} that implements both the
-Dijkstra's and the Bellman-Ford algorithms. Use your Dijkstra's
-implementation to solve the files \texttt{dijkstra1.txt} and
-\texttt{dijkstra2.txt}. Similarly, use your Bellman-Ford algorithm to
-solve the files \texttt{bellmanford1.txt} and
-\texttt{bellmanford2.txt}. For each graph and algorithm, report the
-minimum distance with which each vertex can be reached and their
-respective parent vertex. E. g, the output of Dijkstra's algorithm on
-\texttt{dijkstra1.txt} should look like,
+Dijkstra's\footnote{Note that Java's class
+  \href{https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html}{\texttt{PriorityQueue}}
+  is not \href{https://stackoverflow.com/q/2288241/12035739}{dynamic}
+  and breaks ties arbitrarily.} and the Bellman-Ford algorithms. Use
+your Dijkstra's implementation to solve the files
+\texttt{dijkstra1.txt} and \texttt{dijkstra2.txt}. Similarly, use your
+Bellman-Ford algorithm to solve the files \texttt{bellmanford1.txt}
+and \texttt{bellmanford2.txt}. For each graph and algorithm, report
+the minimum distance with which each vertex can be reached and their
+respective parent vertex in your answers PDF. E. g, the output of
+Dijkstra's algorithm on \texttt{dijkstra1.txt} should look like,
 
 \begin{verbatim}
 a: 0 via a
@@ -131,5 +136,15 @@ algorithm is a better choice?
 YouTube to see how a path finding algorithm known as the A$^*$ looks
 in execution on a real world graph. Note that A$^*$ is essentially the
 Dijkstra's algorithm with addition of a ``heuristic'' function.
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+    \item Turn in a PDF containing any outputs and answers from the homework.
+    \item Also turn in your \texttt{Frequency.java},
+    \texttt{Base27.java} (with a main method) and finally the
+    \texttt{Graph.java}.
+\end{enumerate}
+
 
 \end{document}

@@ -9,12 +9,10 @@ enableRobotsTXT = true
   math = true
 
 [menus]
-
   [[menus.main]]
     name = 'Posts'
     pageRef = '/posts'
     weight = 10
-
   [[menus.main]]
     name = 'Colophon'
     pageRef = '/colophon'

@@ -402,8 +402,8 @@ figure {
   text-align: center;
 }
 
-img { /* Feeling cute, may delete later. idk. */
-  max-width: 80%;
+img {
+  max-width: 100%;
 }
 
 ol {

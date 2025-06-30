@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{- with .Title }}
+    <h1>{{ . }}</h1>
+  {{- end }}
+  {{ partial "contenu.html" .Content }}
+  {{ range .Pages }}
+    <article>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{- .Summary -}}
+    </article>
+  {{ end }}
+{{ end }}

@@ -1,3 +1,26 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+
+Disallow: /
+
+Disallow: /posts/
+
+Disallow: /tags/music/
+
+Disallow: /tags/radio/
+
+Disallow: /posts/radio-paradise/
+
+Disallow: /tags/
+
+Disallow: /articles/
+
+Disallow: /articles/daydreams/
+
+Disallow: /tags/maths/
+
+Disallow: /posts/ab-initio/
+
+Disallow: /colophon/
+
+Disallow: /categories/
+

@@ -1,0 +1,50 @@
+baseURL = 'https://tashfeen.org/'
+languageCode = 'en-US'
+title = 'tashfeen.org'
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+[params]
+  author = 'Tashfeen'
+  math = true
+
+[menus]
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Colophon'
+    pageRef = '/colophon'
+    weight = 20
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[markup]
+  [markup.highlight]
+    lineNumbersInTable = false
+    noClasses = false
+    lineNos = true
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.link]
+        enableDefault = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

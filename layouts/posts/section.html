@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{- with .Title }}
+    <h1>{{ . }}</h1>
+  {{- end }}
+  {{ .Content }}
+  {{ range .Pages }}
+    <article>
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_medium" }}
+      <h2 class="with-divider">
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        </a>
+      </h2>
+      {{- with .Title }}
+        <h2 class="post-title">{{ . }}</h2>
+      {{- end }}
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}

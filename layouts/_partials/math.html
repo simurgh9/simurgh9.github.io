@@ -1,0 +1,16 @@
+{{- with resources.Get "js/hwjax.min.js" -}}
+  {{- $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "external" "")
+    "targetPath" "js/hwjax.min.js"
+  -}}
+  {{- with . | js.Build $opts -}}
+    {{- if hugo.IsDevelopment -}}
+      <script id="MathJax-script" async src="{{ .RelPermalink }}"></script>
+    {{- else -}}
+      {{- with . | fingerprint -}}
+        <script id="MathJax-script" async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

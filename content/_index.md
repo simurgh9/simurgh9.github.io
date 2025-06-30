@@ -5,7 +5,7 @@ Hey! This is my personal website, have a look around.
 
 ## Redesign
 
-If you've been here before, you may notice a redesign.  Please sent me
+If you've been here before, you may notice a redesign.  Please send me
 an [email](/colophon) if you find something broken or something that
 previously existed and no longer does.
 

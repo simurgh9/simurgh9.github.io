@@ -2,17 +2,17 @@
   {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
   {{- $dateHuman := .Date | time.Format "02 Jan 2006" -}}
   <div class="description">
-    <span class="description-beginning">
+    <span class="beginning">
       <a href="{{ .RelPermalink }}">
         <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       </a>
     </span>
-    <span class="description-middle">
+    <span class="middle">
       {{ if findRE "<img[^>]*>" .Content }}
         <i class="ph-duotone ph-file-image"></i>
       {{ end }}
     </span>
-    <span class="description-end">
+    <span class="end">
       {{ if .Title }}
         {{ .Title }}
       {{ else }}

@@ -12,6 +12,7 @@
   --BIG: 32px;
   --MED: 16px;
   --SML: 8px;
+  --QRT: 4px;
   --TNY: 2px;
 }
 
@@ -91,7 +92,8 @@ header h1 {
   font-size: 36px;
 }
 
-figcaption, caption {
+figcaption,
+caption {
   font-size: 10pt;
 }
 
@@ -145,7 +147,7 @@ header h1 a.title {
 }
 
 header h1 a.title:hover {
-  color: rgb(var(--HL))
+  color: rgb(var(--HL));
 }
 
 header nav {
@@ -159,35 +161,35 @@ main {
 
 footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-footer div {
+footer div label.light-checkbox {
   display: flex;
-  align-items: center;
-  column-gap: var(--SML);
 }
 
-.description {
+div.description {
   display: flex;
   align-items: center;
 }
 
-.description-beginning {
+div.description span.beginning {
   font-family: 'IBMPlexMono', monospace;
+  min-width: 11ch;
 }
 
-span.description-beginning a:hover {
+div.description span.beginning a:hover {
   font-weight: 700;
 }
 
-.description-middle {
-  flex-basis: 2em;
+div.description span.middle {
+  min-width: 3ch;
   display: flex;
   justify-content: center;
 }
 
-.description-end {
+div.description span.end {
   flex-grow: 1;
 }
 
@@ -209,8 +211,8 @@ table caption {
 }
 
 footer {
-  padding-top: var(--SML);
-  padding-bottom: var(--SML);
+  padding-top: var(--QRT);
+  padding-bottom: var(--QRT);
   padding-left: var(--MED);
   padding-right: var(--MED);
 }
@@ -297,26 +299,9 @@ li::marker {
   color: rgb(var(--HL));
 }
 
-.stamp-border { /* https://codepen.io/joshwcomeau/pen/VwRqQGP */
-  /* Change this value to adjust the stamp perforation size: */
-  --radius: 3px;
-
-  background-image: 
-    radial-gradient(
-      var(--radius),
-      transparent 98%,
-      rgb(var(--BD))
-    ),
-    linear-gradient(rgb(var(--BD)) 0 0);
-  background-repeat: 
-    round, 
-    no-repeat;
-  background-position:
-    calc(var(--radius) * -1.5) calc(var(--radius) * -1.5),
-    50%;
-  background-size:
-    calc(var(--radius) * 3) calc(var(--radius) * 3),
-    calc(100% - var(--radius) * 2.1) calc(100% - var(--radius) * 3);
+header.banner,
+footer.banner {
+  background-color: rgb(var(--BD));
 }
 
 .with-divider {
@@ -385,7 +370,9 @@ main table {
   border-right: var(--TNY) solid rgb(var(--BD));
 }
 
-mjx-container[display="true"], pre, div.table-wrapper {
+mjx-container[display='true'],
+pre,
+div.table-wrapper {
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -448,11 +435,12 @@ main code {
   background: rgba(var(--BD), 0.2);
 }
 
-code { /* https://nathan.rs/posts/fixing-ios-codeblocks/ */
-    text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+code {
+  /* https://nathan.rs/posts/fixing-ios-codeblocks/ */
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 main blockquote {

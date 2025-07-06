@@ -1,6 +1,5 @@
 +++
 date = '2025-07-05T21:21:42-05:00'
-draft = true
 title = 'Gerography Terms'
 +++
 

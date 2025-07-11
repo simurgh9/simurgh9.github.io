@@ -3,16 +3,7 @@
 
 Hey! This is my personal website, have a look around.
 
-## Redesign
-
-If you've been here before, you may notice a redesign.  Please send me
-an [email](/colophon) if you find something broken or something that
-previously existed and no longer does.
-
-Press the `L` key to change the colour theme or click the icon in the
-footer.  Click the website title to navigate back to home.
-
-## Content
+If you are looking for office hours, click [here][zoom].
 
 Following are couple of my projects (that I use & maintain).
 
@@ -38,3 +29,4 @@ These bellow are a bit more academic.
 [genpres]: https://tashfeen.org/s/29mar2023.pdf
 [tex]: https://github.com/simurgh9/hw
 [wordle]: https://github.com/simurgh9/wordle
+[zoom]: /posts/office-hours/

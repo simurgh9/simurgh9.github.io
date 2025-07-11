@@ -1,5 +1,5 @@
 +++
-date = '2022-07-24T00:00:00-07:00'
+date = '2022-07-24T00:00:00-05:00'
 +++
 
 Here I write on personal opinions, hobbies and interesting things I've

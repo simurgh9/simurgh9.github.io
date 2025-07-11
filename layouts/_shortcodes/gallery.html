@@ -1,0 +1,15 @@
+{{- $caption := .Get 0 -}}
+{{- $dir := .Get 1 -}}
+{{- $images := .Page.Resources.Match (print $dir "/*") -}}
+<figure class="gallery">
+  <ul>
+    {{- range $images -}}
+      <li>
+        <a href="{{ .RelPermalink }}" target="_blank" rel="noopener">
+          <img loading="lazy" src="{{ .RelPermalink }}" />
+        </a>
+      </li>
+    {{- end -}}
+  </ul>
+  <figcaption>{{ $caption }}</figcaption>
+</figure>

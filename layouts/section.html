@@ -5,8 +5,12 @@
   {{ partial "contenu.html" .Content }}
   {{ range .Pages }}
     <article>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{- .Summary -}}
+      {{- partial "tdt.html" . -}}
+      <p>{{- .Summary -}}</p>
+      <p class="ph-duotone-flex-align-items-center">
+        <i class="ph-duotone ph-article-medium"></i>
+        <a href="{{ .RelPermalink }}">Read full article.</a>
+      </p>
     </article>
   {{ end }}
 {{ end }}

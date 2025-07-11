@@ -1,0 +1,9 @@
+<div class="title-date-taxonomy">
+  {{- with .Title -}}
+    <h1>{{ . }}</h1>
+  {{- end -}}
+  {{- with .Date -}}
+    {{- partial "date.html" . -}}
+  {{- end -}}
+  {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+</div>

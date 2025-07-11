@@ -1,0 +1,35 @@
+figure.gallery ul {
+  --IMAGE: 28vh;
+
+  list-style-type: none;
+
+  margin: 0 auto;
+  max-width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--QRT);
+}
+
+figure.gallery ul li {
+  height: var(--IMAGE);
+  flex-grow: 1;
+}
+
+figure.gallery ul li img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+figure.gallery ul li img:hover {
+  object-fit: scale-down;
+}
+
+@media only screen and (max-width: 750px) {
+  figure.gallery ul {
+    --IMAGE: 50vh;
+    flex-flow: column nowrap;
+  }
+}

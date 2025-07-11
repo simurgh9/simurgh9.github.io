@@ -1,8 +1,12 @@
 <div>
   <input id="light" type="checkbox" />
-  <label for="light"  class="light-checkbox">
+  <label for="light" class="light-checkbox">
     <i class="ph-duotone ph-moon-stars"></i>
     <i class="ph-duotone ph-sun"></i>
   </label>
 </div>
-<div>© {{ now.Year }} {{ .Site.Params.author }}</div>
+<div>
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
+    © {{ now.Year }} {{ .Site.Params.author -}}
+  </a>
+</div>

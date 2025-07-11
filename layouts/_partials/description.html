@@ -1,10 +1,8 @@
 {{- range . -}}
-  {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
-  {{- $dateHuman := .Date | time.Format "02 Jan 2006" -}}
-  <div class="description">
+  <div class="description ph-duotone-flex-align-items-center">
     <span class="beginning">
       <a href="{{ .RelPermalink }}">
-        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        {{- partial "date.html" .Date -}}
       </a>
     </span>
     <span class="middle">
@@ -16,7 +14,7 @@
       {{ if .Title }}
         {{ .Title }}
       {{ else }}
-        {{ .Content | plainify | safeHTML | truncate 24 }}
+        {{ .Content | plainify | safeHTML | truncate 23 }}
       {{ end }}
     </span>
   </div>

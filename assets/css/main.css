@@ -8,7 +8,7 @@
   --HL: 63, 154, 44;
   --BD: 70, 70, 69;
   --NV: none;
-  --PAGE_WIDTH: 8.5in;
+  --PAGE_WIDTH: 960px;
   --BIG: 32px;
   --MED: 16px;
   --SML: 8px;
@@ -88,6 +88,13 @@ h6 {
     'liga', 'xtex', 'hlig', 'clig', 'dlig', 'calt', 'swsh', 'cv11';
 }
 
+body {
+  font-family: 'IBMPlex', 'Helvetica', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
 header h1 {
   font-size: 36px;
 }
@@ -95,13 +102,6 @@ header h1 {
 figcaption,
 caption {
   font-size: 10pt;
-}
-
-body {
-  font-family: 'IBMPlex', 'Helvetica', sans-serif;
-  font-size: 12pt;
-  font-weight: 300;
-  line-height: 1.2;
 }
 
 /* --- Structure -------------------------------------------------- */
@@ -135,12 +135,6 @@ header nav {
   align-self: center;
 }
 
-header h1 {
-  display: flex;
-  align-items: center;
-  gap: var(--TNY);
-}
-
 header h1 a.title {
   color: rgb(var(--FG));
   font-weight: normal;
@@ -169,14 +163,9 @@ footer div label.light-checkbox {
   display: flex;
 }
 
-div.description {
-  display: flex;
-  align-items: center;
-}
-
 div.description span.beginning {
   font-family: 'IBMPlexMono', monospace;
-  min-width: 11ch;
+  min-width: 13ch;
 }
 
 div.description span.beginning a:hover {
@@ -191,6 +180,27 @@ div.description span.middle {
 
 div.description span.end {
   flex-grow: 1;
+}
+
+/*
+  Add me to the parent container where the ph icon and text is
+  contained to line up the icon and the text in the middle.
+ */
+.ph-duotone-flex-align-items-center {
+  display: flex;
+  gap: var(--QRT);
+  align-items: center;
+}
+
+div.title-date-taxonomy {
+  display: flex;
+  flex-direction: column;
+}
+
+div.title-date-taxonomy h1 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--BIG);
 }
 
 /* --- Spacing ---------------------------------------------------- */
@@ -222,15 +232,6 @@ footer {
 }
 
 .with-divider + * {
-  margin-top: 0;
-}
-
-.post-title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.post-title + .tags {
   margin-top: 0;
 }
 
@@ -356,13 +357,6 @@ main > article:first-child > *:first-child {
   padding-top: 0em;
 }
 
-h1:has(+ time),
-h2:has(+ time),
-h3:has(+ time),
-h4:has(+ time) {
-  margin-bottom: var(--TNY);
-}
-
 main table {
   margin: var(--MED) auto;
   border-collapse: collapse;
@@ -391,6 +385,14 @@ figure {
 
 img {
   max-width: 100%;
+}
+
+figure img {
+  vertical-align: middle;
+}
+
+figcaption {
+  margin-top: var(--QRT);
 }
 
 ol {

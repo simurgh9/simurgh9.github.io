@@ -1,7 +1,7 @@
 +++
 title = 'Daydreams to Research'
 date = 2022-08-18T00:00:00-06:00
-tags = ['maths']
+tags = ['maths', 'research', 'Real World Applications']
 summary = """\
 3 quarters, 2 dimes, 1 nickel and 4 pence. If anyone carries \
 (at most) these 10 coins, they'll make any change exactly!\

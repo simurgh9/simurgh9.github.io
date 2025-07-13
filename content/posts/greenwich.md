@@ -11,11 +11,11 @@ https://greenwichmeantime.com/articles/clocks/iso/
 
 There is a little nod to the nuance artificial intelligence is causing
 in spoken language that I find interesting; especially on a
-time-standards website. I'll quote it bellow.
+time-standards website. I'll quote it below.
 
 > It is a splendid example of bringing various systems under one rule,
 > and providing an answer that can be read both by humans and
 > computers (or should we now say AI?).
 
-In vibes units, it remind me of the meme: "Do not cite the deep magic
+In vibes units, it reminds me of the meme: "Do not cite the deep magic
 to me, witch. I was there when it was written."

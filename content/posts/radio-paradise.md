@@ -12,7 +12,7 @@ and allowed me to rediscover gems like Jeff Buckley's cover of
 _Hallelujah_, Leonard Cohen's _Boogie Street_ and Rabbi Shergill's
 original _Rabbi_.
 
-Oh and no ads (listener supported), human picked tracks (no AIs, thank
-you) and you can play your music in Free Lossless Audio Codec!
+Oh, and no ads (listener supported), human picked tracks (no AIs,
+thank you) and you can play your music in Free Lossless Audio Codec!
 
 https://radioparadise.com/about/rp

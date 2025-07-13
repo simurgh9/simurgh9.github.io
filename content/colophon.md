@@ -19,8 +19,7 @@ botany and... _et français mais il en sait très peu sur ceux-ci_.
 Albeit not an angel, when he stands next to a window in the dusk's
 crepuscular light, you can almost see his halo.
 
-# About the wesbite
-
+# About the website
 
 This website is made in [Emacs][mcs] using [Hugo][ugo]. The icons used
 are [Phosphor][hor] duotone. Mathematics is rendered using

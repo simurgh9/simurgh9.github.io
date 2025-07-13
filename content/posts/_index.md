@@ -1,4 +1,4 @@
-The blockquote bellow is from: Twain, Mark. _Adventures of Huckleberry
+The blockquote below is from: Twain, Mark. _Adventures of Huckleberry
 Finn_. Vol. 20. Univ of California Press, 2003. Also see the [content
 policy](/posts/ab-initio/).
 

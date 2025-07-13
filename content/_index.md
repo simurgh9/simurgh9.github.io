@@ -5,14 +5,14 @@ Hey! This is my personal website, have a look around.
 
 If you are looking for office hours, click [here][zoom].
 
-Following are couple of my projects (that I use & maintain).
+Following are a couple of my projects (that I use & maintain).
 
 - [Articles](/articles)
 - [Fractals etc.][fractal] ([Github][fracgit])
 - [Huiswerk in LaTeX][tex]
 - [Terminal Wordle][wordle]
 
-These bellow are a bit more academic.
+These below are a bit more academic.
 
 - [Error & Noise Analysis in a Quantum Key Exchange][QKE]
 - [Presentation on BB84 Quantum Protocol & Quantum Satellite Micius][exit]

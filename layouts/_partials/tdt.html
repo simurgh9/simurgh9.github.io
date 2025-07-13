@@ -1,4 +1,5 @@
-<div class="title-date-taxonomy">
+{{- if or .Date .Title (.GetTerms "tags") -}}
+  <div class="title-date-taxonomy">
   {{- with .Title -}}
     <h1>{{ . }}</h1>
   {{- end -}}
@@ -7,3 +8,4 @@
   {{- end -}}
   {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
 </div>
+{{- end  -}}

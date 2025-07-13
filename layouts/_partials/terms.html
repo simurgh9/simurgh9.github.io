@@ -14,7 +14,7 @@ For a given taxonomy, renders a list of terms assigned to the page.
   {{- $label := (index . 0).Parent.LinkTitle }}
   <span class="ph-duotone-flex-align-items-center">
     {{ if eq $label "Tags" }}
-      <i class="ph-duotone ph-tag"></i>
+      {{ partial "icon.html" "ph-tag"}}
     {{ else }}
       {{- $label -}}:
     {{ end }}

@@ -4,7 +4,7 @@
     <h1>{{ . }}</h1>
   {{- end -}}
   {{- with .Date -}}
-    {{- partial "date.html" . -}}
+    {{- partial "date.html" (dict "date" . "icon" "ph-calendar-dots") -}}
   {{- end -}}
   {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
 </div>

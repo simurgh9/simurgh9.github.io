@@ -2,12 +2,12 @@
   <div class="description ph-duotone-flex-align-items-center">
     <span class="beginning">
       <a href="{{ .RelPermalink }}">
-        {{- partial "date.html" .Date -}}
+        {{- partial "date.html" (dict "date" .Date) -}}
       </a>
     </span>
     <span class="middle">
       {{ if findRE "<img[^>]*>" .Content }}
-        <i class="ph-duotone ph-file-image"></i>
+        {{ partial "icon.html" "ph-file-image"}}
       {{ end }}
     </span>
     <span class="end">

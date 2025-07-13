@@ -1,6 +1,8 @@
-{{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateHuman := . | time.Format "02 Jan 2006" }}
-<time datetime="{{ $dateMachine }}" class="ph-duotone-flex-align-items-center">
-  <i class="ph-duotone ph-calendar-dots"></i>
+{{- $dateMachine := .date | time.Format "2006-01-02T15:04:05-07:00" -}}
+{{- $dateHuman := .date | time.Format "02 Jan 2006" -}}
+<time datetime="{{- $dateMachine -}}" class="ph-duotone-flex-align-items-center">
+  {{- with .icon -}}
+    {{ partial "icon.html" . }}
+  {{- end -}}
   {{- $dateHuman -}}
 </time>

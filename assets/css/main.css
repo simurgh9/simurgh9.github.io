@@ -165,7 +165,7 @@ footer div label.light-checkbox {
 
 div.description span.beginning {
   font-family: 'IBMPlexMono', monospace;
-  min-width: 13ch;
+  min-width: 11ch;
 }
 
 div.description span.beginning a:hover {

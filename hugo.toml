@@ -1,12 +1,21 @@
 baseURL = 'https://tashfeen.org/'
-languageCode = 'en-US'
+languageCode = 'en-GB'
 title = 'tashfeen.org'
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
+copyright = '© Tashfeen 2025 — licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
 
 [params]
-  author = 'Tashfeen'
   math = true
+  [params.author]
+    name = 'Tashfeen'
+    email = 'tashfeen@ou.edu'
+
+[outputs]
+  home = ['html']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']
 
 [menus]
   [[menus.main]]

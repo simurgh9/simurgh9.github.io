@@ -6,7 +6,27 @@
   </label>
 </div>
 <div>
+  <a href="mailto:{{ .Site.Params.author.email -}}">
+    {{ partial "icon.html" "ph-at"}}
+  </a>
+  <a href="/posts/index.xml" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-rss-simple"}}
+  </a>
+  <a href="/tags" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-tag"}}
+  </a>
+  <a href="https://github.com/simurgh9" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-github-logo"}}
+  </a>
+  <a href="https://text.npr.org/" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-newspaper-clipping"}}
+  </a>
+  <a href="https://radioparadise.com/player/info/main-mix" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-music-notes"}}
+  </a>
+</div>
+<div>
   <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
-    © {{ now.Year }} {{ .Site.Params.author -}}
+    © {{ now.Year }} {{ .Site.Params.author.name -}}
   </a>
 </div>

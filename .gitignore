@@ -20,3 +20,6 @@ hugo.linux
 
 # mac
 .DS_Store
+
+# full images
+.original/

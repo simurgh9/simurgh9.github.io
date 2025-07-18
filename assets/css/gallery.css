@@ -1,5 +1,5 @@
 figure.gallery ul {
-  --IMAGE: 28vh;
+  --IMAGE: 4in;
 
   list-style-type: none;
 
@@ -9,6 +9,7 @@ figure.gallery ul {
   display: flex;
   flex-wrap: wrap;
   gap: var(--QRT);
+  /* justify-content: flex-start; */
 }
 
 figure.gallery ul li {
@@ -31,5 +32,9 @@ figure.gallery ul li img:hover {
   figure.gallery ul {
     --IMAGE: 50vh;
     flex-flow: column nowrap;
+  }
+
+  figure.gallery ul li {
+    height: inherit;
   }
 }

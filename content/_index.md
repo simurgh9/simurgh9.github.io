@@ -1,9 +1,14 @@
-![Meaolin Monk](/img/billilama.png 'Meaolin Monk')
+![Meaolin Monk](/img/billilama.webp 'Meaolin Monk')
 {class="image-right"}
 
-Hey! This is my personal website, have a look around.
+Hey! This is my personal website, have a look around. If you've been
+here before, you may notice a redesign.  Please send me an email if
+you find something broken or something that previously existed and no
+longer does.
 
-If you are looking for office hours, click [here][zoom].
+{{< recent >}}
+
+## Projects
 
 Following are a couple of my projects (that I use & maintain).
 
@@ -29,4 +34,4 @@ These below are a bit more academic.
 [genpres]: https://tashfeen.org/s/29mar2023.pdf
 [tex]: https://github.com/simurgh9/hw
 [wordle]: https://github.com/simurgh9/wordle
-[zoom]: /posts/office-hours/
+

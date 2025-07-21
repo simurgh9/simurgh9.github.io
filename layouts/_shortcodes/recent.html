@@ -1,0 +1,3 @@
+<h2>Recent Posts</h2>
+{{- $posts := (site.GetPage "/posts").Pages.ByDate.Reverse | first 10 }}
+{{- partial "description.html" $posts -}}

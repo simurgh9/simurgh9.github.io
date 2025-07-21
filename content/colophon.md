@@ -7,6 +7,8 @@ existed and no longer does.
 Press the `L` key to change the colour theme or click the icon in the
 footer.  Click the website title to navigate back to home.
 
+If you are looking for office hours, click [here][zoom].
+
 # About me
 
 Tashfeen is a tinkering computer scientist with a fair bit of intrigue
@@ -44,3 +46,4 @@ Peace!
 [jax]: https://www.mathjax.org/
 [mix]: https://github.com/simurgh9/hw/tree/master/src/mathjax
 [cc4]: https://creativecommons.org/licenses/by-sa/4.0/
+[zoom]: /posts/office-hours/

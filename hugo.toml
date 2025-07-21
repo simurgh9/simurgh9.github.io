@@ -23,9 +23,13 @@ copyright = '© Tashfeen 2025 — licensed under a Creative Commons Attribution-
     pageRef = '/posts'
     weight = 10
   [[menus.main]]
+    name = 'Zoom'
+    pageRef = '/posts/office-hours/'
+    weight = 20
+  [[menus.main]]
     name = 'Colophon'
     pageRef = '/colophon'
-    weight = 20
+    weight = 30
 
 [module]
   [module.hugoVersion]
@@ -46,9 +50,6 @@ copyright = '© Tashfeen 2025 — licensed under a Creative Commons Attribution-
       wrapStandAloneImageWithinParagraph = false
       [markup.goldmark.parser.attribute]
         block = true
-    [markup.goldmark.renderHooks]
-      [markup.goldmark.renderHooks.link]
-        enableDefault = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true

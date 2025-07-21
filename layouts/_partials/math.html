@@ -6,10 +6,10 @@
   -}}
   {{- with . | js.Build $opts -}}
     {{- if hugo.IsDevelopment -}}
-      <script id="MathJax-script" async src="{{ .RelPermalink }}"></script>
+      <script id="MathJax-script" async src="{{ .RelPermalink }}" defer></script>
     {{- else -}}
       {{- with . | fingerprint -}}
-        <script id="MathJax-script" async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+        <script id="MathJax-script" async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
       {{- end -}}
     {{- end -}}
   {{- end -}}

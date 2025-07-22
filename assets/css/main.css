@@ -163,10 +163,6 @@ footer {
   justify-content: space-between;
 }
 
-footer div label.light-checkbox {
-  display: flex;
-}
-
 div.description span.beginning {
   font-family: 'IBMPlexMono', monospace;
   min-width: 11ch;
@@ -307,6 +303,15 @@ li::marker {
 header.banner,
 footer.banner {
   background-color: rgb(var(--BD));
+}
+
+footer a {
+  color: rgb(var(--FG));
+}
+
+footer div label:hover {
+  cursor: pointer;
+  user-select: none;
 }
 
 .with-divider {

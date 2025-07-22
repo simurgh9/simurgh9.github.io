@@ -1,28 +1,29 @@
 <div>
   <input id="light" type="checkbox" />
-  <label for="light" class="light-checkbox">
+  <label for="light" class="ph-duotone-flex-align-items-center">
     {{ partial "icon.html" "ph-moon-stars"}}
     {{ partial "icon.html" "ph-sun"}}
+    Theme
   </label>
 </div>
 <div>
-  <a href="mailto:{{ .Site.Params.author.email -}}">
+  <a title="Email" href="mailto:{{ .Site.Params.author.email -}}">
     {{ partial "icon.html" "ph-at"}}
   </a>
-  <a href="/posts/index.xml" target="_blank" rel="noopener">
+  <a title="RSS" href="/posts/index.xml" target="_blank" rel="noopener">
     {{ partial "icon.html" "ph-rss-simple"}}
   </a>
-  <a href="/tags" target="_blank" rel="noopener">
+  <a title="Tags" href="/tags" target="_blank" rel="noopener">
     {{ partial "icon.html" "ph-tag"}}
   </a>
-  <a href="https://github.com/simurgh9" target="_blank" rel="noopener">
+  <a title="Github" href="https://github.com/simurgh9" target="_blank" rel="noopener">
     {{ partial "icon.html" "ph-github-logo"}}
   </a>
-  <a href="https://text.npr.org/" target="_blank" rel="noopener">
+  <a title="News" href="https://text.npr.org/" target="_blank" rel="noopener">
     {{ partial "icon.html" "ph-newspaper-clipping"}}
   </a>
-  <a href="https://radioparadise.com/player/info/main-mix" target="_blank" rel="noopener">
-    {{ partial "icon.html" "ph-music-notes"}}
+  <a title="Radio" href="https://radioparadise.com/player/info/main-mix" target="_blank" rel="noopener">
+    {{ partial "icon.html" "ph-radio"}}
   </a>
 </div>
 <div>

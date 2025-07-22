@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta
   name="description"
-  content="{{ .Site.Params.author }}'s personal wesbite."
+  content="{{ .Site.Params.author.name }}'s personal wesbite."
 />
 
 <meta name="apple-mobile-web-app-title" content="TA" />
@@ -13,5 +13,5 @@
 <link rel="manifest" href="/site.webmanifest" />
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+{{ partial "head/css.html" . }}
+{{ partial "head/js.html" . }}

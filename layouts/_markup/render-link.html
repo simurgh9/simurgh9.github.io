@@ -32,6 +32,12 @@
     rel="noopener noreferrer"
   {{- end }}
 >
+  {{- with strings.HasSuffix (strings.ToLower $href) ".pdf" }}
+    {{ partial "icon.html" "ph-file-pdf"}}
+  {{- end }}
+  {{- with $external }}
+    {{ partial "icon.html" "ph-arrow-square-out"}}
+  {{- end }}
   {{ .Text }}
 </a>
 {{- /**/ -}}

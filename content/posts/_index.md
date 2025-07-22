@@ -1,5 +1,9 @@
 +++
 outputs = ['html','rss']
+[params]
+  math = true
+  code = true
+  gallery = true
 +++
 
 Twain, Mark. _Adventures of Huckleberry Finn_. Vol. 20. Univ of

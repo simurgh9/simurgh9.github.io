@@ -1,4 +1,4 @@
-User-agent: *
-{{ range .Pages }}
-Disallow: {{ .RelPermalink }}
-{{ end }}
+# https://stackoverflow.com/a/21794569/12035739
+user-agent: *
+Allow: /$
+Disallow: /

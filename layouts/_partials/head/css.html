@@ -1,4 +1,10 @@
-{{- $paths := slice "css/main.css" "css/syntax.css" "css/phosphor.css" "css/gallery.css" -}}
+{{- $paths := slice "css/main.css" "css/phosphor.css" -}}
+{{- if .Param "code" -}}
+  {{ $paths = $paths | append "css/syntax.css" }}
+{{- end -}}
+{{- if .Param "gallery" -}}
+  {{ $paths = $paths | append "css/gallery.css" }}
+{{- end -}}
 {{- range $paths -}}
   {{- with resources.Get . -}}
     {{ if hugo.IsDevelopment -}}

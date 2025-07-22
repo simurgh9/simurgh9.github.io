@@ -3,6 +3,9 @@ draft = true
 title = 'Test'
 date = 1970-01-01T00:00:00-07:00
 tags = ['sample']
+[params]
+  mathjax = true
+  code = true
 +++
 
 The author uses this file to test formatting and other display
@@ -89,9 +92,9 @@ With the Hugo shortcode.
 
 {{< highlight python "hl_lines=1 3-4" >}}
 def function(n): # prints first n natural numbers.
-for i in range(n):
-print(n)
-return 0
+    for i in range(n):
+        print(n)
+    return 0
 {{< /highlight >}}
 
 Blockquote.

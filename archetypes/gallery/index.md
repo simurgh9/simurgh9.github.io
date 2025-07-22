@@ -2,7 +2,9 @@
 draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
-tags = ['forgot']
+tags = ['Photography']
+[params]
+  gallery = true
 +++
 
 {{< gallery "Caption goes here." media >}}

@@ -1,19 +1,42 @@
-{{- with resources.Get "js/main.js" -}}
-  {{- $opts := dict
-    "minify" (not hugo.IsDevelopment)
-    "sourceMap" (cond hugo.IsDevelopment "external" "")
-    "targetPath" "js/main.js"
-  -}}
-  {{- with . | js.Build $opts -}}
-    {{- if hugo.IsDevelopment -}}
-      <script src="{{ .RelPermalink }}" defer></script>
-    {{- else -}}
-      {{- with . | fingerprint -}}
-        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- $paths := slice "js/main.js" -}}
+{{- if .Param "mathjax" -}}
+  {{ $paths = $paths | append "js/hwjax.min.js" }}
+{{- end -}}
+{{- range $paths -}}
+  {{- with resources.Get . -}}
+    {{- $opts := dict
+      "minify" (not hugo.IsDevelopment)
+      "sourceMap" (cond hugo.IsDevelopment "external" "")
+      "targetPath" .RelPermalink
+    -}}
+    {{- with . | js.Build $opts -}}
+      {{- if hugo.IsDevelopment -}}
+        <script
+          {{ if strings.HasSuffix (strings.ToLower .RelPermalink) "hwjax.min.js" -}}
+            id="MathJax-script"
+            async
+          {{ else  }}
+            defer
+          {{ end -}}
+          src="{{ .RelPermalink }}"
+        >
+        </script>
+      {{- else -}}
+        {{- with . | fingerprint -}}
+          <script
+            {{ if strings.HasSuffix (strings.ToLower .RelPermalink) "hwjax.min.js" -}}
+              id="MathJax-script"
+              async
+            {{ else }}
+              defer
+            {{ end -}}
+            src="{{ .RelPermalink }}"
+            integrity="{{ .Data.Integrity }}"
+            crossorigin="anonymous"
+          >
+          </script>
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{ if .Site.Params.math }}
-  {{ partialCached "math.html" . }}
-{{ end }}

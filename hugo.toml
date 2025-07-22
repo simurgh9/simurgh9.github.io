@@ -6,7 +6,6 @@ enableRobotsTXT = true
 copyright = '© Tashfeen 2025 — licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
 
 [params]
-  math = true
   [params.author]
     name = 'Tashfeen'
     email = 'tashfeen@ou.edu'
@@ -42,9 +41,7 @@ copyright = '© Tashfeen 2025 — licensed under a Creative Commons Attribution-
 
 [markup]
   [markup.highlight]
-    lineNumbersInTable = false
     noClasses = false
-    lineNos = true
   [markup.goldmark]
     [markup.goldmark.parser]
       wrapStandAloneImageWithinParagraph = false

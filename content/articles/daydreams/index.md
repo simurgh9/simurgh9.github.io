@@ -6,6 +6,8 @@ summary = """\
 3 quarters, 2 dimes, 1 nickel and 4 pence. If anyone carries \
 (at most) these 10 coins, they'll make any change exactly!\
 """
+[params]
+  mathjax = true
 +++
 
 ![Madeleine au Bois d'Amour](bernard.png "Madeleine au Bois d'Amour")

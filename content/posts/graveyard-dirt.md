@@ -1,5 +1,4 @@
 +++
-draft = true
 title = 'Graveyard Dirt, Bagels and Theatre'
 date = '2025-07-23T00:02:53-05:00'
 tags = ['surprises', 'randomness']

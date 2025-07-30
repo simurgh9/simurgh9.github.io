@@ -1,7 +1,10 @@
 +++
 title = 'Summertime Tomatoes'
 date = '2025-07-22T01:04:35-05:00'
-tags = ['Homegrown', 'Vegetables', 'Shakshouka', 'Tomatoes', 'Summer']
+tags = [
+  'Homegrown', 'Vegetables', 'Shakshouka', 'Tomatoes', 'Summer', 'Food',
+  'Cooking'
+]
 [params]
   gallery = true
 +++

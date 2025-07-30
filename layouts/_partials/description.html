@@ -1,21 +1,21 @@
 {{- range . -}}
   <div class="description ph-duotone-flex-align-items-center">
     <span class="beginning">
-      <a href="{{ .RelPermalink }}">
+      <a href="{{- .RelPermalink -}}">
         {{- partial "date.html" (dict "date" .Date) -}}
       </a>
     </span>
     <span class="middle">
-      {{ if findRE "<img[^>]*>" .Content }}
-        {{ partial "icon.html" "ph-file-image"}}
-      {{ end }}
+      {{- if findRE "<img[^>]*>" .Content -}}
+        {{- partial "icon.html" "ph-file-image" -}}
+      {{- end -}}
     </span>
     <span class="end">
-      {{ if .Title }}
-        {{ .Title }}
-      {{ else }}
-        {{ .Content | plainify | safeHTML | truncate 23 }}
-      {{ end }}
+      {{- if .Title -}}
+        {{- .Title | plainify | safeHTML | truncate 23 -}}
+      {{- else -}}
+        {{- .Content | plainify | safeHTML | truncate 23 -}}
+      {{- end -}}
     </span>
   </div>
 {{- end -}}

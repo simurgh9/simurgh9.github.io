@@ -1,5 +1,4 @@
 +++
-draft = true
 title = 'Shakshouka Al Makhsūs'
 date = '2025-08-03T18:02:11-05:00'
 tags = ['Homegrown', 'Tomatoes', 'Food', 'Cooking', 'Nature']

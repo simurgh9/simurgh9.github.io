@@ -1,4 +1,8 @@
-<h2>Recent Posts</h2>
-{{- $posts := (site.GetPage "/posts").Pages.ByDate.Reverse | first 10 }}
-{{- partial "description.html" $posts -}}
+<h2>Recent Activity</h2>
+{{- $posts := (site.GetPage "/posts").Pages }}
+{{- $articles := (site.GetPage "/articles").Pages }}
+{{- $combined := $posts | append $articles }}
+{{- $sorted := $combined.ByDate.Reverse }}
+{{- $top := first 10 $sorted }}
+{{- partial "description.html" $top -}}
 <p>For longer articles please visit the <a href="/articles">the articles page</a>.</p>

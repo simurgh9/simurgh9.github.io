@@ -10,7 +10,7 @@ summary = """\
   mathjax = true
 +++
 
-![Madeleine au Bois d'Amour](bernard.png "Madeleine au Bois d'Amour")
+![Madeleine au Bois d'Amour](bernard.WEBP "Madeleine au Bois d'Amour")
 
 Sometime before the last semester, I was in my (parked) car, staring
 at the gradually piling lot of coins under the armrest. Whenever I pay

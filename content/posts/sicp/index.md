@@ -19,6 +19,7 @@ Anyway, I downloaded the MIT/GNU Scheme and gave it a spin, exiting
 with `(exit)`.
 
 ![Exiting MIT/GNU Scheme](scheme-exit.WEBP "Exiting MIT/GNU Scheme")
+{class="image-fifteen"}
 
 Did it just cast a hex? I looked up _Ceterum censeo Carthaginem esse
 delendam._ Apparently, it means _Furthermore, I think that Carthage

@@ -478,6 +478,10 @@ main pre code {
   margin-left: var(--SML);
 }
 
+.image-fifteen {
+  max-width: 70%;
+}
+
 /* --- Mobile ----------------------------------------------------- */
 
 /* @media only screen and (max-width: 750px) { */

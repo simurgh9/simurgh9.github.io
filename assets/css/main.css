@@ -99,6 +99,10 @@ body {
   line-height: 1.35;
 }
 
+body main strong { /* Default 'bolder' is too light*/
+  font-weight: 600;
+}
+
 header h1 {
   font-size: 36px;
 }

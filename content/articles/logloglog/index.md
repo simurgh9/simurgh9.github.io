@@ -18,7 +18,7 @@ I heard this joke while watching a Terry Tao lecture on YouTube titled
 YouTube was created equal, was it?  A few weeks back, I was
 doom-scrolling and found this little piece of work.
 
-![YouTube Thumbnail](sc.WEBP "\(9^a + 9^a = 900\)")
+![YouTube Thumbnail](sc.WEBP "YouTube Thumbnail")
 
 To quench a moment of intellectual insecurity, I decided to figure it
 out _real quick_. Let me start by reminding the people who haven't
@@ -36,7 +36,7 @@ some two minutes.
 \begin{align*}
 9^a + 9^a &= 900 \\
 2 \cdot 9^a &= 900 && \text{Since } 2 \cdot 9^a = 9^a + 9^a \\
-\frac{2 \cdot 9^a}{2} &= \frac{900}{2} && \text{Divide by 2 on the both sides.} \\
+\frac{2 \cdot 9^a}{2} &= \frac{900}{2} && \text{Divide by 2 on both sides.} \\
 9^a &= 450 \\
 \log_9(9^a) &= \log_9(450) && \log_9\text{ on both sides} \\
 a &= \log_9(450) && \text{Since } \log_b(b^x) = x \\
@@ -48,9 +48,9 @@ the answer had to be a rational number, _right_?  I mean, the
 thumbnail title does say that this is supposed to be a Harvard exam
 problem.  If by the off-chance any non-mathematical demographic does
 read my blog: the answer not being a rational number implies that it
-cannot be expressed as a fraction of two whole numbers, i.e., you have
-to use a calculator to get an approximation. What's the fun in that?
-All this problem will then test is who can plant keystrokes on a
+cannot be expressed as a fraction of two whole numbers. You have to
+use a calculator to get an approximation. What's the fun in that?  All
+this problem will then test is who can plant keystrokes on a
 calculator.
 
 With faith in humanity and all that is sacred, I proceeded to look for
@@ -69,7 +69,6 @@ greater than \(1\). I picked \(3\) for obvious reasons.
 \begin{align*}
 a &= \log_9(450) \\
 &= \frac{\log_3(450)}{\log_3(9)} && \text{Since } \log_x(y) = \frac{\log_b(y)}{\log_b(x)} \\
-&= \frac{\log_3(450)}{\log_3(9)} \\
 &= \frac{\log_3(9 \cdot 50)}{\log_3(9)} \\
 &= \frac{\log_3(9) + \log_3(50)}{\log_3(9)} && \text{Since } \log(xy) = \log(x) + \log(y) \\
 &= \frac{\log_3(9)}{\log_3(9)} + \frac{\log_3(50)}{\log_3(9)} \\
@@ -107,8 +106,9 @@ _Drum roll..._
 
 They resort to using the calculator at \(a =\log_9(450)\).  The
 [original YouTube video][original] was taken down and replaced with a
-[new YouTube video][new]. Apparently, now it is a "Math Olymp*ai*d
-Question."
+[new YouTube video][new]. Apparently, now it is a "Math Olymp**ai**d
+Question." And, no, that is not an AI joke. I am quoting the original
+title.
 
 [lecture]: https://youtu.be/pp06oGD4m00?t=1261
 [original]: https://www.youtube.com/watch?v=PnnsWjwSuRM

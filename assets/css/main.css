@@ -99,7 +99,7 @@ body {
   line-height: 1.35;
 }
 
-body main strong { /* Default 'bolder' is too light*/
+body main strong { /* Default 'bolder' is too light */
   font-weight: 600;
 }
 

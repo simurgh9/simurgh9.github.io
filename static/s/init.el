@@ -23,15 +23,19 @@
 
 ;; This is my small "terminal" Emacs config I pull on servers.
 
-(load-theme 'modus-vivendi-tinted t)
+(load-theme 'wombat t)
+(set-face-attribute
+  'highlight nil :underline 'unspecified)
 
 (cua-mode t)
 (menu-bar-mode -1)
-(tool-bar-mode -1)
 (show-paren-mode 1)
-(scroll-bar-mode -1)
 (global-hl-line-mode t)
 (global-display-line-numbers-mode t)
+
+(when (display-graphic-p)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
 
 (setq
   inhibit-startup-message t

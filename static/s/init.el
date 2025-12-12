@@ -1,4 +1,3 @@
-;; The MIT License (MIT)
 ;; Copyright (c) 2025 Tashfeen <tashfeen.org>
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -24,8 +23,7 @@
 ;; This is my small "terminal" Emacs config I pull on servers.
 
 (load-theme 'wombat t)
-(set-face-attribute
-  'highlight nil :underline 'unspecified)
+(set-face-attribute 'highlight nil :underline 'unspecified :foreground 'unspecified)
 
 (cua-mode t)
 (menu-bar-mode -1)
@@ -44,13 +42,25 @@
   make-backup-files nil
   auto-save-default nil
   visible-bell t)
+
 (setq-default tab-width 4 fill-column 70)
 (setq inhibit-startup-echo-area-message "tfn")
+
 (dolist
   (binding
-    '(("C-s" . save-buffer)
-       ("C-/" . comment-line)
-       ("C-o" . other-window)
+    '(("C-s"     . save-buffer)
+       ("C-/"    . comment-line)
+       ("C-o"    . other-window)
+       ("C-o"    . other-window)
+       ("C->"    . end-of-buffer)
+       ("C-<"    . beginning-of-buffer)
+       ("C-w"    . kill-current-buffer)
+       ("<f9>"   . kmacro-end-or-call-macro)
+       ("S-<f9>" . kmacro-start-macro-or-insert-counter)
        ("C-f" . isearch-forward)))
   (global-set-key (kbd (car binding)) (cdr binding)))
 
+;; isearch
+(use-package isearch
+  :bind (:map isearch-mode-map
+    ("C-f" . isearch-repeat-forward)))

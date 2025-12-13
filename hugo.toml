@@ -1,3 +1,4 @@
+theme = "anuar"
 baseURL = 'https://tashfeen.org/'
 languageCode = 'en-GB'
 title = 'tashfeen.org'

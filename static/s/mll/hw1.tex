@@ -1,0 +1,94 @@
+\documentclass{homework}
+\author{Tashfeen, Ahmad}
+\class{CSCI 3223: Machine Learning II}
+\title{Homework 1}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+\newcommand\bayes{%
+  https://scikit-learn.org/stable/modules/naive_bayes.html%
+} \newcommand\titanic{%
+  https://github.com/alexisperrier/packt-aml/blob/master/ch4/titanic.csv%
+} \newcommand\threat{%
+  Submissions with any other imports will earn zero credit.%
+}
+
+\begin{document} \maketitle
+
+\question Read the \href{\bayes}{Naive Bayes} section of the Scikit
+learn's documentation. Name the five Na\"ive Bayes' models that are
+described there.
+
+\question In a couple of lines, state the difference between the
+models implemented by Scikit learn and the one we implemented in
+\href{https://tashfeen.org/s/ml/hw3.pdf}{homework 3} from
+Machine Learning I.
+
+\question\label{experiment} Keeping the same source for the
+\href{\titanic}{Titanic data set} and data preprocessing under
+\href{https://tashfeen.org/s/ml/data.py}{\texttt{data.py}},
+start a Python file (\texttt{bayes.py}) with \textit{only} the imports
+shown in listing \ref{imports}.
+
+\begin{lstlisting}[label=imports, language=Python, caption={\threat}]
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, ComplementNB
+from sklearn.naive_bayes import BernoulliNB, CategoricalNB
+from data import X, y, X_, y_
+
+class NaiveBayes:
+    """
+    Your implementation from Machine Learning I.
+    """
+\end{lstlisting}
+
+The Python class \texttt{NaiveBayes} in the code listing \ref{imports}
+is your implementation from Machine Learning I\footnote{If you
+  did not take that course here or with the same professor, you'll
+  need to implement a Na\"ive Bayes classifier as described
+  \href{https://tashfeen.org/s/ml/hw3.pdf}{here}.}. Using the
+data split \texttt{X, y, X\_, y\_}, evaluate the accuracy with
+\texttt{X\_, y\_} after fitting each of the \texttt{GaussianNB,
+  MultinomialNB, ComplementNB, BernoulliNB} and \texttt{CategoricalNB}
+on \texttt{X, y}.
+
+Note that the categorical model requires a little special attention.
+It throws an exception if the test set contains data points that were
+not seen in the training set.  Since this is very likely for the fare
+and the age feature, we may round those to the nearest multiple of 10
+like so,
+
+\begin{verbatim}
+X[:,2:4] = 10 * np.round(X[:,2:4] / 10)
+X_[:,2:4] = 10 * np.round(X_[:,2:4] / 10)
+\end{verbatim}
+
+This data adjustment should only be done for the
+\texttt{CategoricalNB} model and it should not affect any other fits.
+
+\begin{enumerate}
+  \item What is the baseline accuracy for how we split the data in
+        training and testing samples?
+  \item Plot the accuracies of all the models including yours as a bar
+        graph of bars sorted in non-increasing order. The $x$--ticks should
+        be the names of the models and the $y$--label should be
+        ``Accuracy''.
+\end{enumerate}
+
+\question Analysing the plot from question \ref{experiment}, which
+model has the best performance?
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers the questions and contains all the
+        plots that the assignment asks for.
+  \item Submit your \texttt{bayes.py}. If this Python file does not
+        run on the console with \texttt{python3 bayes.py} after any
+        necessary path adjustments, the submission will receive no credit.
+\end{enumerate}
+
+\end{document}

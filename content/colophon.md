@@ -23,9 +23,11 @@ crepuscular light, you can almost see his halo.
 
 # About the website
 
-This website is made in [Emacs][mcs] using [Hugo][ugo]. The icons used
-are [Phosphor][hor] duotone. Mathematics is rendered using
-[MathJax][jax], though I have my own [custom distribution][mix].
+This website is made with [Emacs][mcs] using [Hugo][ugo]. The icons in
+use are [Phosphor][hor] duotone. Mathematics is rendered using
+[MathJax][jax], though I have my own [custom distribution][mix]. The
+fonts [EB Garamond][garamond] and [IBM Plex][plex] constitute the bulk
+of the typography used on here.
 
 The website is licensed under a [Creative Commons
 Attribution-ShareAlike 4.0 International License][cc4].
@@ -47,3 +49,5 @@ Peace!
 [mix]: https://github.com/simurgh9/hw/tree/master/src/mathjax
 [cc4]: https://creativecommons.org/licenses/by-sa/4.0/
 [zoom]: /posts/office-hours/
+[garamond]: http://www.georgduffner.at/ebgaramond/index.html
+[plex]: https://www.ibm.com/plex/

@@ -3,10 +3,6 @@
 
 Welcome! This is my personal website, have a look around.
 
-If you've been here before, you may notice a redesign.  Please send me
-an email if you find something broken or something that previously
-existed and no longer does.
-
 {{< recent >}}
 
 ## Projects

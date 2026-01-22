@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 """
-Simple parabola with labels and captions.
+Simple parabola without labels and captions.
 """
 
 plt.plot([-3, -2, -1, 0, 1, 2, 3], [9, 4, 1, 0, 1, 4, 9])

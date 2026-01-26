@@ -1,0 +1,253 @@
+\documentclass{homework}
+% \author{Tashfeen, Ahmad}  % uncomment with your name
+\class{CSCI 3223: Tashfeen's Machine Learning II}
+\title{Homework 2}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}\newcommand\fisher{\href{%
+    https://en.wikipedia.org/wiki/Iris_flower_data_set%
+  }{Fisher's Iris data set}}
+\newcommand\treeplot{\href{%
+    https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html%
+  }{\texttt{sklearn.tree.plot\_tree}}}
+\newcommand\titanic{\href{%
+    https://github.com/alexisperrier/packt-aml/blob/master/ch4/titanic.csv%
+  }{cleaned Titanic Dataset}}
+\newcommand\threat{%
+  Submissions with any other imports will earn zero credit.%
+}\newcommand\DecisionTreeClassifier{\href{%
+    https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html%
+  }{\texttt{DecisionTreeClassifier}}}
+\DeclareMathOperator{\en}{Entropy}
+\DeclareMathOperator{\gn}{Gain}
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\usepackage[linguistics]{forest}
+
+\begin{document} \maketitle
+
+\img<fig:example>[0.3]{XKCD Comic 1924: \url{https://xkcd.com/1924/}}{media/solar_panels_2x}
+
+In this assignment, we'll learn about classification and (not as
+intuitively) regression using \textit{decision trees}. Please do not
+use any other libraries than Numpy, Matplotlib and Scikit-learn.
+
+\section*{Classification Trees}
+
+Figure \ref{fig:example} shows an example classification decision
+tree. Consider the data given in Table \ref{training1}, we could make
+two possible decision trees given in Figure \ref{trees}. The
+difference between the two trees is the first splitting question, or
+simply, the feature we select to split over. If we follow the Occam's
+razor, the tree with only one split is better. Generalising the
+question we need to answer when we are building a decision tree for a
+dataset, we ask,
+
+\begin{center}
+  What is the best feature to split the data over at a given level of
+  the tree?
+\end{center}
+
+To best answer this question, we use two important concepts from
+information theory (the branch of mathematics most responsible for
+artificial intelligence),
+
+\begin{enumerate}
+  \item $\text{Entropy} \propto \frac{1}{\text{Purity}}$
+  \item Information Gain
+\end{enumerate}
+
+\tbl<training1>{Dataset $S$ with attributes $a_1$ and $_2$.} {
+      Instance & Classification & $a_1$ & $a_2$ \\
+      1        & $+$            & T     & T     \\
+      2        & $+$            & T     & T     \\
+      3        & $+$            & T     & F     \\
+      4        & $-$            & F     & F     \\
+      5        & $-$            & F     & T     \\
+      6        & $-$            & F     & T     \\
+}
+
+% for tree={s sep=20mm, inner sep=0, l=0}
+\begin{figure}[hbtp]
+  \centering%
+  \begin{forest}
+    [Is $a_1$ equal to T?
+      [Instances: {$1^+, 2^+, 3^+$}, edge label={node[midway,fill=white,font=\scriptsize]{$\text{Y}^{+++}$}}]
+      [Instances: {$4^-, 5^-, 6^-$}, edge label={node[midway,fill=white,font=\scriptsize]{$\text{N}^{---}$}}]
+    ]
+  \end{forest}
+  \begin{forest}
+    [Is $a_2$ equal to T?
+      [Is $a_1$ equal to T?, edge label={node[midway,fill=white,font=\scriptsize]{$\text{Y}^{++--}$}}
+        [Instances: {$1^+, 2^+$}, edge label={node[midway,fill=white,font=\scriptsize]{Y}}]
+        [Instance: {$5^-, 6^-$}, edge label={node[midway,fill=white,font=\scriptsize]{N}}]
+      ]
+      [Is $a_1$ equal to T?, edge label={node[midway,fill=white,font=\scriptsize]{$\text{N}^{+-}$}}
+        [Instances: {$3^-$}, edge label={node[midway,fill=white,font=\scriptsize]{Y}}]
+        [Instance: $4^+$, edge label={node[midway,fill=white,font=\scriptsize]{N}}]
+      ]
+    ]
+  \end{forest}
+  \caption{Possible decision trees for Table \ref{training1}.}\label{trees}
+\end{figure}
+
+Page 55 of \textit{Machine Learning}, Tom Mitchell's Equation 3.1
+defines entropy for two classes as follows:
+\[
+  \en(S) = -p_\oplus\lg p_\oplus - p_\ominus\lg p_\ominus
+\]
+Note that when $p_\oplus = 0.5 = p_\ominus$, we have entropy
+$-0.5\lg\paren{0.5} - 0.5\lg\paren{0.5} = 1$. Where $p_\oplus$ and
+$p_\ominus$ are the probabilities of the positive and negative classes
+in the data $S$. Furthermore, the equation 3.4 (pg. 58) gives the
+definition of the information gain for a split over an attribute
+$A=a_i$. Observe that if $A$ is a binary attribute then $\text{Values}(A) =
+\{\text{F}, \text{T}\} \ni v$ and $S_v$ are rows where $A=v$.
+\[
+  \gn(S, A) = \en(S) - \displaystyle \sum_{v\in \text{Values}(A)} \frac{|S_v|}{|S|}\en(S_v)
+\]
+\question Consider the data set $S$ in table \ref{training1}.
+
+\begin{enumerate}
+  \item What is the entropy of $S$?
+  \item What is the $\gn(S, a_2)$? Should we split over $a_1$ or $a_2$? Justify your answer.
+\end{enumerate}
+
+\question\label{experiment} Pick the columns, ``pclass, sex and age''
+from the \titanic{} and remove any rows with empty values. Encode
+``female'' as 0 and ``male'' as 1. Hold out 50 records corresponding
+to the people who survived and 50 for those who unfortunately did
+not. You'll be using these $50 + 50 = 100$ records for testing. Feel
+free to use the Python file
+\href{https://tashfeen.org/s/ml/data.py}{\texttt{data.py}} from the
+previous homework.
+
+Use the Scikit-learn's \DecisionTreeClassifier{} with the training data to
+build a decision tree of max depth equal to $4$ (starting counting at 0). Put
+the code in a file called \texttt{titanictree.py}.
+
+\begin{enumerate}[label=(\alph*)]
+  \item What is the accuracy on the testing set?
+  \item Plot the tree using \treeplot{}. Let \texttt{fontsize} be 10 while
+        also setting the class variables \texttt{feature\_names} and
+        \texttt{class\_names} appropriately. Also set
+        \texttt{plt.figure(figsize=(24, 8))} and
+        \texttt{plt.tight\_layout()} before the call \texttt{plt.show()}.
+        Give this plot.
+  \item What is the probability that a first class male infant survived
+        the shipwreck?
+\end{enumerate}
+
+\question \fisher{} consists of 150 rows and $4+1$ columns where four
+columns correspond to lengths and one to an Iris species. There are
+fifty records for each of the: Setosa, Versicolor, Virginica.
+
+\tbl<tb:iris>{Ronald Fisher's Iris Flower Data (\href{https://tashfeen.org/s/mll/loadiris.py}{\texttt{loadiris.py}}). } {
+  $i$      & Sepal Length (cm) & Sepal Width (cm) & Petal Length (cm) & Petal Width (cm) & Species    \\
+  1        & 5.1               & 3.5              & 1.4               & 0.2              & Setosa     \\
+  $\vdots$ & $\vdots$          & $\vdots$         & $\vdots$          & $\vdots$         & $\vdots$   \\
+  51       & 7.0               & 3.2              & 4.7               & 1.4              & Versicolor \\
+  $\vdots$ & $\vdots$          & $\vdots$         & $\vdots$          & $\vdots$         & $\vdots$   \\
+  101      & 6.3               & 3.3              & 6.0               & 2.5              & Virginica  \\
+  $\vdots$ & $\vdots$          & $\vdots$         & $\vdots$          & $\vdots$         & $\vdots$   \\
+  150      & 5.9               & 3.0              & 5.1               & 1.8              & Virginica  \\
+}
+\img<fig:iris>{%
+  Iris' sepal length against its petal length (left). Annotated anatomy of an Iris flower (right).%
+}{media/sepal_petal_length, media/iris}
+
+You can see the Sepal and Petal annotated in Figure \ref{fig:iris}
+(right) while the left side shows the relationship between the sepal
+and the petal lengths. Give a two-split classification decision tree
+that classifies Irises into Setosa, Versicolor, Virginica where
+entropy in any given leaf node is at most $0.4$. Give the entropy for
+each of your leaf nodes. Put any code for this question in a file
+called \texttt{iristree.py}.
+
+
+
+\section*{Regression Trees}
+
+For regression, let prediction for a leaf node $\ell_i$ be the mean of
+all the target values that fall in that leaf. As well as the mean
+squared error for that leaf,
+\[
+  \text{MSE}(\ell_i) = \frac{1}{|\ell_i|}\sum_{y\in \ell_i}(\hat y - y)^2
+  \quad
+  \text{where}
+  \quad
+  \hat y = \frac{1}{|\ell_i|}\sum_{y\in \ell_i}y.
+\]
+The error of a regression tree can be defined as the sum of errors in
+all the leaves.
+
+
+\begin{example}\label{example}
+  If we split the toy data in Table \ref{toy} over the question,
+  ``Enrollment $\geq 25$,'' we get,
+
+  % for tree={s sep=20mm, inner sep=0, l=0}
+  \begin{center}
+    \begin{forest}
+      [Enrollment $\geq 25$
+        [$i$: 2 3 4 5 8 9, edge label={node[midway,fill=white,font=\scriptsize]{Y}}]
+          [$i$: 0 1 6 7, edge label={node[midway,fill=white,font=\scriptsize]{N}}]
+      ]
+    \end{forest}
+  \end{center}
+
+  Hence the two leaves give following number of pets,
+  \begin{align*}
+    \hat y_\text{Y} & = \frac{2 + 10 + 5 + 0 + 3 + 3}{6} = \frac{23}{6} = 3.8\overline{3} \\
+    \hat y_\text{N} & = \frac{0 + 0 + 0 + 1}{4} = \frac{1}{4} = 0.25
+  \end{align*}
+
+  Calculating error,
+  \begin{align*}
+    \text{MSE}(\ell_\text{Y}) & = \frac{(3.8\overline{3} - 2)^2 + (3.8\overline{3} - 10)^2 + (3.8\overline{3} - 5)^2 + (3.8\overline{3} - 0)^2 + (3.8\overline{3} - 3)^2 + (3.8\overline{3} - 3)^2}{6} \\
+                              & = \frac{58.8\overline{3}}{6}      = 9.80\overline{5}                                                                                                                   \\
+    \text{MSE}(\ell_\text{N}) & = \frac{(0.25 - 0)^2 + (0.25 - 0)^2 + (0.25 - 0)^2 + (0.25 - 1)^2}{4}                                                                                                  \\
+                              & = \frac{0.75}{4}     = 0.1875
+  \end{align*}
+
+  Therefore the total error is $9.80\overline{5} + 0.1875 =
+    9.9930\overline{5}$.
+\end{example}
+
+\tbl<toy>{Toy student data to predict the number of pets.} {
+  $i$ & Enrollment & Hour of the Day (0: AM, 1: PM) & Class Level (0: U, 1: G) & Number of Pets \\
+  0   & 20         & 0                              & 0                        & 0              \\
+  1   & 12         & 1                              & 1                        & 0              \\
+  2   & 50         & 0                              & 0                        & 2              \\
+  3   & 100        & 1                              & 0                        & 10             \\
+  4   & 75         & 1                              & 0                        & 5              \\
+  5   & 30         & 0                              & 1                        & 0              \\
+  6   & 5          & 0                              & 1                        & 0              \\
+  7   & 12         & 0                              & 1                        & 1              \\
+  8   & 30         & 1                              & 1                        & 3              \\
+  9   & 25         & 1                              & 1                        & 3              \\
+}
+
+\question\label{choise} With each of the given root questions for the
+toy data in Table \ref{toy},
+\begin{enumerate}
+  \item Enrollment $\geq 50$
+  \item Hour of the Day is 1
+  \item Class Level is 1
+\end{enumerate}
+
+Calculate the respective splits and errors for each of their leaves
+and give the total tree error as shown in Example \ref{example}. What
+is the best root split criterion to grow a regression tree?
+
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers any questions and contains all the plots that the assignment asks for.
+  \item Submit your \texttt{titanictree.py} and \texttt{iristree.py}.
+\end{enumerate}
+
+\end{document}

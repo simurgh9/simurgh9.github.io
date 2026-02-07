@@ -10,6 +10,7 @@ Welcome! This is my personal website, have a look around.
 Following are a couple of my projects (that I use & maintain).
 
 - [Fractals etc.][fractal] ([Github][fracgit])
+- [AI Snake Agents][snake] ([Evolving Snakes][snakega])
 - [Huiswerk in LaTeX][tex]
 - [Terminal Wordle][wordle]
 
@@ -30,4 +31,5 @@ These below are a bit more academic.
 [genpres]: /s/29mar2023.pdf
 [tex]: https://github.com/simurgh9/hw
 [wordle]: https://github.com/simurgh9/wordle
-
+[snake]: https://github.com/simurgh9/snake
+[snakega]: https://github.com/simurgh9/snake/tree/experiment

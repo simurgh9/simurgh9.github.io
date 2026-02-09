@@ -1,0 +1,188 @@
+\documentclass{homework}
+% \author{Tashfeen, Ahmad}  % uncomment with your name
+\class{CSCI 3223: Tashfeen's Machine Learning II}
+\title{Homework 3}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\newcommand\titanicpy{\href{%
+    https://tashfeen.org/s/mll/titanic.py%
+  }{\texttt{titanic.py}}}
+\newcommand\titanic{\href{%
+    https://github.com/alexisperrier/packt-aml/blob/master/ch4/titanic.csv%
+  }{csv file}}
+\newcommand\ridge{\href{%
+    https://tinyurl.com/ye5yl4tx%
+  }{\texttt{sklearn.linear\_model.Ridge}}}
+\newcommand\lasso{\href{%
+    https://tinyurl.com/27sydfrp%
+  }{\texttt{sklearn.linear\_model.Lasso}}}
+\newcommand\boston{\href{%
+    https://tinyurl.com/28o4harq%
+  }{\texttt{BostonHousing.csv}}}
+\newcommand\mnist{\href{%
+    http://yann.lecun.com/exdb/mnist/%
+  }{MNIST database of handwritten digits'}}
+\newcommand\sklearnart{\href{%
+    https://scikit-learn.org/stable/auto_examples/compose/plot_column_transformer_mixed_types.html%
+  }{Column Transformer with Mixed Types}}
+\newcommand\hwzip{\href{%
+    https://tashfeen.org/s/mll/hw3.zip%
+  }{\texttt{hw3.zip}}}
+
+
+\begin{document} \maketitle
+
+You can download all the code in this homework as \hwzip{}.
+
+\question Recall that Ridge regression minimises the following error
+function, where $\alpha$ is the regularisation constant.
+\[
+  J(\beta) = (X\beta - Y)^T(X\beta - Y)+
+  \underbrace{\overbrace{\alpha}
+  ^{\substack{\text{Regularisation} \\ \text{Constant}}}
+  \cdot\quad\beta^T\beta}_{
+  \substack{\text{Penalty} \\ \text{Term}}}
+\]
+
+
+Generate data as shown in listing \ref{hilbert} and then for each
+$\alpha_i \in \texttt{np.logspace(-10, -2)}$ use the Scikit-learns's
+\ridge{} and plot $\paren{\alpha_i, \beta_{i, 1 \leq j \leq p}}$ This
+is \texttt{Ridge.coef\_} plotted against \texttt{Ridge.alpha}. Note
+that you need to pass \texttt{fit\_intercept=False} to the Ridge
+constructor and scale your $x$--axis logarithmically. Use the error
+function $J(\beta)$ to explain the trend in the plot. Put the code for
+this question in a file called \texttt{regu.py}.
+
+
+\lstinputlisting[
+  linerange={6-9},
+  language=Python,
+  caption={Hilbert space data.},
+  label=hilbert]
+{code/given/regu.py}
+
+\question\label{lasso} Instead of smoothly minimising $\beta_i$ like
+Ridge, Lasso regression minimises the less relevant $\beta_i$ to
+zero. Therefore, we may use the $\beta$ evaluated by Lasso for feature
+selection or dimensionality reduction. Load the Boston house-price
+data like this,
+
+\lstinputlisting[
+  linerange={8-26},
+  language=Python,
+  caption={
+      Loading the \boston{}.%
+    },
+  label=boston]
+{code/house_sol.py}
+
+Gradually train 10 different Lasso models with each model's
+\texttt{max\_iter} set to its index and $\alpha=1$. For example, the
+first model will be trained for 1 iteration, the second for 2, third
+for 3 and so on. Record the $\beta$ for each of these and you'll
+accumulate a 10 by 13 matrix. Plot each of the rows of this matrix in
+the same figure.  Which features have converged to zero? What does
+that mean? Code should be put in \texttt{house.py}.
+
+\question While Ridge regression uses the $\ell^2$ or the Euclidean
+norm in the penalty term, Lasso regression uses the $\ell^1$ or the
+Taxicab norm, more commonly referred to as the Manhattan
+distance. Lasso minimises the same quadratic error function but with a
+penalty term that involves absolute values.
+\[
+  J(\beta) = (X\beta - Y)^T(X\beta - Y)+\alpha\sum_{i=1}^p|\beta_i|
+\]
+\begin{enumerate}
+  \item As such, just like the Ridge or the Ordinary Least Squares
+        regression, can you analytically workout a solution for $\beta$?
+        Justify your answer.
+  \item Read the \lasso{} documentation and state the method that is used
+        to minimise the Lasso regression's error function. Hint: How are
+        the data points fit?
+  \item Read \titanicpy{} (the \titanic{} is the same from previous
+        homework). What does it do?
+  \item At the end of the \titanicpy{}, build a Lasso model using the
+        transformed data. Then, build a bar graph where each bar is the
+        Lasso regularised slope $\beta_i$. Label the $x$--ticks with the
+        transformed feature names. According to this bar graph, which
+        features are the most important?
+\end{enumerate}
+
+\question\label{neither} Assure that you can download and read in the
+following two \mnist{} test files. Read them into the appropriate
+Numpy variables as in the previous assignments. Be sure to normalise
+the pixel values from $0 \leq x \leq (2^8-1)$ to $0 \leq x \leq 1$.
+\begin{itemize}
+  \item \href{https://myokcuedu-my.sharepoint.com/:u:/g/personal/tashfeen_okcu_edu/EeqU1CH36W5Bp0YRgiRXxxUBuhzdI_JPec6CBlxsMBCtgA}{\texttt{t10k-images-idx3-byte}}
+  \item \href{https://myokcuedu-my.sharepoint.com/:u:/g/personal/tashfeen_okcu_edu/EV2eLmsY5E9Dv3VpDTp4IV0BijP0gNxc4Jmi_Hqx9-FKcQ?e=JaLBW5}{\texttt{t10k-labels-idx1-ubyte}}
+\end{itemize}
+Use the hyper-parameters given bellow for the Scikit-learn's
+$K$--means model. Fit the entire MNIST test set with clustering. Upon
+converging, what is the sum of the squared distances of the images to
+their closest cluster center (hereafter called inertia)?
+\begin{center}
+  \texttt{n\_init='auto', n\_clusters=10, random\_state=0}
+\end{center}
+
+\question Perform the principal component analysis (PCA) and transform
+the images in the MNSIT test set we clustered above.
+
+\begin{enumerate}
+  \item How many of the principal components explain
+        exactly $90\%$ of the data variance? Illustrate this with a plot.
+  \item Use the amount of principal components determined in the
+        previous part to obtain the equal number of transformed data
+        columns. Use this trimmed data to perform clustering again as
+        in question \ref{neither}. What is the inertia upon convergence
+        this time?
+\end{enumerate}
+
+\question Fit a Lasso regression model with $\alpha=0.0112$ onto the
+image data,
+\begin{enumerate}[label=(\alph*)]
+  \item How many non-zero $\beta_i$ coefficients remain once the
+        coordinate descent stops?
+  \item Pick the columns corresponding the $\beta_i\neq 0$ from the
+        data and yet again, perform clustering as in question
+        \ref{neither}. What is the inertia?
+\end{enumerate}
+
+\question\label{nor} Between neither, Lasso and PCA pre-processing which
+technique allowed for the best F1 score? What were the F1 scores for
+each of the techniques? Does better clustering necessarily mean better
+classification? Discuss.
+
+\question Between Lasso and PCA, which algorithm is better when,
+\begin{enumerate}[label=(\alph*)]
+  \item The labels are not known.
+  \item Final features need to be interpretable.
+\end{enumerate}
+
+\question Find a dataset at \url{https://www.openml.org/} and read it
+as shown in the article \sklearnart{}. Perform either Lasso or PCA
+reduction and report which features are the most important. Please
+briefly describe the dataset and the problem as well as what do all of
+the features mean. Place the code for this question in a file called
+\texttt{custom.py}.
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers the questions and contains all the plots
+        that the assignment asks for. Please \textit{read all the questions}
+        and make sure you give the plots! Just turning in the code is not
+        enough.
+  \item Submit your \texttt{regu.py}, \texttt{house.py},
+        \texttt{titanic.py} \& \texttt{custom.py}. Place all the code
+        between question \ref{neither} and question \ref{nor} in a
+        file called \texttt{experiment.py}. If
+        this Python file does not run on the console with\\
+        \texttt{python3 experiment.py} after any necessary path
+        adjustments, the submission will receive no credit.
+\end{enumerate}
+\end{document}

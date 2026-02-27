@@ -53,7 +53,7 @@ Using the quadratic error function we get,
            & = \sum_{i=1}^n(x_i^T\beta - y_{i})^2                \\
            & = (X\beta - y)^T(X\beta - y)                        \\
            & = (\beta^TX^T - y^T)(X\beta - y)                    \\
-           & = \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta - y^Ty \\
+           & = \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta + y^Ty \\
 \end{align*}
 Note that,
 \[
@@ -61,17 +61,17 @@ Note that,
   \text{ with dimensions }
   (1, p) \cdot (p, n) \cdot (n, 1) = (1, 1)
 \]
-Therefore $ \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta - y^Ty$ is
+Therefore $ \beta^TX^TX\beta - \beta^TX^Ty - y^TX\beta + y^Ty$ is
 equal to,
 \[
-  \beta^TX^TX\beta - 2\beta^TX^Ty - y^Ty
+  \beta^TX^TX\beta - 2\beta^TX^Ty + y^Ty
 \]
 
 In order to minimise this error function in terms of $\beta$ we take
 the partial derivative.
 \begin{align*}
   \frac{\p J(\beta)}{\p \beta}
-   & = \frac{\p}{\p \beta}\paren{\beta^TX^TX\beta - 2\beta^TX^Ty - y^Ty} \\
+   & = \frac{\p}{\p \beta}\paren{\beta^TX^TX\beta - 2\beta^TX^Ty + y^Ty} \\
    & = 2X^TX\beta - 2X^Ty - 0                                            \\
    & = 2X^TX\beta - 2X^Ty
 \end{align*}

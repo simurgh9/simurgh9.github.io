@@ -1,0 +1,155 @@
+\documentclass{homework}
+% \author{Tashfeen, Ahmad}  % uncomment with your name
+\class{CSCI 3223: Tashfeen's Machine Learning II}
+\title{Homework 4}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\usepackage[plain]{algorithm}
+\DeclareRobustCommand{\DO}{\mathbf{do\;}}
+\DeclareRobustCommand{\IF}{\mathbf{if\;}}
+\DeclareRobustCommand{\THEN}{\mathbf{then\;}}
+\DeclareRobustCommand{\WHILE}{\mathbf{while\;}}
+\DeclareRobustCommand{\FOR}{\mathbf{for\;}}
+\DeclareRobustCommand{\SL}{\mathbf{Select}}
+\DeclareRobustCommand{\FIT}{\mathbf{Fitness}}
+\DeclareRobustCommand{\CROSS}{\mathbf{Cross}}
+\DeclareRobustCommand{\MUTATE}{\mathbf{Mutate}}
+
+\begin{document} \maketitle
+
+\textit{Genetic Algorithms} (GA) mimic biological evolution and
+natural selection to address mathematical optimisation problems. They
+begin with an initial population $P$ of solutions and aim to optimize
+them over several generational iterations, similar to how desirable
+traits emerge in nature (or rather, undesirable traits go extinct).
+
+To solve an optimisation problem with a GA, we start with a
+\emph{genotype} that encodes a solution. Genotype instances are
+called \emph{individuals} $x$. A set of individuals is a
+\emph{population} $x \in P$. Populations of individuals evolve
+through \emph{generations} via reproduction. Using a
+\emph{selection} $\SL(P, \FIT)$ process based on a
+\emph{fitness-function} $\FIT: P \ra [0, 1]$, two parent
+individuals $a, b$ are selected for \emph{crossover} to produce a
+child individual $t \leftarrow \CROSS(a, b)$ in the next
+generation $P_\text{next}$. The child $t$ may $\MUTATE(t)$. See
+Algorithm.~\ref{ga}.
+
+\begin{algorithm}
+  \begin{flushleft}
+    \noindent\textbf{Input}:
+    \begin{enumerate}
+      \item Initial population: $P$
+      \item Fitness-function: $\FIT: P \ra [0, 1]$
+      \item Error threshold $\ep$
+      \item Mutation probability
+    \end{enumerate}
+    \noindent\textbf{Output}:
+    The best individual in population, according to the fitness.
+  \end{flushleft}%
+  \begin{enumerate}[label=\arabic*:,noitemsep,partopsep=0pt,topsep=0pt,parsep=0pt]%
+    \item $\DO$
+    \item $\quad P_\text{next} \leftarrow \nil$
+    \item $\quad \FOR (a, b) \leftarrow \SL(P, \FIT)$
+    \item $\quad\quad t \leftarrow \CROSS(a, b)$
+    \item $\quad\quad \IF (\text{small random probability})\;\THEN t \leftarrow \MUTATE(t)$
+    \item $\quad\quad P_\text{next} \leftarrow P_\text{next} \cup \{t\}$
+    \item $\quad P \leftarrow P_\text{next}$
+    \item $\WHILE \forall x \in P, \FIT(x) < (1 - \ep)$
+  \end{enumerate}%
+  \caption{%
+    Pseudo code for a simple Genetic Algorithm. See Mitchell, pg. 251
+    or Russell and Norvig, pg 129 for more details.
+  }%
+  \label{ga}%
+\end{algorithm}%
+
+\question\label{example} Watch,
+\begin{itemize}
+  \item \href{https://www.youtube.com/watch?v=MacVqujSXWE}{The Knapsack Problem \& Genetic Algorithms - Computerphile}
+  \item \href{https://www.youtube.com/watch?v=jPcBU0Z2Hj8}{The 8 Queen Problem - Numberphile}
+\end{itemize}
+
+and answer,
+
+\begin{enumerate}[label=(\alph*)]
+  \item For $S = \{1, 5, 10, 25\}, m = 31$, give a subset of $S$ that
+        sums to $m$.
+  \item Give a possible solution to the 8 queens problem.
+\end{enumerate}
+
+\question\label{knpga} Design a GA for the Knapsack Problem where $\abs{S}=d$ by
+stating the genotype, strategy for the initial population, fitness
+function, selection process, mutation and a crossover operator.
+
+\question In the worst possible configuration of the 8 queens,
+\begin{enumerate}
+  \item How many queens can attack a single queen assuming attacks are not
+        blocked by intermediate queens?
+  \item How many total attacks (on each queen) are possible on the board?
+\end{enumerate}
+
+\question\label{plan} Design a Genetic Algorithm to approximate
+solutions to the 8 queens problem by stating the genotype, strategy
+for the initial population, fitness function, selection process,
+mutation and a crossover operator.
+
+\question\label{code} Using the strategies you came up with in
+question \ref{plan}, finish the code given in the listing
+\href{https://tashfeen.org/s/mll/stubs.py}{available here}. Note
+that you'll need to finish the functions as well as use them in your
+implementation of the genetic algorithm with the following
+hyper-parameters,
+
+\begin{itemize}
+  \item Population size: 100
+  \item Muration rate: 0.005
+  \item Stopping criteria: Stop when the difference between the current
+        population's fitness and the one before is less than $0.0001$. The
+        fitness of a population is the mean fitness of its individuals.
+\end{itemize}
+
+Put your code for this question in \texttt{queens.py}.
+
+\begin{enumerate}
+  \item Plot the fitness against generations from question \ref{code}.
+  \item What is the fitness of the fittest individual in your final
+        generation? Also give the corresponding chessboard.
+\end{enumerate}
+
+\question If you've encoded the board state in an efficient way, you'll be
+able to efficiently brute force search the whole space of
+individuals and calculate their fitness. The individuals $x$ with
+fitness $f(x) = 1$ are exact solutions to the 8 queens problem.
+How many such solutions are there?
+
+\question Generate a random knapsack problem where,
+\begin{itemize}
+  \item An element $s_i \in S$ is uniformly randomly sampled between $1$ and $2^{32}$.
+  \item The cardinality of the solution subset $\chi$ that sums to $m$
+  is at least a third of the cardinality of $S$.
+  \[
+    \abs{\chi} \geq \abs{S}/3
+  \]
+\end{itemize}
+
+Implement your GA from question \ref{knpga} to find the best
+approximation of $\chi$ and put the code in \texttt{subset.py}.
+
+\begin{enumerate}
+  \item Plot the fitness against generations.
+  \item Let the subset $\hat{\chi}$ correspond to the fittest
+  individual in your final generation, give $\floor{\log_2(m)} + 1$
+  and $\floor{\log_2\paren{\abs{m - (\sum_{b \in \hat{\chi}} b)}}} + 1$.
+\end{enumerate}
+
+\section*{Submission Instructions}
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions including any plots.
+  \item Submit the Python files \eg \texttt{quuens.py} and \texttt{subset.py}.
+\end{enumerate}
+\end{document}

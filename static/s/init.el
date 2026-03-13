@@ -48,9 +48,9 @@
 
 (dolist
   (binding
-    '(("C-s"     . save-buffer)
+    '(("C-z"    . undo)
        ("C-/"    . comment-line)
-       ("C-o"    . other-window)
+       ("C-s"     . save-buffer)
        ("C-o"    . other-window)
        ("<f6>"   . end-of-buffer)
        ("<f5>"   . beginning-of-buffer)

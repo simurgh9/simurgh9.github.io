@@ -1,0 +1,103 @@
+\documentclass{homework}
+% \author{Tashfeen, Ahmad}  % uncomment with your name
+\class{CSCI 3223: Tashfeen's Machine Learning II}
+\title{Homework 5}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\usepackage{blkarray}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\begin{document} \maketitle
+
+You're \textit{not allowed} to use any libraries other than Numpy or
+Matplotlib.
+
+\question Read Mitchell, Chapter 13 (pg. 267--377). What do you think
+sets \textit{Reinforcement Learning} apart from other machine learning
+techniques? Do you see any pitfalls? Give at least one.
+
+
+\question\label{toy} Consider a toy guessing-game-environment. The environment
+keeps track of two integer quantities $0< (x, \hat{x}) < 99$. The
+agent's aim is to guess the number $x$ and the agent's guess is
+$\hat{x}$. We define the state space as,
+\[
+  S = \{\hat{x} < x, \hat{x} = x, \hat{x} > x\}.
+\]
+And, similarly, the action space,
+\[
+  A = \curl{
+    \hat{x} \leftarrow \hat{x} + \floor{\frac{\hat{x}}{2}},
+    \hat{x} \leftarrow \hat{x},
+    \hat{x} \leftarrow \hat{x} - \floor{\frac{\hat{x}}{2}}}.
+\]
+Upon each action, the environment returns the following reward,
+\[
+  r =
+  \begin{cases}
+    +2, \text{ if } \hat{x} = x, \\
+    +1, \text{ if } \hat{x} \text{ is closer to } x \text{ than before,}\\ 
+    -1, \text{ if } \hat{x} \text{ is farther than before or equal to } x
+  \end{cases}
+\]
+
+Using the learning rule given in Equation 13.7,
+\[
+  \hat{Q}(s, a) = r + \gamma \max_{a'}\hat{Q}(s', a')
+\]
+and the algorithm in Table 13.1 on Mitchell pg. 375, give the
+converged $\hat{Q}$ table.  Use the initial values,
+\[
+  \hat{x} = 64, \quad x = 4, \quad \gamma = 0.5, \quad \hat{Q}(s, a) = 0 \text{ for all } (s, a)
+\]
+and the following policy function,
+\[
+  \pi(s) = \argmax_a\hat{Q}(s, a).
+\]
+Place the code for this question in \texttt{toy.py}.
+
+\question Does question \ref{toy} describe a Markov Decision Process (MDP)?
+Briefly explain your answer. Hint: Mitchell pg. 370.
+
+\question Assume that $\hat{Q}$ converges to,
+\[
+  \begin{blockarray}{cccc}
+    \uparrow & \nil & \downarrow & {}\\
+    \begin{block}{[ccc]c}
+      2    & 0  & 0 & \hat{x} < x \\
+      -0.5 & 4  & 0 & \hat{x} = x \\
+      -1   & -1 & 2 & \hat{x} > x \\
+    \end{block}
+  \end{blockarray}
+\]
+Interpret the policy $\pi(s) = \argmax_a\hat{Q}(s, a)$. Hint: If the
+$\hat{Q}$ from your question \ref{toy} did not converge to the one
+given in this question, you have made a mistake.
+
+\question Write a $Q$-learning snake agent for the following game environment,\\
+\url{https://github.com/simurgh9/snake}\\
+You should read the documentation \texttt{README.md} to get started.
+
+Note that this question will be graded based on your code's quality
+and agent's performance. Please avoid duplicating code. Ask the
+professor if you need some logic that you think is missing.
+
+Give the details of hyper parameters and your state \& action state
+modelling. Give any other details necessary.
+
+\section*{Submission Instructions}
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions including any plots.
+  \item Submit the contents of the director that you created under
+  \texttt{snake/model/serpents/}. Also submit the Python file
+  \texttt{toy.py} from question \ref{toy}.
+  \item Submit an optimised \texttt{demo.gif} of your $Q$-learning
+  agent playing the game. An example of such a gif is also in the
+  \texttt{README.md}
+\end{enumerate}
+\end{document}
+

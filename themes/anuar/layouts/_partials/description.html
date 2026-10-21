@@ -1,21 +1,14 @@
-{{- range . -}}
-  <div class="description ph-duotone-flex-align-items-center">
-    <span class="beginning">
-      <a href="{{- .RelPermalink -}}">
-        {{- partial "date.html" (dict "date" .Date) -}}
-      </a>
-    </span>
-    <span class="middle">
-      {{- if findRE "<img[^>]*>" .Content -}}
-        {{- partial "icon.html" "ph-file-image" -}}
-      {{- end -}}
-    </span>
-    <span class="end">
-      {{- if .Title -}}
-        {{- .Title | plainify | safeHTML | truncate 23 -}}
-      {{- else -}}
-        {{- .Content | plainify | safeHTML | truncate 23 -}}
-      {{- end -}}
-    </span>
-  </div>
+{{- $pinned := sort (where . "Params.pin" "!=" nil) "Params.pin" -}}
+{{- $rest := where . "Params.pin" "==" nil -}}
+{{- $hasPinned := gt (len $pinned) 0 -}}
+
+{{- if . -}}
+  <ul class="description-list" role="list">
+    {{- range $pinned -}}
+      {{- partial "description-row.html" (dict "page" . "hasPinned" $hasPinned) -}}
+    {{- end -}}
+    {{- range $rest -}}
+      {{- partial "description-row.html" (dict "page" . "hasPinned" $hasPinned) -}}
+    {{- end -}}
+  </ul>
 {{- end -}}

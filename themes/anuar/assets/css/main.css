@@ -167,22 +167,28 @@ footer {
   justify-content: space-between;
 }
 
-div.description span.beginning {
+ul.description-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.description span.beginning {
   font-family: 'IBMPlexMono', monospace;
   min-width: 11ch;
 }
 
-div.description span.beginning a:hover {
+li.description span.beginning a:hover {
   font-weight: 700;
 }
 
-div.description span.middle {
+li.description span.icon-slot {
   min-width: 3ch;
   display: flex;
   justify-content: center;
 }
 
-div.description span.end {
+li.description span.end {
   flex-grow: 1;
 }
 

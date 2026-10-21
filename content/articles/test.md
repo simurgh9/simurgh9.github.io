@@ -6,6 +6,7 @@ tags = ['sample']
 [params]
   mathjax = true
   code = true
+  pin = 0
 +++
 
 The author uses this file to test formatting and other display

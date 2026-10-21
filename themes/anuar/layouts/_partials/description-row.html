@@ -1,0 +1,26 @@
+<li class="description ph-duotone-flex-align-items-center">
+  {{- if .hasPinned }}
+    <span class="icon-slot">
+      {{- if isset .page.Params "pin" -}}
+        {{- partial "icon.html" "ph-push-pin-simple" -}}
+      {{- end -}}
+    </span>
+  {{- end }}
+  <span class="beginning">
+    <a href="{{- .page.RelPermalink -}}">
+      {{- partial "date.html" (dict "date" .page.Date) -}}
+    </a>
+  </span>
+  <span class="icon-slot">
+    {{- if findRE "<img[^>]*>" .page.Content -}}
+      {{- partial "icon.html" "ph-file-image" -}}
+    {{- end -}}
+  </span>
+  <span class="end">
+    {{- if .page.Title -}}
+      {{- .page.Title | plainify | safeHTML | truncate 23 -}}
+    {{- else -}}
+      {{- .page.Content | plainify | safeHTML | truncate 23 -}}
+    {{- end -}}
+  </span>
+</li>

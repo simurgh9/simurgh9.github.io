@@ -1,6 +1,6 @@
-theme = "anuar"
+theme = 'anuar'
 baseURL = 'https://tashfeen.org/'
-languageCode = 'en-GB'
+locale = 'en-GB'
 title = 'tashfeen.org'
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
